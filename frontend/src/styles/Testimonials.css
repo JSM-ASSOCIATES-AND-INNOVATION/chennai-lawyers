@@ -1,0 +1,200 @@
+/* =========================================
+   TESTIMONIALS & AWARDS SECTION (Scrolling Marquees)
+   ========================================= */
+
+.testimonials-section {
+    padding: 6rem 0; /* Removing side padding for full-bleed marquee */
+    background-color: var(--bg-card); 
+    color: var(--text-main);
+    transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.testimonials-container {
+    width: 100%;
+}
+
+/* Header */
+.testimonials-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 3.5rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 5%;
+}
+
+.testimonials-eyebrow {
+    color: #C49B55;
+    font-size: 0.85rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.testimonials-title {
+    font-size: clamp(2rem, 3vw, 2.5rem);
+    font-family: 'Playfair Display', Georgia, serif;
+    color: var(--text-heading);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    margin: 0;
+}
+
+/* Infinite Marquee Animation */
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 1rem 0;
+}
+
+/* Gradient Masks for fading edges */
+.marquee-container::before,
+.marquee-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+.light-theme .marquee-container::before {
+    left: 0;
+    background: linear-gradient(to right, var(--bg-card) 0%, transparent 100%);
+}
+.light-theme .marquee-container::after {
+    right: 0;
+    background: linear-gradient(to left, var(--bg-card) 0%, transparent 100%);
+}
+.dark-theme .marquee-container::before {
+    left: 0;
+    background: linear-gradient(to right, var(--bg-card) 0%, transparent 100%);
+}
+.dark-theme .marquee-container::after {
+    right: 0;
+    background: linear-gradient(to left, var(--bg-card) 0%, transparent 100%);
+}
+
+/* Tracks */
+.marquee-track {
+    display: flex;
+    gap: 2rem;
+    width: max-content;
+    padding: 0.5rem 2rem;
+}
+
+/* Animations */
+.track-1 {
+    animation: scrollLeft 40s linear infinite;
+}
+.track-2 {
+    animation: scrollRight 40s linear infinite;
+}
+
+.marquee-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scrollLeft {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-50% - 1rem)); } /* -50% shifts exactly half the track width */
+}
+
+@keyframes scrollRight {
+    0% { transform: translateX(calc(-50% - 1rem)); }
+    100% { transform: translateX(0); }
+}
+
+/* Cards */
+.review-card {
+    background-color: var(--bg-main);
+    border: 1px solid var(--border-color);
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+    width: 400px;
+    flex-shrink: 0;
+    white-space: normal;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.review-stars, .award-icon-wrapper {
+    display: flex;
+    gap: 0.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.award-title, .review-text {
+    font-size: 1.1rem;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic;
+    color: var(--text-heading);
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.award-desc {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+}
+
+.review-text {
+    margin-bottom: 2rem;
+    flex-grow: 1;
+}
+
+.review-author-box {
+    border-top: 1px solid var(--border-color);
+    padding-top: 1.5rem;
+}
+
+.author-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.author-name {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-heading);
+    margin-bottom: 0.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.author-role {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .testimonials-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+    
+    .review-card {
+        width: 320px;
+        padding: 2rem 1.5rem;
+    }
+}

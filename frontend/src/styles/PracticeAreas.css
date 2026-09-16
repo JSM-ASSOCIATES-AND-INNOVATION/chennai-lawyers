@@ -1,0 +1,135 @@
+/* =========================================
+   PRACTICE AREAS (Apple HIG & Mockup Inspired)
+   ========================================= */
+
+.practice-section {
+    padding: 6rem 5%;
+    background-color: var(--bg-card); /* Slightly off-white/gray in light mode for contrast */
+    color: var(--text-main);
+    transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.practice-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Header */
+.practice-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 3.5rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 2rem;
+}
+
+.practice-eyebrow {
+    color: #C49B55;
+    font-size: 0.85rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.practice-title {
+    font-size: clamp(2rem, 3.5vw, 2.8rem);
+    font-family: 'Playfair Display', Georgia, serif;
+    color: var(--text-heading);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    margin: 0;
+}
+
+.view-all-link {
+    color: #C49B55;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    transition: opacity 0.2s ease;
+}
+
+.view-all-link:hover {
+    opacity: 0.7;
+}
+
+/* Grid */
+.practice-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+/* Card */
+.practice-card {
+    background-color: var(--bg-main);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 3rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+}
+
+.practice-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border-color: #C49B55;
+}
+
+.practice-icon {
+    color: #C49B55;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.practice-card:hover .practice-icon {
+    transform: scale(1.1);
+}
+
+.practice-card-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-heading);
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Responsive */
+@media screen and (max-width: 1024px) {
+    .practice-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .practice-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+    
+    .practice-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .practice-grid {
+        grid-template-columns: 1fr;
+    }
+}

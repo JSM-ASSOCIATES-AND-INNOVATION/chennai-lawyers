@@ -1,0 +1,88 @@
+/* =========================================
+   CONTACT BANNER (Mockup Inspired)
+   ========================================= */
+
+.contact-banner {
+    position: relative;
+    padding: 6rem 5%;
+    display: flex;
+    align-items: center;
+    min-height: 300px;
+    overflow: hidden;
+    background-color: #0b1016; /* Very dark blue/black fallback */
+}
+
+.contact-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Parallax effect */
+    z-index: 1;
+}
+
+.contact-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(11, 16, 22, 0.95) 0%, rgba(11, 16, 22, 0.7) 100%);
+    z-index: 2;
+}
+
+.contact-banner-container {
+    position: relative;
+    z-index: 3;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Text Content */
+.contact-banner-content {
+    max-width: 700px;
+}
+
+.contact-eyebrow {
+    color: #C49B55;
+    font-size: 0.85rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.contact-title {
+    font-size: clamp(2rem, 3vw, 2.5rem);
+    font-family: 'Playfair Display', Georgia, serif;
+    color: #FFFFFF;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+}
+
+.contact-description {
+    color: #E5E5EA;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .contact-banner-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+    
+    .contact-title {
+        font-size: 2rem;
+    }
+}
