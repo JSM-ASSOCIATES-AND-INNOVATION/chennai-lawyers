@@ -1,0 +1,57 @@
+/* =========================================
+   DOT NAVIGATION (Premium Vertical Pagination)
+   ========================================= */
+
+.dot-navigation {
+    position: fixed;
+    right: 2%;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    z-index: 9999;
+    padding: 10px;
+}
+
+.dot-nav-btn {
+    background: transparent;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+}
+
+.dot-indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 1px solid rgba(196, 155, 85, 0.5); /* Gold outline */
+    background-color: transparent;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* Active State */
+.dot-nav-btn.active .dot-indicator {
+    background-color: #C49B55;
+    border-color: #C49B55;
+    transform: scale(1.5);
+    box-shadow: 0 0 10px rgba(196, 155, 85, 0.5);
+}
+
+/* Hover State */
+.dot-nav-btn:hover .dot-indicator:not(.active) {
+    border-color: #C49B55;
+    background-color: rgba(196, 155, 85, 0.3);
+}
+
+/* Responsive: Hide on very small screens */
+@media screen and (max-width: 768px) {
+    .dot-navigation {
+        display: none;
+    }
+}

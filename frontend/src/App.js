@@ -13,6 +13,7 @@ import Testimonials from "./components/Testimonials";
 import Ourpeople from "./components/Ourpeople";
 import InsightsPreview from "./components/InsightsPreview";
 import About from "./components/About";
+import DotNavigation from "./components/DotNavigation";
 import Careers from "./components/Career";
 import { ThemeProvider } from "./components/ThemeContext";
 import Blogs from "./components/Blogs";
@@ -130,7 +131,8 @@ function App() {
                     <Routes>
                         {/* Main Website Routes */}
                         <Route path="/" element={
-                            <>
+                            <main id="home-scroll-container" className="snap-container">
+                                <DotNavigation />
                                 <Hero />
                                 <PracticeAreas />
                                 <About />
@@ -138,7 +140,7 @@ function App() {
                                 <Ourpeople />
                                 <Testimonials />
                                 <ContactForm />
-                            </>
+                            </main>
                         }
                         />
                         <Route path="/legacy" element={<Legacy />} />

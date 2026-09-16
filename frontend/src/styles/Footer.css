@@ -3,6 +3,9 @@
    ========================================= */
 
 .footer-section {
+    height: 100vh;
+    scroll-snap-align: start;
+    overflow: hidden;
     background-color: #080B10; /* Ultra-dark, premium tone */
     color: #8E8E93; /* Apple HIG secondary text */
     font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;

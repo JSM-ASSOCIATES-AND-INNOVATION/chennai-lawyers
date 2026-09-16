@@ -3,11 +3,14 @@
    ========================================= */
 
 .testimonials-section {
+    height: 100vh;
+    scroll-snap-align: start;
+    overflow: hidden;
     padding: 6rem 0; /* Removing side padding for full-bleed marquee */
     background-color: var(--bg-card); 
     color: var(--text-main);
     transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
-    min-height: 50vh;
+    
     display: flex;
     align-items: center;
     overflow: hidden;

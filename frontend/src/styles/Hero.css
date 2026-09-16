@@ -2,6 +2,9 @@
    1. HERO CONTAINER (Apple HIG / Mockup Theme)
    ========================================= */
 .hero-section {
+    height: 100vh;
+    scroll-snap-align: start;
+    overflow: hidden;
     position: relative;
     width: 100vw;
     height: 100vh;
@@ -153,6 +156,9 @@
    ========================================= */
 @media (max-width: 768px) {
     .hero-section {
+    height: 100vh;
+    scroll-snap-align: start;
+    overflow: hidden;
         padding: 0 20px;
     }
     
