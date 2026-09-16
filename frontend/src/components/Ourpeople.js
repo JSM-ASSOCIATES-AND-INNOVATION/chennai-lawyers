@@ -115,6 +115,13 @@ const OurPeople = () => {
                     )}
                 </div>
 
+                {/* Mobile-only View All Button */}
+                <div className="our-people-mobile-action">
+                    <Link to="/team" className="apple-btn primary-btn" style={{ width: '100%', justifyContent: 'center' }}>
+                        VIEW ALL MEMBERS <ArrowRight size={16} style={{marginLeft: '8px'}} />
+                    </Link>
+                </div>
+
             </div>
         </section>
     );

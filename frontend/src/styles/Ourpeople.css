@@ -3,17 +3,17 @@
    ========================================= */
 
 .our-people {
+    padding: 6rem 5% 2rem 5%; /* Adjust top padding for navbar, reduce bottom */
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
     height: 100vh;
     scroll-snap-align: start;
     overflow-y: auto;
     overflow-x: hidden;
-    padding: 6rem 5%;
-    background-color: var(--bg-main);
-    color: var(--text-main);
-    transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
-    
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .our-people-container {
@@ -82,9 +82,8 @@
 .partner-card {
     position: relative;
     border-radius: 8px;
-    overflow-y: auto;
-    overflow-x: hidden;
-    height: 450px;
+    overflow: hidden;
+    height: 380px; /* Reduced from 450px to fit perfectly */
     background-color: var(--bg-card);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -160,30 +159,46 @@
 }
 
 /* Responsive */
+/* Auto-scroll animation for mobile */
+@keyframes mobileAutoScroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.our-people-mobile-action {
+    display: none;
+    margin-top: 2rem;
+}
+
 @media screen and (max-width: 768px) {
+    .our-people {
+        padding: 5rem 5% 2rem;
+    }
     .our-people-header {
         flex-direction: column;
         align-items: flex-start;
-        gap: 1.5rem;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    .our-people-header-right {
+        display: none; /* Hide top link on mobile */
+    }
+    .our-people-mobile-action {
+        display: flex; /* Show bottom button on mobile */
     }
     .partners-grid {
         display: flex;
         overflow-x: auto;
+        overflow-y: hidden;
         scroll-snap-type: x mandatory;
         gap: 1rem;
+        padding-bottom: 1rem;
+        scroll-behavior: smooth;
     }
     .partner-card {
         min-width: 85vw;
-        height: 350px;
+        height: 320px;
         scroll-snap-align: center;
-    }
-}
-
-    .partners-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .partner-card {
-        height: 400px;
+        flex-shrink: 0;
     }
 }

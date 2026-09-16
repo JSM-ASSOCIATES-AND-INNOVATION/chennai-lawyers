@@ -3,14 +3,17 @@
    ========================================= */
 
 .footer-section {
-    height: 100vh;
-    scroll-snap-align: start;
-    overflow-y: auto;
-    overflow-x: hidden;
     background-color: #080B10; /* Ultra-dark, premium tone */
     color: #8E8E93; /* Apple HIG secondary text */
     font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
     position: relative;
+    height: 100vh;
+    scroll-snap-align: start;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /* Subtle Top Glow */
@@ -27,20 +30,20 @@
 .footer-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 6rem 5% 4rem;
+    padding: 5rem 5% 2rem; /* Reduced padding, adjusted for navbar */
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1.5fr;
-    gap: 4rem;
+    gap: 2rem; /* Reduced gap */
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 /* Typography & Headers */
 .footer-heading {
     color: #FFFFFF;
-    font-size: 0.8rem;
-    letter-spacing: 0.15em;
+    font-size: 0.75rem; /* Shrunk */
+    letter-spacing: 0.1em;
     text-transform: uppercase;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem; /* Shrunk */
     font-weight: 600;
 }
 
