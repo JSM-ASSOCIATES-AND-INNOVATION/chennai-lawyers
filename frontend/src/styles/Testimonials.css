@@ -5,27 +5,27 @@
 .testimonials-section {
     height: 100vh;
     scroll-snap-align: start;
-    overflow: hidden;
-    padding: 6rem 0; /* Removing side padding for full-bleed marquee */
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 3rem 0; /* Reduced padding to fit in 1 slide */
     background-color: var(--bg-card); 
     color: var(--text-main);
     transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
-    
     display: flex;
-    align-items: center;
-    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .testimonials-container {
     width: 100%;
 }
 
-/* Header */
+/* Headers */
 .testimonials-header {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    margin-bottom: 3.5rem;
+    margin-bottom: 1.5rem; /* Reduced from 3.5rem */
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
@@ -34,20 +34,19 @@
 
 .testimonials-eyebrow {
     color: #C49B55;
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     font-weight: 600;
 }
 
 .testimonials-title {
-    font-size: clamp(2rem, 3vw, 2.5rem);
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
     font-family: 'Playfair Display', Georgia, serif;
     color: var(--text-heading);
     font-weight: 700;
     line-height: 1.1;
-    letter-spacing: -0.01em;
     margin: 0;
 }
 
@@ -56,7 +55,7 @@
     width: 100%;
     overflow: hidden;
     position: relative;
-    padding: 1rem 0;
+    padding: 0.5rem 0; /* Reduced */
 }
 
 /* Gradient Masks for fading edges */
@@ -65,7 +64,7 @@
     content: "";
     position: absolute;
     top: 0;
-    width: 100px;
+    width: 80px;
     height: 100%;
     z-index: 2;
     pointer-events: none;
@@ -90,30 +89,23 @@
 /* Tracks */
 .marquee-track {
     display: flex;
-    gap: 2rem;
+    gap: 1.5rem;
     width: max-content;
-    padding: 0.5rem 2rem;
+    padding: 0.5rem 1.5rem;
 }
 
-/* Animations */
-.track-1 {
-    animation: scrollLeft 40s linear infinite;
-}
-.track-2 {
-    animation: scrollRight 40s linear infinite;
-}
+.track-1 { animation: scrollLeft 40s linear infinite; }
+.track-2 { animation: scrollRight 40s linear infinite; }
 
-.marquee-track:hover {
-    animation-play-state: paused;
-}
+.marquee-track:hover { animation-play-state: paused; }
 
 @keyframes scrollLeft {
     0% { transform: translateX(0); }
-    100% { transform: translateX(calc(-50% - 1rem)); } /* -50% shifts exactly half the track width */
+    100% { transform: translateX(calc(-50% - 0.75rem)); }
 }
 
 @keyframes scrollRight {
-    0% { transform: translateX(calc(-50% - 1rem)); }
+    0% { transform: translateX(calc(-50% - 0.75rem)); }
     100% { transform: translateX(0); }
 }
 
@@ -121,52 +113,42 @@
 .review-card {
     background-color: var(--bg-main);
     border: 1px solid var(--border-color);
-    padding: 2.5rem 2rem;
+    padding: 1.5rem; /* Reduced padding */
     display: flex;
     flex-direction: column;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     border-radius: 8px;
-    width: 400px;
+    width: 320px; /* Reduced width */
+    height: 220px; /* Fixed height for uniformity */
     flex-shrink: 0;
     white-space: normal;
-}
-
-.review-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
 .review-stars, .award-icon-wrapper {
     display: flex;
     gap: 0.25rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.75rem;
 }
 
 .award-title, .review-text {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
     font-family: 'Playfair Display', Georgia, serif;
     font-style: italic;
     color: var(--text-heading);
-    line-height: 1.5;
-    margin-bottom: 1rem;
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
 }
 
-.award-desc {
-    font-size: 0.95rem;
+.award-desc, .review-text {
+    font-size: 0.85rem;
     color: var(--text-muted);
-    line-height: 1.6;
-    margin-bottom: 2rem;
-    flex-grow: 1;
-}
-
-.review-text {
-    margin-bottom: 2rem;
+    line-height: 1.5;
     flex-grow: 1;
 }
 
 .review-author-box {
     border-top: 1px solid var(--border-color);
-    padding-top: 1.5rem;
+    padding-top: 0.75rem;
+    margin-top: auto;
 }
 
 .author-details {
@@ -175,29 +157,39 @@
 }
 
 .author-name {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     font-weight: 700;
     color: var(--text-heading);
-    margin-bottom: 0.25rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
 }
 
 .author-role {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: var(--text-muted);
 }
 
-/* Responsive */
+/* Responsive constraints to fit 100vh on mobile */
 @media screen and (max-width: 768px) {
-    .testimonials-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1.5rem;
+    .testimonials-section {
+        padding: 1.5rem 0;
     }
     
+    .testimonials-header {
+        margin-bottom: 1rem;
+    }
+
     .review-card {
-        width: 320px;
-        padding: 2rem 1.5rem;
+        width: 280px;
+        height: 180px;
+        padding: 1rem;
+    }
+
+    .award-title, .review-text {
+        font-size: 0.85rem;
+    }
+    
+    .award-desc {
+        font-size: 0.75rem;
     }
 }

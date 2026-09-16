@@ -5,7 +5,8 @@
 .our-people {
     height: 100vh;
     scroll-snap-align: start;
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
     padding: 6rem 5%;
     background-color: var(--bg-main);
     color: var(--text-main);
@@ -81,7 +82,8 @@
 .partner-card {
     position: relative;
     border-radius: 8px;
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
     height: 450px;
     background-color: var(--bg-card);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -164,6 +166,18 @@
         align-items: flex-start;
         gap: 1.5rem;
     }
+    .partners-grid {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 1rem;
+    }
+    .partner-card {
+        min-width: 85vw;
+        height: 350px;
+        scroll-snap-align: center;
+    }
+}
 
     .partners-grid {
         grid-template-columns: 1fr;

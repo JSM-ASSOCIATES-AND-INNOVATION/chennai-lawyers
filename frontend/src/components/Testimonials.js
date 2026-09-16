@@ -118,7 +118,7 @@ const Testimonials = () => {
                 </div>
 
                 {/* Testimonials Header */}
-                <div className="testimonials-header" style={{ marginTop: '5rem' }}>
+                <div className="testimonials-header" style={{ marginTop: '2rem' }}>
                     <div className="testimonials-header-left">
                         <h4 className="testimonials-eyebrow">TESTIMONIALS</h4>
                         <h2 className="testimonials-title">Client Perspectives</h2>

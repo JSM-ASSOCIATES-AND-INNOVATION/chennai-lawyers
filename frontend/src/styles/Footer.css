@@ -5,7 +5,8 @@
 .footer-section {
     height: 100vh;
     scroll-snap-align: start;
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
     background-color: #080B10; /* Ultra-dark, premium tone */
     color: #8E8E93; /* Apple HIG secondary text */
     font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
@@ -102,7 +103,8 @@
     background-color: rgba(255,255,255,0.03);
     border: 1px solid rgba(255,255,255,0.1);
     border-radius: 6px;
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
     transition: border-color 0.3s ease;
 }
 

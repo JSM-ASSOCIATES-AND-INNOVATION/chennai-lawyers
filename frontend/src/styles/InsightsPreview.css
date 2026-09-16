@@ -5,7 +5,8 @@
 .insights-section {
     height: 100vh;
     scroll-snap-align: start;
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
     padding: 6rem 5%;
     background-color: var(--bg-main);
     color: var(--text-main);
@@ -123,6 +124,16 @@
     }
     
     .insights-grid {
-        grid-template-columns: 1fr;
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 1rem;
+        padding-bottom: 1rem;
     }
+    
+    .insight-card {
+        min-width: 80vw;
+        scroll-snap-align: center;
+    }
+}
 }
