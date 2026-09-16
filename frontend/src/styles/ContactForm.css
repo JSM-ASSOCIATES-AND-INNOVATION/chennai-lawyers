@@ -1,20 +1,17 @@
 /* =========================================
-   CONTACT BANNER (Mockup Inspired)
+   CONTACT BANNER & FORM
    ========================================= */
 
 .contact-banner {
-    height: 100vh;
-    scroll-snap-align: start;
-    overflow-y: auto;
-    overflow-x: hidden;
     position: relative;
     padding: 6rem 5%;
     display: flex;
     align-items: center;
-    
+    height: 100vh;
+    scroll-snap-align: start;
     overflow-y: auto;
     overflow-x: hidden;
-    background-color: #0b1016; /* Very dark blue/black fallback */
+    background-color: #0b1016;
 }
 
 .contact-background {
@@ -25,7 +22,6 @@
     height: 100%;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* Parallax effect */
     z-index: 1;
 }
 
@@ -48,11 +44,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 4rem;
 }
 
-/* Text Content */
+/* Text Content (Left) */
 .contact-banner-content {
-    max-width: 700px;
+    flex: 1;
+    max-width: 500px;
 }
 
 .contact-eyebrow {
@@ -65,29 +63,110 @@
 }
 
 .contact-title {
-    font-size: clamp(2rem, 3vw, 2.5rem);
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
     font-family: 'Playfair Display', Georgia, serif;
     color: #FFFFFF;
     font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 0.5rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
 }
 
 .contact-description {
     color: #E5E5EA;
     font-size: 1.1rem;
+    line-height: 1.6;
     margin: 0;
 }
 
+/* Form Container (Right) */
+.contact-form-wrapper {
+    flex: 1;
+    max-width: 550px;
+}
+
+.glass-contact-form {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-row {
+    display: flex;
+    gap: 1.25rem;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.form-input {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 1rem;
+    color: #FFFFFF;
+    font-size: 0.95rem;
+    outline: none;
+    transition: all 0.3s ease;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+}
+
+.form-input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.form-input:focus {
+    border-color: #C49B55;
+    background: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 0 2px rgba(196, 155, 85, 0.2);
+}
+
+.form-textarea {
+    resize: none;
+}
+
+.submit-btn {
+    width: 100%;
+    margin-top: 1rem;
+    justify-content: center;
+    padding: 1.25rem;
+    font-size: 1rem;
+}
+
 /* Responsive */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 968px) {
     .contact-banner-container {
         flex-direction: column;
         align-items: flex-start;
-        gap: 2rem;
+        gap: 3rem;
     }
     
-    .contact-title {
-        font-size: 2rem;
+    .contact-banner-content, .contact-form-wrapper {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .contact-banner {
+        padding: 5rem 5% 3rem;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .glass-contact-form {
+        padding: 1.5rem;
     }
 }
