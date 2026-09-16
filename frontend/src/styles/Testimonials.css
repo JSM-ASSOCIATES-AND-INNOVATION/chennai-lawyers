@@ -7,7 +7,7 @@
     scroll-snap-align: start;
     overflow-y: auto;
     overflow-x: hidden;
-    padding: 3rem 0; /* Reduced padding to fit in 1 slide */
+    padding: 6rem 0 2rem 0; /* Add top padding to clear the fixed navbar */
     background-color: var(--bg-card); 
     color: var(--text-main);
     transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
@@ -113,12 +113,12 @@
 .review-card {
     background-color: var(--bg-main);
     border: 1px solid var(--border-color);
-    padding: 1.5rem; /* Reduced padding */
+    padding: 1.25rem 1.5rem; /* Reduced padding further */
     display: flex;
     flex-direction: column;
     border-radius: 8px;
-    width: 320px; /* Reduced width */
-    height: 220px; /* Fixed height for uniformity */
+    width: 300px; /* Reduced width */
+    height: 175px; /* Shrunk height */
     flex-shrink: 0;
     white-space: normal;
 }
@@ -126,28 +126,28 @@
 .review-stars, .award-icon-wrapper {
     display: flex;
     gap: 0.25rem;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem; /* Reduced */
 }
 
 .award-title, .review-text {
-    font-size: 0.95rem;
+    font-size: 0.85rem; /* Shrunk font */
     font-family: 'Playfair Display', Georgia, serif;
     font-style: italic;
     color: var(--text-heading);
-    line-height: 1.4;
+    line-height: 1.3;
     margin-bottom: 0.5rem;
 }
 
 .award-desc, .review-text {
-    font-size: 0.85rem;
+    font-size: 0.75rem; /* Shrunk font */
     color: var(--text-muted);
-    line-height: 1.5;
+    line-height: 1.4;
     flex-grow: 1;
 }
 
 .review-author-box {
     border-top: 1px solid var(--border-color);
-    padding-top: 0.75rem;
+    padding-top: 0.5rem; /* Reduced */
     margin-top: auto;
 }
 
@@ -157,7 +157,7 @@
 }
 
 .author-name {
-    font-size: 0.85rem;
+    font-size: 0.75rem; /* Shrunk font */
     font-weight: 700;
     color: var(--text-heading);
     text-transform: uppercase;
@@ -165,7 +165,7 @@
 }
 
 .author-role {
-    font-size: 0.75rem;
+    font-size: 0.65rem; /* Shrunk font */
     color: var(--text-muted);
 }
 
