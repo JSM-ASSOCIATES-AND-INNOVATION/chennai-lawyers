@@ -164,3 +164,117 @@ a:hover {
         text-align: center;
     }
 }
+/* =========================================
+   PREMIUM TLH SWIPE BUTTON ANIMATION
+   Applied globally to all buttons
+   ========================================= */
+
+.apple-btn, 
+.primary-btn, 
+.secondary-btn,
+.submit-btn,
+.nav-right .nav-link:last-child /* targeting contact nav button */ {
+    position: relative !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 14px 28px !important;
+    border-radius: 0 !important; /* Premium sharp edges */
+    font-size: 0.85rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 2px !important;
+    text-transform: uppercase !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+    overflow: hidden !important;
+    background-color: rgba(128, 128, 128, 0.05) !important; 
+    border: 1px solid rgba(128, 128, 128, 0.15) !important;
+    color: var(--text-heading) !important;
+    z-index: 1 !important;
+    transition: color 0.4s ease, border-color 0.4s ease !important;
+    box-shadow: none !important;
+}
+
+/* Base line on the left side */
+.apple-btn::before, 
+.primary-btn::before, 
+.secondary-btn::before,
+.submit-btn::before,
+.nav-right .nav-link:last-child::before {
+    content: "" !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    height: 100% !important;
+    width: 3px !important;
+    z-index: -1 !important;
+    transition: width 0.4s cubic-bezier(0.19, 1, 0.22, 1) !important;
+}
+
+/* Dark Theme Colors */
+.dark-theme .apple-btn::before, 
+.dark-theme .primary-btn::before, 
+.dark-theme .secondary-btn::before,
+.dark-theme .submit-btn::before,
+.dark-theme .nav-right .nav-link:last-child::before { 
+    background-color: #FFBF00 !important; 
+}
+
+/* Light Theme Colors */
+.light-theme .apple-btn::before, 
+.light-theme .primary-btn::before, 
+.light-theme .secondary-btn::before,
+.light-theme .submit-btn::before,
+.light-theme .nav-right .nav-link:last-child::before { 
+    background-color: #CD0000 !important; 
+}
+
+/* Hover Effects */
+.apple-btn:hover, 
+.primary-btn:hover, 
+.secondary-btn:hover,
+.submit-btn:hover,
+.nav-right .nav-link:last-child:hover {
+    border-color: transparent !important;
+}
+
+/* Text color flips on hover depending on theme */
+.dark-theme .apple-btn:hover, 
+.dark-theme .primary-btn:hover, 
+.dark-theme .secondary-btn:hover,
+.dark-theme .submit-btn:hover,
+.dark-theme .nav-right .nav-link:last-child:hover {
+    color: #000000 !important;
+}
+
+.light-theme .apple-btn:hover, 
+.light-theme .primary-btn:hover, 
+.light-theme .secondary-btn:hover,
+.light-theme .submit-btn:hover,
+.light-theme .nav-right .nav-link:last-child:hover {
+    color: #FFFFFF !important;
+}
+
+/* Expand the background */
+.apple-btn:hover::before, 
+.primary-btn:hover::before, 
+.secondary-btn:hover::before,
+.submit-btn:hover::before,
+.nav-right .nav-link:last-child:hover::before {
+    width: 100% !important;
+}
+
+/* SVG Arrow inside button alignment */
+.apple-btn svg, .primary-btn svg {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+.apple-btn:hover svg, .primary-btn:hover svg {
+    transform: translateX(4px);
+}
+
+/* Specific styling for Navbar Contact button to ensure it matches exactly */
+.nav-right .nav-link:last-child {
+    padding: 10px 24px !important;
+}
