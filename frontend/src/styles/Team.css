@@ -92,21 +92,30 @@
     justify-content: center;
 }
 
+
 .team-portrait-card {
     position: relative;
     border-radius: 8px;
     overflow: hidden;
-    background-color: var(--bg-card);
-    border: 1px solid var(--border-color);
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 3px solid #C49B55;
     cursor: pointer;
-    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.team-portrait-card:hover {
-    transform: translateY(-8px);
-    border-color: var(--accent-primary);
-    box-shadow: 0 15px 40px var(--accent-glow);
+.light-theme .team-portrait-card {
+    background: linear-gradient(145deg, #FFFFFF 0%, #F5F5F7 100%);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-top: 3px solid #C49B55;
 }
+
+
+
+.light-theme 
+
+
+
 
 .portrait-image-wrapper {
     width: 100%;

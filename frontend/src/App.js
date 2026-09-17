@@ -13,6 +13,10 @@ import Testimonials from "./components/Testimonials";
 import Ourpeople from "./components/Ourpeople";
 import InsightsPreview from "./components/InsightsPreview";
 import About from "./components/About";
+import AboutPage from "./components/AboutPage";
+import PracticeAreasPage from "./components/PracticeAreasPage";
+import ContactPage from "./components/ContactPage";
+
 import DotNavigation from "./components/DotNavigation";
 import Careers from "./components/Career";
 import { ThemeProvider } from "./components/ThemeContext";
@@ -144,6 +148,10 @@ function App() {
                         }
                         />
                         <Route path="/legacy" element={<Legacy />} />
+                        <Route path="/about" element={<AboutPage />} />
+                        <Route path="/all-practices" element={<PracticeAreasPage />} />
+                        <Route path="/contact" element={<ContactPage />} />
+
                         <Route path="/careers" element={<Careers />} />
                         <Route path="/blogs" element={<Blogs />} />
                         <Route path="/publications" element={<Publications />} />

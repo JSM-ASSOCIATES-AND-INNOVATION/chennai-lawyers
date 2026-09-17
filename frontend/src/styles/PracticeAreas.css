@@ -134,11 +134,6 @@
         padding: 1.5rem 1rem;
     }
 }
-    
-    .practice-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
 
 @media screen and (max-width: 480px) {
     .practice-grid {

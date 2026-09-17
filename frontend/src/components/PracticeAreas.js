@@ -25,6 +25,9 @@ const PracticeAreas = () => {
             <div className="practice-container">
                 
                 <div className="practice-header">
+                    <div className="practice-header-right">
+                        <Link to="/all-practices" className="apple-link">EXPLORE ALL AREAS &rarr;</Link>
+                    </div>
                     <div className="practice-header-left">
                         <h4 className="practice-eyebrow">OUR PRACTICE AREAS</h4>
                         <h2 className="practice-title">Comprehensive Legal Solutions</h2>
