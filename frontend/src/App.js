@@ -22,6 +22,8 @@ import BlogPost from "./components/Pages/BlogPost/BlogPost";
 import EventDetails from "./components/Pages/EventDetails/EventDetails";
 
 import AcademicSection from "./components/Pages/AcademicSection/AcademicSection";
+import LegalDisclaimer from "./components/Shared/LegalDisclaimer/LegalDisclaimer";
+import CookieConsent from "./components/Shared/CookieConsent/CookieConsent";
 import Preloader from "./components/Shared/Preloader/Preloader";
 
 // --- ADMIN IMPORTS ---
@@ -117,6 +119,10 @@ function App() {
 
     return (
         <ThemeProvider>
+
+            
+            <LegalDisclaimer />
+            <CookieConsent />
 
             {/* 🚨 THE PRELOADER COMPONENT */}
             {showPreloader && <Preloader onComplete={() => setShowPreloader(false)} />}
