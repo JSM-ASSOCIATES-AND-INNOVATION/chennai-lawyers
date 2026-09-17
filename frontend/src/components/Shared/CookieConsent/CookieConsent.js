@@ -34,6 +34,11 @@ const CookieConsent = () => {
         setIsVisible(false);
     };
 
+    const handleReject = () => {
+        localStorage.setItem('cookieConsentAgreed', 'false');
+        setIsVisible(false);
+    };
+
     if (!isVisible) return null;
 
     return (
@@ -44,8 +49,11 @@ const CookieConsent = () => {
                 </p>
             </div>
             <div className="cookie-actions">
-                <button className="apple-btn primary-btn cookie-btn" onClick={handleAccept}>
+                <button className="cookie-btn cookie-accept" onClick={handleAccept}>
                     Accept
+                </button>
+                <button className="cookie-btn cookie-reject" onClick={handleReject}>
+                    Reject
                 </button>
                 <button className="close-cookie" onClick={() => setIsVisible(false)}>
                     <X size={20} />
