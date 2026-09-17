@@ -10,26 +10,26 @@ const InsightsPreview = () => {
 
     const mockInsights = [
         {
-            category: "Award",
-            title: 'Awarded the coveted "Legal Counsel of the Year - 2018" by INBA.',
-            date: "2018",
+            category: "Interview",
+            title: "Exclusive Interview: The Future of Corporate Litigation and Dispute Resolution in India.",
+            date: "Recent",
             link: "/blogs"
         },
         {
-            category: "Recognition",
-            title: 'Featured in "GC Power List India 2018" by Legal 500.',
-            date: "2018",
+            category: "News",
+            title: "Chennai Lawyers Expands Practice to Handle Complex International Arbitration Cases.",
+            date: "Recent",
             link: "/blogs"
         },
         {
-            category: "Publication",
-            title: "Authored numerous articles regarding complex legal issues in renowned magazines.",
+            category: "Blog",
+            title: "Understanding the Implications of the New Digital Personal Data Protection Act.",
             date: "Ongoing",
             link: "/blogs"
         },
         {
-            category: "Pro Bono",
-            title: "Active involvement in pro bono activities heavily appreciated by the general public and media.",
+            category: "Publication",
+            title: "Authored numerous articles regarding complex legal issues in renowned national magazines.",
             date: "Ongoing",
             link: "/blogs"
         }
