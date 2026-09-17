@@ -1,30 +1,30 @@
-/* PREMIUM HOME ABOUT SECTION */
+/* PREMIUM HOME ABOUT SECTION - SINGLE SLIDE FIT */
 
 .about-section {
-    padding: 8rem 0;
+    height: 100vh; /* Force exactly one viewport height */
+    min-height: 800px;
+    display: flex;
+    align-items: center;
     position: relative;
     background: var(--bg-main);
+    overflow: hidden; /* No scrolling inside this slide */
 }
 
 .about-container {
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 2rem;
+    width: 100%;
 }
 
 .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 5rem;
-    align-items: start;
+    gap: 4rem;
+    align-items: center;
 }
 
 /* LEFT COLUMN - CONTENT */
-.about-content-wrapper {
-    position: sticky;
-    top: 150px;
-}
-
 .glass-panel {
     background: rgba(255, 255, 255, 0.03);
     backdrop-filter: blur(20px);
@@ -41,8 +41,8 @@
     box-shadow: 0 30px 60px rgba(0,0,0,0.05);
 }
 
-.dark-theme .about-sticky-content { border-top: 2px solid rgba(255, 191, 0, 0.3); }
-.light-theme .about-sticky-content { border-top: 2px solid rgba(205, 0, 0, 0.3); }
+.dark-theme .about-content-wrapper { border-top: 2px solid rgba(255, 191, 0, 0.3); }
+.light-theme .about-content-wrapper { border-top: 2px solid rgba(205, 0, 0, 0.3); }
 
 .about-eyebrow {
     font-size: 0.85rem;
@@ -59,24 +59,24 @@
     font-family: 'Playfair Display', serif;
     font-weight: 400;
     line-height: 1.1;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     color: var(--text-heading);
 }
 
 .about-accent-line {
     width: 60px;
     height: 3px;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     border-radius: 2px;
 }
 .dark-theme .about-accent-line { background: #FFBF00; }
 .light-theme .about-accent-line { background: #CD0000; }
 
 .about-description {
-    font-size: 1.15rem;
-    line-height: 1.9;
+    font-size: 1.1rem;
+    line-height: 1.8;
     color: var(--text-muted);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
 }
 
 .justified-text {
@@ -85,55 +85,16 @@
 }
 
 .about-action-wrapper {
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
 /* RIGHT COLUMN - VISUALS & STATS */
 .about-visuals-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
-}
-
-.about-stats-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-}
-
-.stat-glass-card {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.04);
-    border-radius: 16px;
-    padding: 2rem 1.5rem;
-    text-align: center;
-    transition: transform 0.4s ease;
-}
-
-.light-theme .stat-glass-card {
-    background: rgba(0, 0, 0, 0.02);
-    border: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.stat-glass-card:hover {
-    transform: translateY(-5px);
-}
-
-.stat-number {
-    font-size: 2.2rem;
-    font-family: 'Playfair Display', serif;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-}
-.dark-theme .stat-number { color: #FFBF00; }
-.light-theme .stat-number { color: #CD0000; }
-
-.stat-label {
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--text-muted);
-    font-weight: 600;
+    gap: 2rem;
+    height: 100%;
+    justify-content: center;
 }
 
 /* IMAGE CONTAINER */
@@ -142,7 +103,7 @@
     width: 100%;
     border-radius: 24px;
     overflow: hidden;
-    aspect-ratio: 4/5;
+    height: 400px;
 }
 
 .about-image {
@@ -165,10 +126,10 @@
 /* QUOTE BOX */
 .about-quote-box {
     position: absolute;
-    bottom: 2rem;
-    left: 2rem;
-    right: 2rem;
-    padding: 2rem;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    right: 1.5rem;
+    padding: 1.5rem;
     border-radius: 16px;
     border-top: none;
     border-left: 3px solid;
@@ -177,20 +138,19 @@
 .light-theme .about-quote-box { border-left-color: #CD0000; }
 
 .about-quote {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     font-family: 'Playfair Display', serif;
     font-style: italic;
     color: #F5F5F7;
-    line-height: 1.5;
-    margin-bottom: 1rem;
+    line-height: 1.4;
+    margin-bottom: 0.75rem;
 }
-
 .light-theme .about-quote { color: #111; }
 
 .quote-divider {
     width: 30px;
     height: 2px;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
 }
 .dark-theme .quote-divider { background: #FFBF00; }
 .light-theme .quote-divider { background: #CD0000; }
@@ -204,43 +164,73 @@
 .dark-theme .quote-author { color: #FFBF00; }
 .light-theme .quote-author { color: #CD0000; }
 
+/* STATS */
+.about-stats-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.stat-glass-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 16px;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    transition: transform 0.4s ease;
+}
+.light-theme .stat-glass-card {
+    background: rgba(0, 0, 0, 0.02);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.stat-glass-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+.dark-theme .stat-number { color: #FFBF00; }
+.light-theme .stat-number { color: #CD0000; }
+
+.stat-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
 /* MOBILE RESPONSIVE */
 @media (max-width: 992px) {
+    .about-section {
+        height: auto;
+        padding: 5rem 0;
+    }
     .about-grid {
         grid-template-columns: 1fr;
-        gap: 4rem;
-    }
-    .about-content-wrapper {
-        position: relative;
-        top: 0;
+        gap: 3rem;
     }
     .about-image-container {
-        aspect-ratio: 16/9;
+        height: 350px;
     }
 }
 
 @media (max-width: 768px) {
-    .about-section {
-        padding: 5rem 0;
-    }
     .glass-panel, .about-quote-box {
-        padding: 2rem 1.5rem;
+        padding: 1.5rem;
     }
     .about-stats-container {
         grid-template-columns: 1fr;
     }
     .stat-glass-card {
-        padding: 1.5rem;
+        padding: 1.25rem;
     }
     .about-image-container {
-        aspect-ratio: 1/1;
-    }
-    .about-quote-box {
-        bottom: 1rem;
-        left: 1rem;
-        right: 1rem;
-    }
-    .about-quote {
-        font-size: 1.1rem;
+        height: 300px;
     }
 }
