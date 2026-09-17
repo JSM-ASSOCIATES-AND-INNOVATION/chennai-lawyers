@@ -4,7 +4,7 @@ import {
 } from "lucide-react";
 
 // 🚨 IMPORT THE NEW DEDICATED CSS
-import "../../styles/admin/AdminTabs.css";
+import './AdminTabs.css';
 
 const API_BASE_URL = "http://localhost:5001/api";
 

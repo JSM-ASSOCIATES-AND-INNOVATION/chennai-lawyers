@@ -4,7 +4,7 @@ import axios from "axios";
 import { ArrowLeft, FileText, Mail, Phone, Calendar, Trash2, Eye, Clock, User, Download } from "lucide-react";
 
 // 🚨 IMPORT THE NEW CSS FILE
-import "../../styles/admin/AdminApplications.css";
+import './AdminApplications.css';
 
 // 🛡️ 1. THE ERROR BOUNDARY (Prevents the Blank Screen)
 class ErrorBoundary extends Component {

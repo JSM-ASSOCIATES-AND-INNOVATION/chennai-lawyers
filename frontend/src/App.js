@@ -4,42 +4,42 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from "react-route
 // 🚨 IMPORT THE NEW UNIFIED GLOBAL CSS ENGINE 🚨
 import "./styles/global.css";
 
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import PracticeAreas from "./components/PracticeAreas";
-import ContactForm from "./components/ContactForm";
-import Footer from "./components/Footer";
-import Testimonials from "./components/Testimonials";
-import Ourpeople from "./components/Ourpeople";
-import InsightsPreview from "./components/InsightsPreview";
-import About from "./components/About";
-import AboutPage from "./components/AboutPage";
-import PracticeAreasPage from "./components/PracticeAreasPage";
-import ContactPage from "./components/ContactPage";
+import Navbar from "./components/Navbar/Navbar";
+import Hero from "./components/Home/Hero/Hero";
+import PracticeAreas from "./components/Home/PracticeAreas/PracticeAreas";
+import ContactForm from "./components/Home/ContactForm/ContactForm";
+import Footer from "./components/Footer/Footer";
+import Testimonials from "./components/Home/Testimonials/Testimonials";
+import Ourpeople from "./components/Home/Ourpeople/Ourpeople";
+import InsightsPreview from "./components/Home/InsightsPreview/InsightsPreview";
+import About from "./components/Home/About/About";
+import AboutPage from "./components/Pages/AboutPage/AboutPage";
+import PracticeAreasPage from "./components/Pages/PracticeAreasPage/PracticeAreasPage";
+import ContactPage from "./components/Pages/ContactPage/ContactPage";
 
-import DotNavigation from "./components/DotNavigation";
-import Careers from "./components/Career";
-import { ThemeProvider } from "./components/ThemeContext";
-import Blogs from "./components/Blogs";
-import Publications from "./components/Publications";
-import Events from "./components/Events";
-import Legacy from "./components/Legacy";
-import Team from "./components/Team";
-import BlogPost from "./components/BlogPost";
-import EventDetails from "./components/EventDetails";
+import DotNavigation from "./components/Shared/DotNavigation/DotNavigation";
+import Careers from "./components/Pages/Career/Career";
+import { ThemeProvider } from "./components/Shared/ThemeContext/ThemeContext";
+import Blogs from "./components/Pages/Blogs/Blogs";
+import Publications from "./components/Pages/Publications/Publications";
+import Events from "./components/Pages/Events/Events";
+import Legacy from "./components/Pages/Legacy/Legacy";
+import Team from "./components/Pages/Team/Team";
+import BlogPost from "./components/Pages/BlogPost/BlogPost";
+import EventDetails from "./components/Pages/EventDetails/EventDetails";
 
-import AcademicSection from "./components/AcademicSection";
-import Preloader from "./components/Preloader";
+import AcademicSection from "./components/Pages/AcademicSection/AcademicSection";
+import Preloader from "./components/Shared/Preloader/Preloader";
 
 // --- ADMIN IMPORTS ---
 import Admin from "./components/admin";
-import AdminDashboard from "./components/admin/AdminDashboard";
-import AdminBlogManager from "./components/admin/AdminBlogManager";
-import AdminEventManager from "./components/admin/AdminEventManager";
-import AdminTeamManager from "./components/admin/AdminTeamManager";
-import AdminApplications from "./components/admin/AdminApplications";
-import AdminAcademicManager from "./components/admin/AdminAcademicManager";
-import AdminContactManager from "./components/admin/AdminContactManager";
+import AdminDashboard from "./components/Admin/AdminDashboard";
+import AdminBlogManager from "./components/Admin/AdminBlogManager";
+import AdminEventManager from "./components/Admin/AdminEventManager";
+import AdminTeamManager from "./components/Admin/AdminTeamManager";
+import AdminApplications from "./components/Admin/AdminApplications";
+import AdminAcademicManager from "./components/Admin/AdminAcademicManager";
+import AdminContactManager from "./components/Admin/AdminContactManager";
 
 const ScrollToTop = () => {
     const { pathname, hash } = useLocation();

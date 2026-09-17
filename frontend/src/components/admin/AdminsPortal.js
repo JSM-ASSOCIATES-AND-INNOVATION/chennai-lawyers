@@ -7,7 +7,7 @@ import ArticleEditor from "./admin/ArticleEditor";
 import { SubmissionsHub, IssueManager, BoardManager, AnnouncementsManager } from "./admin/AdminTabs";
 
 // 2. Import Layout CSS (Ensure this path is correct based on your file tree)
-import "../styles/admin/AdminPortal.css";
+import './AdminPortal.css';
 
 // 3. Connect to the Live Backend
 const API_BASE_URL = "http://127.0.0.1:5001/api";

@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { BookOpen, Calendar, Users, ClipboardList, LogOut, GraduationCap, Mail } from "lucide-react";
-import "../../styles/admin/AdminDashboard.css";
+import './AdminDashboard.css';
 
 const AdminDashboard = () => {
     const navigate = useNavigate();

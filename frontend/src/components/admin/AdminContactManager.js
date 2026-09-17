@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { ArrowLeft, Trash2, Mail, Calendar, User, Phone, Briefcase, Clock } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import "../../styles/admin/AdminContactManager.css";
+import './AdminContactManager.css';
 
 export default function AdminContactManager() {
     const navigate = useNavigate();

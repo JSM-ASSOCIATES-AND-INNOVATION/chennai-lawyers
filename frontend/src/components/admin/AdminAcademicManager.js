@@ -4,7 +4,7 @@ import { ArrowLeft, Trash2, GraduationCap, Plus, Image as ImageIcon } from "luci
 import { useNavigate } from "react-router-dom";
 
 // 🚨 IMPORT THE NEW CSS FILE
-import "../../styles/admin/AdminAcademicManager.css";
+import './AdminAcademicManager.css';
 
 // 🚨 SMART RESOLVER
 const resolveUrl = (url) => {

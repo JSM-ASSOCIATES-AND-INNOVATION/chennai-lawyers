@@ -4,7 +4,7 @@ import axios from "axios";
 import { Plus, Edit3, Trash2, X, UploadCloud, Users, ArrowUp, ArrowDown, ArrowLeft } from "lucide-react";
 
 // 🚨 IMPORT THE NEW DEDICATED CSS
-import "../../styles/admin/AdminTeamManager.css";
+import './AdminTeamManager.css';
 
 const AdminTeamManager = () => {
     const navigate = useNavigate();

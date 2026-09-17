@@ -6,7 +6,7 @@ import "react-easy-crop/react-easy-crop.css";
 import { ArrowLeft, Save, UploadCloud, Edit3, Trash2, Calendar, Plus, ArrowUp, ArrowDown, ImageIcon, ChevronLeft, ChevronRight, MapPin, Users, Clock } from "lucide-react";
 
 // 🚨 IMPORT THE NEW DEDICATED CSS
-import "../../styles/admin/AdminEventManager.css";
+import './AdminEventManager.css';
 
 // --- SMART RESOLVER ---
 const resolveUrl = (url) => {
