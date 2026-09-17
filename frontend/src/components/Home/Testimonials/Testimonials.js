@@ -1,89 +1,83 @@
 import React from 'react';
 import { useTheme } from "../../Shared/ThemeContext/ThemeContext";
-import { Star, Award } from 'lucide-react';
+import { Star, Award, ShieldCheck } from 'lucide-react';
 import './Testimonials.css';
 
 const awards = [
     {
         id: 1,
-        title: "Legal Counsel of the Year - 2018",
-        issuer: "Indian National Bar Association (INBA)",
-        description: "Awarded for exceptional contribution to the legal profession and outstanding client service."
+        title: "Top Global Legal Leader 2019",
+        issuer: "Legal/IP Gorilla, Singapore",
+        description: "Awarded for exceptional leadership in international law and IP protection."
     },
     {
         id: 2,
-        title: "Excellence in Corporate Law",
-        issuer: "National Legal Awards",
-        description: "Recognized for handling complex corporate structuring and high-stakes negotiations."
+        title: "GC Powerlist India 2018",
+        issuer: "Legal 500, UK",
+        description: "Recognized among the most influential and innovative legal counsel in India."
     },
     {
         id: 3,
-        title: "Leading Dispute Resolution Firm",
-        issuer: "Legal Era Recognitions",
-        description: "Honored for maintaining a pristine track record in complex commercial litigation."
-    },
-    {
-        id: 4,
-        title: "Top Intellectual Property Counsel",
-        issuer: "IP Rights Federation",
-        description: "Awarded for protecting multi-million dollar corporate assets and innovations."
+        title: "Legal Counsel of the Year 2018",
+        issuer: "Indian National Bar Association",
+        description: "Honored for outstanding contribution to the legal profession and client service."
     }
 ];
 
-const row1Reviews = [
+const googleReviews = [
     {
         id: 1,
-        text: "After months of stalled negotiations, the team at JSM Associates secured a highly favorable settlement for our corporate dispute.",
-        author: "Priya M.",
-        role: "Founder of NextGen Solutions"
+        text: "Advocate Satish Kumar and the team handled our corporate compliance seamlessly. Their deep understanding of the law and proactive approach saved us immense time. Truly a 5-star experience.",
+        author: "Prakash V.",
+        role: "Corporate Client"
     },
     {
         id: 2,
-        text: "Their expert legal counsel during our merger was invaluable. Truly a top-tier law firm with exceptional attention to detail.",
-        author: "Abhishek T.",
-        role: "CEO of FashionVibes India"
+        text: "Exceptional service! They guided me through a highly complex property dispute with professionalism and sharp legal acumen. I felt confident every step of the way.",
+        author: "Meera Krishnan",
+        role: "Private Client"
     },
     {
         id: 3,
-        text: "JSM's swift action in our intellectual property case saved us millions. Their litigators are sharp and deeply dedicated.",
-        author: "David H.",
-        role: "Tech Innovators Inc."
-    },
-    {
-        id: 4,
-        text: "They transformed a complex regulatory compliance issue into a clear, manageable process. Highly recommended!",
-        author: "Anjali P.",
-        role: "Director at Wanderland"
+        text: "Highly recommended for their transparency and dedication. The way they strategize and execute is commendable. One of the best law firms in Chennai.",
+        author: "Rajan S.",
+        role: "Business Owner"
     }
 ];
 
 const AwardCard = ({ award }) => (
-    <div className="review-card award-card">
-        <div className="award-icon-wrapper">
-            <Award size={24} color="#C49B55" />
+    <div className="award-glass-card">
+        <div className="award-icon-header">
+            <Award size={22} className="accent-icon" />
+            <span className="award-issuer">{award.issuer}</span>
         </div>
-        <p className="award-title">"{award.title}"</p>
+        <h4 className="award-title">"{award.title}"</h4>
         <p className="award-desc">{award.description}</p>
-        <div className="review-author-box">
-            <div className="author-details">
-                <span className="author-name">{award.issuer}</span>
-            </div>
-        </div>
     </div>
 );
 
 const ReviewCard = ({ review }) => (
-    <div className="review-card">
-        <div className="review-stars">
-            {[...Array(5)].map((_, i) => (
-                <Star key={i} size={16} fill="#C49B55" color="#C49B55" />
-            ))}
+    <div className="review-glass-card">
+        <div className="review-google-header">
+            <div className="google-badge">
+                <span className="g-blue">G</span><span className="g-red">o</span><span className="g-yellow">o</span><span className="g-blue">g</span><span className="g-green">l</span><span className="g-red">e</span>
+                <span className="google-review-text">Review</span>
+            </div>
+            <div className="review-stars">
+                {[...Array(5)].map((_, i) => (
+                    <Star key={i} size={14} fill="#FBBC05" color="#FBBC05" />
+                ))}
+            </div>
         </div>
         <p className="review-text">"{review.text}"</p>
-        <div className="review-author-box">
-            <div className="author-details">
-                <span className="author-name">{review.author}</span>
-                <span className="author-role">{review.role}</span>
+        <div className="review-author-info">
+            <div className="author-avatar">{review.author.charAt(0)}</div>
+            <div>
+                <div className="author-name">{review.author}</div>
+                <div className="author-role">
+                    <ShieldCheck size={12} color="#34A853" style={{ marginRight: '4px' }} />
+                    Verified {review.role}
+                </div>
             </div>
         </div>
     </div>
@@ -93,49 +87,40 @@ const Testimonials = () => {
     const { isDarkTheme } = useTheme();
 
     return (
-        <section className={`testimonials-section ${isDarkTheme ? 'dark-theme' : 'light-theme'}`} id="testimonials">
-            <div className="testimonials-container">
+        <section className={`reputation-section ${isDarkTheme ? 'dark-theme' : 'light-theme'}`} id="reputation">
+            <div className="reputation-container">
                 
-                {/* Awards Header */}
-                <div className="testimonials-header">
-                    <div className="testimonials-header-left">
-                        <h4 className="testimonials-eyebrow">AWARDS & RECOGNITION</h4>
-                        <h2 className="testimonials-title">Excellence in Legal Practice</h2>
+                {/* 50/50 Split Grid for 100vh slide */}
+                <div className="reputation-grid">
+                    
+                    {/* LEFT COLUMN: AWARDS */}
+                    <div className="reputation-column">
+                        <div className="reputation-header">
+                            <h4 className="reputation-eyebrow">Recognitions</h4>
+                            <h2 className="reputation-title">Global Awards</h2>
+                            <div className="reputation-accent-line"></div>
+                        </div>
+                        <div className="cards-stack">
+                            {awards.map((award) => (
+                                <AwardCard key={award.id} award={award} />
+                            ))}
+                        </div>
                     </div>
-                </div>
 
-                {/* Awards Marquee */}
-                <div className="marquee-container">
-                    <div className="marquee-track track-1">
-                        {awards.map((award) => (
-                            <AwardCard key={award.id} award={award} />
-                        ))}
-                        {/* Duplicate for infinite scroll */}
-                        {awards.map((award) => (
-                            <AwardCard key={`${award.id}-dup`} award={award} />
-                        ))}
+                    {/* RIGHT COLUMN: TESTIMONIALS */}
+                    <div className="reputation-column">
+                        <div className="reputation-header">
+                            <h4 className="reputation-eyebrow">Testimonials</h4>
+                            <h2 className="reputation-title">Client Trust</h2>
+                            <div className="reputation-accent-line"></div>
+                        </div>
+                        <div className="cards-stack">
+                            {googleReviews.map((review) => (
+                                <ReviewCard key={review.id} review={review} />
+                            ))}
+                        </div>
                     </div>
-                </div>
 
-                {/* Testimonials Header */}
-                <div className="testimonials-header" style={{ marginTop: '1rem' }}>
-                    <div className="testimonials-header-left">
-                        <h4 className="testimonials-eyebrow">TESTIMONIALS</h4>
-                        <h2 className="testimonials-title">Client Perspectives</h2>
-                    </div>
-                </div>
-
-                {/* Testimonials Marquee */}
-                <div className="marquee-container">
-                    <div className="marquee-track track-2">
-                        {row1Reviews.map((review) => (
-                            <ReviewCard key={review.id} review={review} />
-                        ))}
-                        {/* Duplicate for infinite scroll */}
-                        {row1Reviews.map((review) => (
-                            <ReviewCard key={`${review.id}-dup`} review={review} />
-                        ))}
-                    </div>
                 </div>
                 
             </div>
