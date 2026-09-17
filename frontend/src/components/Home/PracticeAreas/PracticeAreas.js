@@ -1,49 +1,67 @@
 import { Link } from "react-router-dom";
 import React from 'react';
 import { useTheme } from "../../Shared/ThemeContext/ThemeContext";
+import { 
+    Briefcase, ShieldAlert, Users, Shield, 
+    Gavel, Pill, Landmark, Lightbulb, ArrowRight
+} from 'lucide-react';
 import './PracticeAreas.css';
 
 const PracticeAreas = () => {
     const { isDarkTheme } = useTheme();
 
     const practices = [
-        { title: 'Civil Law', url: '/all-practices' },
-        { title: 'Corporate Law', url: '/all-practices' },
-        { title: 'Family Law', url: '/all-practices' },
-        { title: 'Criminal Law', url: '/all-practices' },
-        { title: 'Consumer Law', url: '/all-practices' },
-        { title: 'Data Protection & Privacy', url: '/all-practices' },
-        { title: 'Intellectual Property', url: '/all-practices' },
-        { title: 'Narcotics & Drugs Act', url: '/all-practices' }
+        { title: 'Civil Law', icon: <Landmark size={24} strokeWidth={1.5} />, url: '/all-practices' },
+        { title: 'Corporate Law', icon: <Briefcase size={24} strokeWidth={1.5} />, url: '/all-practices' },
+        { title: 'Family Law', icon: <Users size={24} strokeWidth={1.5} />, url: '/all-practices' },
+        { title: 'Criminal Law', icon: <Gavel size={24} strokeWidth={1.5} />, url: '/all-practices' },
+        { title: 'Consumer Law', icon: <ShieldAlert size={24} strokeWidth={1.5} />, url: '/all-practices' },
+        { title: 'Data Protection & Privacy', icon: <Shield size={24} strokeWidth={1.5} />, url: '/all-practices' },
+        { title: 'Intellectual Property', icon: <Lightbulb size={24} strokeWidth={1.5} />, url: '/all-practices' },
+        { title: 'Narcotics & Drugs Act', icon: <Pill size={24} strokeWidth={1.5} />, url: '/all-practices' }
     ];
 
     return (
-        <section className={`practice-section tlh-style ${isDarkTheme ? 'dark-theme' : 'light-theme'}`} id="practice-areas">
-            <div className="practice-container tlh-container">
-                <div className="tlh-layout">
+        <section className={`practice-section liquid-glass-style ${isDarkTheme ? 'dark-theme' : 'light-theme'}`} id="practice-areas">
+            <div className="practice-container">
+                <div className="pg-layout">
                     
                     {/* Left Column (Sticky Header) */}
-                    <div className="tlh-left">
-                        <h2 className="tlh-title">Practice Areas</h2>
-                        <div className="tlh-accent-line"></div>
-                        <p className="tlh-description">
-                            Our nuanced understanding of the legal landscape equips us to effectively counsel international and domestic businesses, operations and investments across varied practice areas
-                        </p>
+                    <div className="pg-left">
+                        <div className="pg-sticky-content glass-panel">
+                            <h4 className="pg-eyebrow">OUR EXPERTISE</h4>
+                            <h2 className="pg-title">Comprehensive<br/>Legal Solutions.</h2>
+                            <div className="pg-accent-line"></div>
+                            <p className="pg-description">
+                                Our nuanced understanding of the legal landscape equips us to effectively counsel international and domestic businesses, operations and investments across varied practice areas.
+                            </p>
+                        </div>
                     </div>
 
                     {/* Right Column (List of Links) */}
-                    <div className="tlh-right">
-                        {practices.map((practice, index) => (
-                            <Link to={practice.url} key={index} className="tlh-practice-link">
-                                <div>{practice.title}</div>
-                                <div className="tlh-arrow-icon">
-                                    <svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M0.761719 1.62158L6.09616 6.95602L0.792858 12.2593" stroke="currentColor" strokeWidth="2"/>
-                                    </svg>
-                                </div>
-                                <div className="tlh-link-border"></div>
+                    <div className="pg-right">
+                        <div className="pg-list-wrapper">
+                            {practices.map((practice, index) => (
+                                <Link to={practice.url} key={index} className="pg-practice-card glass-card">
+                                    <div className="pg-card-left">
+                                        <div className="pg-icon-wrapper">
+                                            {practice.icon}
+                                        </div>
+                                        <h3 className="pg-card-title">{practice.title}</h3>
+                                    </div>
+                                    <div className="pg-arrow-wrapper">
+                                        <ArrowRight size={20} strokeWidth={1.5} />
+                                    </div>
+                                    <div className="pg-hover-reveal"></div>
+                                </Link>
+                            ))}
+                        </div>
+                        
+                        <div className="pg-action-wrapper">
+                            <Link to="/all-practices" className="apple-btn primary-btn glass-btn">
+                                VIEW ALL PRACTICE AREAS <span style={{marginLeft: '8px'}}>→</span>
                             </Link>
-                        ))}
+                        </div>
                     </div>
 
                 </div>
