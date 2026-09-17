@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useTheme } from "../../Shared/ThemeContext/ThemeContext";
 import { Link } from 'react-router-dom';
-import { ArrowRight, Award, Shield, Users, Landmark } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import './AboutPage.css';
 
 const AboutPage = () => {
@@ -13,55 +13,66 @@ const AboutPage = () => {
 
     return (
         <div className={`about-page ${isDarkTheme ? 'dark-theme' : 'light-theme'}`}>
+            
             {/* HERO SECTION */}
             <section className="about-hero">
                 <div className="about-hero-overlay"></div>
                 <div className="about-hero-content">
-                    <h4 className="page-eyebrow">ABOUT OUR FIRM</h4>
-                    <h1 className="page-title">Justice. Access. Community.</h1>
-                    <p className="page-subtitle">
-                        A legacy of legal excellence and unwavering commitment to securing justice for our clients across India.
-                    </p>
+                    <h1 className="about-hero-title">A Legacy of <br/> Unyielding Advocacy.</h1>
                 </div>
             </section>
 
-            {/* MISSION & VISION */}
-            <section className="about-mission-section">
-                <div className="about-page-container">
-                    <div className="mission-grid">
-                        <div className="mission-text-content">
-                            <h2 className="section-title">Our Heritage & Mission</h2>
-                            <p className="section-paragraph">
-                                Founded on the principles of integrity, transparency, and relentless advocacy, JSM Associates & Innovation has grown from a boutique practice into a premier full-service law firm based in Chennai, India. 
+            {/* MAIN ABOUT CONTENT */}
+            <section className="about-main-section">
+                <div className="about-container">
+                    <div className="about-grid">
+                        
+                        {/* Left Side: Sticky Title */}
+                        <div className="about-grid-left">
+                            <div className="about-sticky-title">
+                                <h4 className="about-eyebrow">OUR FIRM</h4>
+                                <h2>Chennai Lawyers</h2>
+                                <div className="about-accent-line"></div>
+                            </div>
+                        </div>
+
+                        {/* Right Side: Justified Text Content */}
+                        <div className="about-grid-right">
+                            <p className="about-paragraph justified-text lead-paragraph">
+                                Founded on the core principles of integrity, transparency, and relentless advocacy, Chennai Lawyers (JSM Associates & Innovation) has established itself as a premier full-service law firm in India. We represent a convergence of profound legal scholarship and aggressive litigation strategy, designed to secure decisive victories for our clients in an increasingly complex world.
                             </p>
-                            <p className="section-paragraph">
-                                We believe that access to justice is a fundamental right. Our multidisciplinary team of seasoned advocates, consultants, and industry experts collaborate seamlessly to provide tailored, strategic legal solutions for individuals, corporations, and international entities.
+                            
+                            <p className="about-paragraph justified-text">
+                                We believe that access to justice is a fundamental right. Our multidisciplinary team of seasoned advocates, consultants, and industry experts collaborate seamlessly to provide tailored, strategic legal solutions for individuals, corporations, and international entities. We do not just navigate the legal landscape; we actively shape it through rigorous preparation and innovative legal theories.
                             </p>
-                            <p className="section-paragraph">
-                                Whether navigating complex commercial litigation, orchestrating cross-border corporate mergers, or defending constitutional rights, our approach remains the same: meticulous preparation, aggressive representation, and an unwavering focus on our clients' success.
+                            
+                            <p className="about-paragraph justified-text">
+                                Whether navigating complex commercial litigation, orchestrating cross-border corporate mergers, defending constitutional rights, or handling intricate family disputes, our approach remains resolutely the same. We take the time to deeply understand your unique objectives, ensuring every legal maneuver is precision-engineered for success.
                             </p>
                         </div>
-                        <div className="mission-stats-grid">
-                            <div className="stat-card-premium">
-                                <Landmark className="stat-icon" size={32} />
-                                <h3>35+</h3>
-                                <p>Years of Combined Legacy</p>
-                            </div>
-                            <div className="stat-card-premium">
-                                <Users className="stat-icon" size={32} />
-                                <h3>50+</h3>
-                                <p>Dedicated Legal Professionals</p>
-                            </div>
-                            <div className="stat-card-premium">
-                                <Shield className="stat-icon" size={32} />
-                                <h3>10k+</h3>
-                                <p>Successful Resolutions</p>
-                            </div>
-                            <div className="stat-card-premium">
-                                <Award className="stat-icon" size={32} />
-                                <h3>Tier 1</h3>
-                                <p>Firm Rankings</p>
-                            </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* AWARDS / RECOGNITIONS BANNER */}
+            <section className="about-stats-section">
+                <div className="about-container">
+                    <div className="stats-grid">
+                        <div className="stat-item">
+                            <h3>35+</h3>
+                            <p>Years of Legacy</p>
+                        </div>
+                        <div className="stat-item">
+                            <h3>Tier 1</h3>
+                            <p>Firm Rankings</p>
+                        </div>
+                        <div className="stat-item">
+                            <h3>10k+</h3>
+                            <p>Resolutions</p>
+                        </div>
+                        <div className="stat-item">
+                            <h3>50+</h3>
+                            <p>Professionals</p>
                         </div>
                     </div>
                 </div>
@@ -69,20 +80,31 @@ const AboutPage = () => {
 
             {/* CORE VALUES */}
             <section className="about-values-section">
-                <div className="about-page-container">
-                    <h2 className="section-title text-center">Our Core Values</h2>
-                    <div className="values-grid">
-                        <div className="value-card">
-                            <h4>Uncompromising Integrity</h4>
-                            <p>We uphold the highest ethical standards in every case, ensuring transparency and honesty in all client communications.</p>
+                <div className="about-container">
+                    <div className="about-grid">
+                        <div className="about-grid-left">
+                            <div className="about-sticky-title">
+                                <h4 className="about-eyebrow">OUR ETHOS</h4>
+                                <h2>Core Values</h2>
+                                <div className="about-accent-line"></div>
+                            </div>
                         </div>
-                        <div className="value-card">
-                            <h4>Client-Centric Approach</h4>
-                            <p>Every legal strategy is custom-tailored. We take the time to deeply understand your unique business objectives and personal goals.</p>
-                        </div>
-                        <div className="value-card">
-                            <h4>Innovative Solutions</h4>
-                            <p>The legal landscape is evolving. We leverage modern technology and progressive legal theories to solve complex, novel challenges.</p>
+                        
+                        <div className="about-grid-right">
+                            <div className="value-list">
+                                <div className="value-item">
+                                    <h3>Uncompromising Integrity</h3>
+                                    <p className="justified-text">We uphold the highest ethical standards in every case, ensuring absolute transparency and honesty in all client communications. Our reputation is built on trust that is never taken for granted.</p>
+                                </div>
+                                <div className="value-item">
+                                    <h3>Client-Centric Strategy</h3>
+                                    <p className="justified-text">Every legal strategy is custom-tailored. We recognize that no two cases are identical, and we dedicate the necessary resources to thoroughly understand the nuances of your specific situation.</p>
+                                </div>
+                                <div className="value-item">
+                                    <h3>Innovative Legal Solutions</h3>
+                                    <p className="justified-text">The legal landscape is perpetually evolving. We leverage modern technology and progressive, forward-thinking legal theories to solve complex, novel challenges that traditional practices cannot.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -90,13 +112,14 @@ const AboutPage = () => {
 
             {/* CTA SECTION */}
             <section className="about-cta-section">
-                <div className="about-page-container text-center">
-                    <h2 className="section-title">Ready to Discuss Your Case?</h2>
-                    <p className="section-paragraph center-para">
-                        Our team is available to review your legal needs and provide immediate, actionable counsel.
+                <div className="about-container text-center">
+                    <h2 className="cta-title">Partner with Excellence</h2>
+                    <p className="cta-paragraph">
+                        Our expert team is available to review your legal needs and provide immediate, actionable counsel.
                     </p>
-                    <Link to="/contact" className="apple-btn primary-btn" style={{ margin: '2rem auto 0' }}>
-                        CONTACT US TODAY <ArrowRight size={18} style={{marginLeft: '8px'}}/>
+                    <Link to="/contact" className="apple-btn primary-btn about-cta-btn">
+                        CONTACT US TODAY
+                        <ArrowRight size={18} />
                     </Link>
                 </div>
             </section>
