@@ -87,40 +87,57 @@ const Testimonials = () => {
     const { isDarkTheme } = useTheme();
 
     return (
-        <section className={`reputation-section ${isDarkTheme ? 'dark-theme' : 'light-theme'}`} id="reputation">
-            <div className="reputation-container">
+        <section className={`testimonials-section ${isDarkTheme ? 'dark-theme' : 'light-theme'}`} id="testimonials">
+            <div className="testimonials-container">
                 
-                {/* 50/50 Split Grid for 100vh slide */}
-                <div className="reputation-grid">
-                    
-                    {/* LEFT COLUMN: AWARDS */}
-                    <div className="reputation-column">
-                        <div className="reputation-header">
-                            <h4 className="reputation-eyebrow">Recognitions</h4>
-                            <h2 className="reputation-title">Global Awards</h2>
-                            <div className="reputation-accent-line"></div>
-                        </div>
-                        <div className="cards-stack">
-                            {awards.map((award) => (
-                                <AwardCard key={award.id} award={award} />
-                            ))}
-                        </div>
+                {/* Awards Header */}
+                <div className="testimonials-header">
+                    <div className="testimonials-header-left">
+                        <h4 className="testimonials-eyebrow">AWARDS & RECOGNITION</h4>
+                        <h2 className="testimonials-title">Excellence in Legal Practice</h2>
                     </div>
+                </div>
 
-                    {/* RIGHT COLUMN: TESTIMONIALS */}
-                    <div className="reputation-column">
-                        <div className="reputation-header">
-                            <h4 className="reputation-eyebrow">Testimonials</h4>
-                            <h2 className="reputation-title">Client Trust</h2>
-                            <div className="reputation-accent-line"></div>
-                        </div>
-                        <div className="cards-stack">
-                            {googleReviews.map((review) => (
-                                <ReviewCard key={review.id} review={review} />
-                            ))}
-                        </div>
+                {/* Awards Marquee */}
+                <div className="marquee-container">
+                    <div className="marquee-track track-1">
+                        {awards.map((award) => (
+                            <AwardCard key={award.id} award={award} />
+                        ))}
+                        {/* Duplicate for infinite scroll */}
+                        {awards.map((award) => (
+                            <AwardCard key={`${award.id}-dup`} award={award} />
+                        ))}
+                        {/* Triple for longer screens */}
+                        {awards.map((award) => (
+                            <AwardCard key={`${award.id}-tri`} award={award} />
+                        ))}
                     </div>
+                </div>
 
+                {/* Testimonials Header */}
+                <div className="testimonials-header" style={{ marginTop: '2rem' }}>
+                    <div className="testimonials-header-left">
+                        <h4 className="testimonials-eyebrow">TESTIMONIALS</h4>
+                        <h2 className="testimonials-title">Client Perspectives</h2>
+                    </div>
+                </div>
+
+                {/* Testimonials Marquee */}
+                <div className="marquee-container">
+                    <div className="marquee-track track-2">
+                        {googleReviews.map((review) => (
+                            <ReviewCard key={review.id} review={review} />
+                        ))}
+                        {/* Duplicate for infinite scroll */}
+                        {googleReviews.map((review) => (
+                            <ReviewCard key={`${review.id}-dup`} review={review} />
+                        ))}
+                        {/* Triple for longer screens */}
+                        {googleReviews.map((review) => (
+                            <ReviewCard key={`${review.id}-tri`} review={review} />
+                        ))}
+                    </div>
                 </div>
                 
             </div>

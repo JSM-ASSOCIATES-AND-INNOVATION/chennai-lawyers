@@ -403,3 +403,61 @@
         font-size: 1.1rem;
     }
 }
+
+@media (max-width: 768px) {
+    .stats-group {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 10px;
+    }
+    .stat-row {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+        border: none !important; /* Remove stacked borders */
+        border-right: 1px solid rgba(128,128,128,0.2) !important;
+    }
+    .stat-row:last-child {
+        border-right: none !important;
+    }
+    .stat-num {
+        font-size: 1.5rem !important; /* Shrink to fit */
+    }
+    .stat-name {
+        font-size: 0.75rem !important;
+    }
+    .legacy-grid {
+        gap: 1.5rem;
+    }
+    .big-number {
+        font-size: 3rem !important;
+    }
+    .grid-desc {
+        font-size: 0.95rem;
+    }
+    .watermark-text h1 {
+        font-size: 4rem; /* Shrink watermark */
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Ensure it all fits on one slide */
+    .legacy-container {
+        padding: 3rem 1rem !important;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .diagram-wrapper {
+        margin: 1.5rem 0 !important;
+    }
+    .node-title {
+        font-size: 0.8rem !important;
+    }
+}

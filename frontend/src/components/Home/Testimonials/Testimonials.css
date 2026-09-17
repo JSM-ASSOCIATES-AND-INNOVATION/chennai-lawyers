@@ -1,69 +1,108 @@
-/* PREMIUM REPUTATION SECTION (AWARDS & TESTIMONIALS) - ONE SLIDE FIT */
-
-.reputation-section {
-    height: 100vh;
-    min-height: 700px; /* Protect against too-small screens */
-    display: flex;
-    align-items: center;
-    background: var(--bg-main);
-    overflow: hidden; /* Lock into one slide */
+.testimonials-section {
+    padding: 6rem 0;
     position: relative;
+    overflow: hidden;
 }
 
-.reputation-container {
+.testimonials-container {
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 2rem;
-    width: 100%;
 }
 
-.reputation-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: flex-start;
+.testimonials-header {
+    margin-bottom: 3rem;
 }
 
-/* HEADERS */
-.reputation-header {
-    margin-bottom: 2rem;
-}
-
-.reputation-eyebrow {
-    font-size: 0.8rem;
+.testimonials-eyebrow {
+    font-size: 0.85rem;
     letter-spacing: 3px;
     text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
     font-weight: 600;
-    margin-bottom: 0.75rem;
 }
-.dark-theme .reputation-eyebrow { color: #FFBF00; }
-.light-theme .reputation-eyebrow { color: #CD0000; }
 
-.reputation-title {
-    font-size: clamp(2rem, 3vw, 2.8rem);
+.dark-theme .testimonials-eyebrow { color: #FFBF00; }
+.light-theme .testimonials-eyebrow { color: #CD0000; }
+
+.testimonials-title {
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
     font-family: 'Playfair Display', serif;
     font-weight: 400;
-    line-height: 1.1;
-    margin-bottom: 1rem;
     color: var(--text-heading);
+    line-height: 1.1;
 }
 
-.reputation-accent-line {
-    width: 40px;
-    height: 3px;
-    border-radius: 2px;
+/* MARQUEE CONTAINERS */
+.marquee-container {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    overflow: hidden;
+    position: relative;
+    padding: 1rem 0;
 }
-.dark-theme .reputation-accent-line { background: #FFBF00; }
-.light-theme .reputation-accent-line { background: #CD0000; }
 
-/* CARD STACKS */
-.cards-stack {
+/* Add slight gradient fade at edges */
+.marquee-container::before,
+.marquee-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 10%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.dark-theme .marquee-container::before {
+    left: 0;
+    background: linear-gradient(to right, var(--bg-main) 0%, transparent 100%);
+}
+.dark-theme .marquee-container::after {
+    right: 0;
+    background: linear-gradient(to left, var(--bg-main) 0%, transparent 100%);
+}
+
+.light-theme .marquee-container::before {
+    left: 0;
+    background: linear-gradient(to right, var(--bg-main) 0%, transparent 100%);
+}
+.light-theme .marquee-container::after {
+    right: 0;
+    background: linear-gradient(to left, var(--bg-main) 0%, transparent 100%);
+}
+
+.marquee-track {
     display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
+    gap: 2rem;
+    width: max-content;
+    will-change: transform;
 }
 
-/* SHARED GLASS CARD STYLES */
+.track-1 {
+    animation: scroll-left 40s linear infinite;
+}
+
+.track-2 {
+    animation: scroll-right 45s linear infinite;
+}
+
+.marquee-container:hover .marquee-track {
+    animation-play-state: paused;
+}
+
+@keyframes scroll-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-33.33%); }
+}
+
+@keyframes scroll-right {
+    0% { transform: translateX(-33.33%); }
+    100% { transform: translateX(0); }
+}
+
+/* CARDS */
 .award-glass-card,
 .review-glass-card {
     background: rgba(255, 255, 255, 0.02);
@@ -71,152 +110,138 @@
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 12px;
-    padding: 1.5rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 2rem;
+    width: 400px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
 .light-theme .award-glass-card,
 .light-theme .review-glass-card {
-    background: rgba(0, 0, 0, 0.02);
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
 .award-glass-card:hover,
 .review-glass-card:hover {
-    transform: translateY(-3px);
+    transform: translateY(-5px);
 }
 
-/* AWARDS SPECIFIC */
+.dark-theme .award-glass-card:hover { border-color: rgba(255, 191, 0, 0.4); }
+.light-theme .award-glass-card:hover { border-color: rgba(205, 0, 0, 0.4); }
+
+.dark-theme .review-glass-card:hover { border-color: rgba(255, 191, 0, 0.4); }
+.light-theme .review-glass-card:hover { border-color: rgba(205, 0, 0, 0.4); }
+
+/* Award Card specifics */
 .award-icon-header {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-bottom: 0.75rem;
+    margin-bottom: 1rem;
 }
-
 .accent-icon {
-    color: #C49B55;
+    color: var(--text-heading);
 }
-.light-theme .accent-icon { color: #CD0000; }
 .dark-theme .accent-icon { color: #FFBF00; }
+.light-theme .accent-icon { color: #CD0000; }
 
 .award-issuer {
-    font-size: 0.75rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 600;
-    color: var(--text-muted);
 }
-
 .award-title {
-    font-family: 'Playfair Display', serif;
     font-size: 1.25rem;
     color: var(--text-heading);
-    margin: 0 0 0.5rem 0;
+    margin-bottom: 0.75rem;
+    font-family: 'Playfair Display', serif;
 }
-
 .award-desc {
-    font-size: 0.95rem;
     color: var(--text-muted);
-    line-height: 1.5;
-    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
 }
 
-/* REVIEW SPECIFIC */
+/* Review Card specifics */
 .review-google-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1rem;
 }
-
 .google-badge {
+    font-size: 0.8rem;
+    font-weight: 600;
     display: flex;
     align-items: center;
-    gap: 6px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 1.1rem;
+    gap: 1px;
 }
-
 .g-blue { color: #4285F4; }
 .g-red { color: #EA4335; }
 .g-yellow { color: #FBBC05; }
 .g-green { color: #34A853; }
-
 .google-review-text {
-    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-left: 6px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: var(--text-muted);
-    font-weight: 600;
-    margin-left: 4px;
+    font-size: 0.75rem;
 }
-
 .review-stars {
     display: flex;
     gap: 2px;
 }
-
 .review-text {
-    font-size: 0.95rem;
+    font-size: 1rem;
     line-height: 1.6;
-    color: var(--text-main);
-    margin-bottom: 1.25rem;
+    color: var(--text-muted);
     font-style: italic;
+    margin-bottom: 1.5rem;
 }
-
 .review-author-info {
     display: flex;
     align-items: center;
     gap: 12px;
 }
-
 .author-avatar {
-    width: 36px;
-    height: 36px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
+    background: #111;
+    color: #FFF;
     display: flex;
-    justify-content: center;
     align-items: center;
-    color: #fff;
-    font-weight: bold;
+    justify-content: center;
+    font-weight: 700;
     font-size: 1.1rem;
 }
-.dark-theme .author-avatar { background: #FFBF00; color: #000; }
-.light-theme .author-avatar { background: #CD0000; }
-
+.light-theme .author-avatar { background: #f0f0f0; color: #111; }
 .author-name {
-    font-weight: 600;
-    font-size: 0.9rem;
     color: var(--text-heading);
-    margin-bottom: 2px;
+    font-weight: 600;
+    font-size: 0.95rem;
 }
-
 .author-role {
-    font-size: 0.75rem;
     color: var(--text-muted);
+    font-size: 0.8rem;
     display: flex;
     align-items: center;
-}
-
-/* MOBILE RESPONSIVE */
-@media (max-width: 1024px) {
-    .reputation-grid {
-        gap: 2rem;
-    }
 }
 
 @media (max-width: 768px) {
-    .reputation-section {
-        height: auto;
+    .testimonials-section {
         padding: 4rem 0;
     }
-    .reputation-grid {
-        grid-template-columns: 1fr;
-        gap: 3rem;
+    .testimonials-header {
+        text-align: center;
     }
-    .cards-stack {
-        gap: 1rem;
+    .award-glass-card,
+    .review-glass-card {
+        width: 320px;
+        padding: 1.5rem;
     }
 }
