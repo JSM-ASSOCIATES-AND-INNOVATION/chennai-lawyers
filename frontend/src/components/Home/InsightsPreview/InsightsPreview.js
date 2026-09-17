@@ -10,26 +10,20 @@ const InsightsPreview = () => {
 
     const mockInsights = [
         {
-            category: "Interview",
-            title: "Exclusive Interview: The Future of Corporate Litigation and Dispute Resolution in India.",
-            date: "Recent",
-            link: "/blogs"
-        },
-        {
             category: "News",
-            title: "Chennai Lawyers Expands Practice to Handle Complex International Arbitration Cases.",
+            title: "Chennai Lawyers Expands International Arbitration Practice.",
             date: "Recent",
             link: "/blogs"
         },
         {
-            category: "Blog",
-            title: "Understanding the Implications of the New Digital Personal Data Protection Act.",
-            date: "Ongoing",
+            category: "Insights",
+            title: "Digital Personal Data Protection Act: Corporate Compliance.",
+            date: "Trending",
             link: "/blogs"
         },
         {
-            category: "Publication",
-            title: "Authored numerous articles regarding complex legal issues in renowned national magazines.",
+            category: "Publications",
+            title: "Navigating High-Stakes Commercial Litigation in India.",
             date: "Ongoing",
             link: "/blogs"
         }
