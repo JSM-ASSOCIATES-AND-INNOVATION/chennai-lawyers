@@ -261,3 +261,19 @@
         grid-template-columns: 1fr;
     }
 }
+
+@media (max-width: 480px) {
+    .contact-form-wrapper input,
+    .contact-form-wrapper textarea {
+        padding: 15px; /* Bigger touch targets */
+        font-size: 16px; /* Prevents iOS auto-zoom */
+    }
+    .contact-form-wrapper .submit-btn {
+        width: 100%;
+        padding: 16px 24px !important;
+        font-size: 1rem !important;
+    }
+    .contact-info-column {
+        padding: 0 10px;
+    }
+}

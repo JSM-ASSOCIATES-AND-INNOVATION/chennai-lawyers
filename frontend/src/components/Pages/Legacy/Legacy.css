@@ -383,3 +383,23 @@
         text-align: left;
     }
 }
+@media (max-width: 768px) {
+    .legacy-content h2 {
+        text-align: center;
+        font-size: 2.2rem;
+    }
+    .legacy-content p {
+        text-align: center;
+        font-size: 1.05rem;
+    }
+    .big-stat {
+        text-align: center;
+    }
+    .big-stat .stat-number {
+        font-size: 4rem;
+        justify-content: center;
+    }
+    .big-stat .stat-label {
+        font-size: 1.1rem;
+    }
+}

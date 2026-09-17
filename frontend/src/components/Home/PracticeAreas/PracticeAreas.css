@@ -254,3 +254,15 @@
         justify-content: center;
     }
 }
+
+@media (max-width: 768px) {
+    .glass-panel {
+        text-align: center;
+    }
+    .pg-accent-line {
+        margin: 0 auto 2rem auto;
+    }
+    .pg-eyebrow {
+        text-align: center;
+    }
+}

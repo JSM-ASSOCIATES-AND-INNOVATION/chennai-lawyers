@@ -1,3 +1,4 @@
+import './NavbarMobile.css';
 import React, { useState, useEffect, useRef } from "react";
 import { ChevronDown, Menu, X, Sun, Moon } from "lucide-react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
