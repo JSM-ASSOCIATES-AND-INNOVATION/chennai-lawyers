@@ -39,7 +39,7 @@ const AcademicSection = () => {
                 <h2 className="academic-title">Academic Collaborations</h2>
                 <div className="academic-divider"></div>
                 <p className="academic-subtitle">
-                    JSM Associates proudly partners with leading institutions to empower the next generation of legal professionals.
+                    Chennai Lawyers proudly partners with leading institutions to empower the next generation of legal professionals.
                 </p>
             </div>
 

@@ -73,11 +73,11 @@ const Blogs = () => {
     const handleShare = async (e, post) => {
         e.stopPropagation(); // Prevents the card from navigating when you click share
         const url = `${window.location.origin}/blog/${post._id}`;
-        const title = post.title || 'JSM Associates Legal Insight';
+        const title = post.title || 'Chennai Lawyers Legal Insight';
 
         if (navigator.share) {
             try {
-                await navigator.share({ title, text: 'Check out this legal insight from JSM Associates.', url });
+                await navigator.share({ title, text: 'Check out this legal insight from Chennai Lawyers.', url });
             } catch (err) {
                 console.error('Error sharing:', err);
             }
@@ -176,7 +176,7 @@ const Blogs = () => {
 
                             <div className="card-footer">
                                 <div className="card-author">
-                                    <User size={16} color="var(--accent-primary)" /> {featuredPost.authorDetails?.name || featuredPost.author?.name || "JSM Associates"}
+                                    <User size={16} color="var(--accent-primary)" /> {featuredPost.authorDetails?.name || featuredPost.author?.name || "Chennai Lawyers"}
                                 </div>
                                 <span className="read-more-text">
                                     Read Article <ArrowRight size={16} />
@@ -224,7 +224,7 @@ const Blogs = () => {
 
                                     <div className="card-footer">
                                         <div className="card-author">
-                                            <User size={14} color="var(--accent-primary)" /> {post.authorDetails?.name || post.author?.name || "JSM Associates"}
+                                            <User size={14} color="var(--accent-primary)" /> {post.authorDetails?.name || post.author?.name || "Chennai Lawyers"}
                                         </div>
                                         <ArrowRight size={18} color="var(--accent-primary)" />
                                     </div>

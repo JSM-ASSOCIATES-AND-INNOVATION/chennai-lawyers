@@ -85,7 +85,7 @@ const Legacy = () => {
                             <div className="grid-label">Our Impact</div>
                             <div className="big-number">25+</div>
                             <p className="grid-desc">
-                                For over a quarter of a century, JSM Associates has set the benchmark for legal excellence. We have navigated the most complex landscapes to protect our clients' interests, secure their assets, and forge a legacy of absolute trust.
+                                For over a quarter of a century, Chennai Lawyers has set the benchmark for legal excellence. We have navigated the most complex landscapes to protect our clients' interests, secure their assets, and forge a legacy of absolute trust.
                             </p>
                         </div>
 

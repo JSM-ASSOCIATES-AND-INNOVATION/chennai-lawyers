@@ -356,7 +356,7 @@ const AdminBlogManagerContent = () => {
                                             <h3>{authorName || "JSM Author"}</h3>
                                             <h4>{authorRole || "Expert"}</h4>
                                             <div className="mock-sidebar-divider"></div>
-                                            <p>{authorBio || "Expert insights and corporate legal analysis provided by the team at JSM Associates."}</p>
+                                            <p>{authorBio || "Expert insights and corporate legal analysis provided by the team at Chennai Lawyers."}</p>
                                         </div>
                                     </div>
                                 </div>

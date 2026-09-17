@@ -26,7 +26,7 @@ const Publications = () => {
                 <div className="construction-divider"></div>
 
                 <p className="publications-description">
-                    The strategic minds at JSM Associates are currently curating an exclusive archive of corporate legal analyses, definitive whitepapers, and landmark case studies.
+                    The strategic minds at Chennai Lawyers are currently curating an exclusive archive of corporate legal analyses, definitive whitepapers, and landmark case studies.
                 </p>
 
                 <p className="publications-notice">

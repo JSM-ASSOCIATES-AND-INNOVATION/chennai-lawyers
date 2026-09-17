@@ -150,7 +150,7 @@ const BlogPost = () => {
     const authorImage = resolveUrl(blog.authorPhoto) || resolveUrl(blog.authorDetails?.photo) || defaultAvatar;
     const authorName = blog.authorDetails?.name || blog.author?.name || "JSM Legal Expert";
     const authorRole = blog.authorDetails?.role || blog.author?.profession || "Legal Counsel";
-    const authorBio = blog.authorDetails?.bio || blog.author?.bio || "Expert insights and corporate legal analysis provided by the team at JSM Associates.";
+    const authorBio = blog.authorDetails?.bio || blog.author?.bio || "Expert insights and corporate legal analysis provided by the team at Chennai Lawyers.";
     const audioTrack = resolveUrl(blog.audioUrl);
 
     // 🚨 STRIP OUT FORCED BACKGROUND COLORS FROM QUILL SO IT MATCHES THE JSM THEME

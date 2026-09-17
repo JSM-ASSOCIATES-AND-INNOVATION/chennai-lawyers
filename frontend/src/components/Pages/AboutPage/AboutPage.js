@@ -39,7 +39,7 @@ const AboutPage = () => {
                         {/* Right Side: Justified Text Content */}
                         <div className="about-grid-right">
                             <p className="about-paragraph justified-text lead-paragraph">
-                                Founded on the core principles of integrity, transparency, and relentless advocacy, Chennai Lawyers (JSM Associates & Innovation) has established itself as a premier full-service law firm in India. We represent a convergence of profound legal scholarship and aggressive litigation strategy, designed to secure decisive victories for our clients in an increasingly complex world.
+                                Founded on the core principles of integrity, transparency, and relentless advocacy, Chennai Lawyers (Chennai Lawyers) has established itself as a premier full-service law firm in India. We represent a convergence of profound legal scholarship and aggressive litigation strategy, designed to secure decisive victories for our clients in an increasingly complex world.
                             </p>
                             
                             <p className="about-paragraph justified-text">

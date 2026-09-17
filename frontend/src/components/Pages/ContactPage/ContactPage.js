@@ -30,7 +30,7 @@ const ContactPage = () => {
                         <div className="contact-info-col">
                             <h2 className="section-title">Our Offices</h2>
                             <p className="section-paragraph">
-                                JSM Associates & Innovation operates out of prime locations in Chennai, ensuring we are accessible when you need us most.
+                                Chennai Lawyers operates out of prime locations in Chennai, ensuring we are accessible when you need us most.
                             </p>
                             
                             <div className="info-card">
