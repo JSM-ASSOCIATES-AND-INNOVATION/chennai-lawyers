@@ -3,7 +3,7 @@
 .practice-section.liquid-glass-style {
     padding: 8rem 0;
     position: relative;
-    overflow: hidden;
+    
 }
 
 .practice-container {
@@ -107,7 +107,7 @@
     text-decoration: none;
     color: var(--text-heading);
     position: relative;
-    overflow: hidden;
+    
     /* Transparent bg to match TLH sleek list style, but glass on hover */
     background: transparent;
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
