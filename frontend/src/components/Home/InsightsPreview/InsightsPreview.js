@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { useTheme } from "../../Shared/ThemeContext/ThemeContext";
@@ -6,81 +6,132 @@ import './InsightsPreview.css';
 
 const InsightsPreview = () => {
     const { isDarkTheme } = useTheme();
+    const scrollRef = useRef(null);
 
     const mockInsights = [
         {
-            category: "Legal Update",
-            title: "Navigating the New Data Protection Act: What Corporations Need to Know",
-            date: "October 12, 2026",
-            link: "/blogs",
-            image: "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80&w=800"
+            category: "Award",
+            title: 'Awarded the coveted "Legal Counsel of the Year - 2018" by INBA.',
+            date: "2018",
+            link: "/blogs"
         },
         {
-            category: "Firm News",
-            title: "Chennai Lawyers Recognized Among Top Tier Regional Firms",
-            date: "September 28, 2026",
-            link: "/blogs",
-            image: "https://images.unsplash.com/photo-1453928582365-b6ad33cbcf64?auto=format&fit=crop&q=80&w=800"
+            category: "Recognition",
+            title: 'Featured in "GC Power List India 2018" by Legal 500.',
+            date: "2018",
+            link: "/blogs"
         },
         {
-            category: "Article",
-            title: "The Evolution of Commercial Arbitration in India",
-            date: "September 15, 2026",
-            link: "/blogs",
-            image: "https://images.unsplash.com/photo-1505664177941-be0a169dc2a8?auto=format&fit=crop&q=80&w=800"
+            category: "Publication",
+            title: "Authored numerous articles regarding complex legal issues in renowned magazines.",
+            date: "Ongoing",
+            link: "/blogs"
         },
         {
-            category: "Press Release",
-            title: "JSM Associates Expands Corporate Practice with New Partners",
-            date: "August 30, 2026",
-            link: "/blogs",
-            image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=800"
+            category: "Pro Bono",
+            title: "Active involvement in pro bono activities heavily appreciated by the general public and media.",
+            date: "Ongoing",
+            link: "/blogs"
         }
     ];
 
-    return (
-        <section className={`insights-section tlh-swiper-style ${isDarkTheme ? 'dark-theme' : 'light-theme'}`} id="insights">
-            <div className="insights-container">
-                
-                <div className="insights-header-flex">
-                    <div className="insights-header-left">
-                        <h2 className="insights-title">News & Insights</h2>
-                        <div className="insights-accent-line"></div>
-                    </div>
-                    <div className="insights-header-right">
-                        <Link to="/blogs" className="apple-btn primary-btn glass-btn">
-                            VIEW ALL <span style={{marginLeft: '8px'}}>→</span>
-                        </Link>
-                    </div>
-                </div>
+    // Mobile Auto-scroll logic
+    useEffect(() => {
+        const slider = scrollRef.current;
+        if (!slider) return;
 
-                <div className="insights-carousel-wrapper">
-                    <div className="insights-carousel">
-                        {mockInsights.map((insight, index) => (
-                            <Link to={insight.link} key={index} className="insight-card glass-card">
-                                <div className="insight-image-wrapper">
-                                    <img src={insight.image} alt={insight.title} className="insight-image" />
-                                    <div className="insight-category-badge">{insight.category}</div>
-                                </div>
-                                <div className="insight-content">
-                                    <div className="insight-meta">
+        let animationFrameId;
+        let scrollPos = 0;
+        
+        const scroll = () => {
+            if (window.innerWidth <= 768) {
+                scrollPos += 0.5; // speed
+                if (scrollPos >= slider.scrollHeight / 2) {
+                    scrollPos = 0; // reset for infinite effect
+                }
+                slider.scrollTop = scrollPos;
+            }
+            animationFrameId = requestAnimationFrame(scroll);
+        };
+
+        // duplicate content for seamless loop on mobile
+        if (window.innerWidth <= 768 && slider.children.length === mockInsights.length) {
+            const children = Array.from(slider.children);
+            children.forEach(child => {
+                const clone = child.cloneNode(true);
+                slider.appendChild(clone);
+            });
+        }
+
+        const handleIntersection = (entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && window.innerWidth <= 768) {
+                    // Start at the top when scrolled into view
+                    scrollPos = 0;
+                    slider.scrollTop = 0;
+                    animationFrameId = requestAnimationFrame(scroll);
+                } else {
+                    cancelAnimationFrame(animationFrameId);
+                }
+            });
+        };
+
+        const observer = new IntersectionObserver(handleIntersection, { threshold: 0.1 });
+        observer.observe(slider);
+
+        return () => {
+            cancelAnimationFrame(animationFrameId);
+            observer.disconnect();
+        };
+    }, [mockInsights.length]);
+
+    return (
+        <section className={`insights-section ${isDarkTheme ? 'dark-theme' : 'light-theme'}`} id="insights">
+            <div className="insights-container">
+                <div className="insights-layout">
+                    
+                    {/* Left Column */}
+                    <div className="insights-left">
+                        <div className="insights-sticky-content">
+                            <h4 className="insights-eyebrow">NEWS & UPDATES</h4>
+                            <h2 className="insights-title">Insights &<br/>Recognitions.</h2>
+                            <div className="insights-accent-line"></div>
+                            <p className="insights-description">
+                                Stay informed with our latest legal updates, awards, and deep-dive articles authored by our experts.
+                            </p>
+                            <div className="insights-action-wrapper">
+                                <Link to="/blogs" className="apple-btn primary-btn insights-btn">
+                                    VIEW ALL UPDATES
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Right Column - Cards */}
+                    <div className="insights-right">
+                        <div className="insights-card-list" ref={scrollRef}>
+                            {mockInsights.map((insight, index) => (
+                                <Link to={insight.link} key={index} className="insight-text-card">
+                                    <div className="insight-card-header">
+                                        <span className="insight-badge">{insight.category}</span>
                                         <span className="insight-date">{insight.date}</span>
                                     </div>
                                     <h3 className="insight-card-title">{insight.title}</h3>
                                     
-                                    <div className="insight-footer">
-                                        <span className="read-more">Read More</span>
-                                        <div className="insight-arrow">
-                                            <ArrowRight size={20} strokeWidth={1.5} />
-                                        </div>
+                                    <div className="insight-card-footer">
+                                        <span className="view-more-text">View More</span>
+                                        <ArrowRight size={18} strokeWidth={2} className="view-more-arrow" />
                                     </div>
-                                </div>
-                                <div className="insight-hover-border"></div>
-                            </Link>
-                        ))}
+                                    
+                                    {/* Hover effects */}
+                                    <div className="insight-border-bg"></div>
+                                    <div className="insight-border-active"></div>
+                                </Link>
+                            ))}
+                        </div>
                     </div>
-                </div>
 
+                </div>
             </div>
         </section>
     );
