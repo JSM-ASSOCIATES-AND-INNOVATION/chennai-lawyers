@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { X, Linkedin, Twitter, Mail } from "lucide-react";
+import { X, Linkedin, Twitter, Mail, ArrowLeft } from "lucide-react";
 import './Team.css';
 import { useTheme } from "../../Shared/ThemeContext/ThemeContext";
 
@@ -12,23 +12,41 @@ const resolveUrl = (url) => {
     return `http://localhost:5001/${cleanPath}`;
 };
 
-// --- FALLBACK DATA (Used if the database is completely empty) ---
+// --- FALLBACK DATA ---
 const fallbackTeamData = [
     {
         _id: "1",
-        name: "JSM Managing Partner",
-        designation: "Founder & Head of Corporate",
+        name: "K Satish Kumar",
+        designation: "Founder & Principal Advocate",
         category: "Board of Directors",
-        bio: "The driving force behind JSM Associates. With over two decades of experience, they have shaped the firm's strategic direction, focusing on corporate governance and international law.",
+        bio: "K Satish Kumar LLB, CMA, Legal & Chief Data Protection Officer, is the visionary behind Chennai Lawyers. With over 20 years of experience, he is a Keynote Speaker, prominent author, and a highly respected legal professional.\n\nHe has authored numerous articles regarding legal issues in renowned magazines. He has received many awards, including the coveted “Legal Counsel of the Year - 2018” by INBA, and is featured in the “GC Power List India 2018” by Legal 500.\n\nHis active involvement in pro bono activities through Chennai Lawyers is highly appreciated by the general public and media.",
+        image: "/praksh.png", // We'll use praksh.png or FirmImage.jpg as a placeholder
+        linkedin: "#",
+        twitter: "#",
+        email: "contact@chennailawyers.net"
+    },
+    {
+        _id: "2",
+        name: "Senior Associate",
+        designation: "Head of Litigation",
+        category: "Partners",
+        bio: "An aggressive litigator with extensive experience in the High Court of Madras, leading complex civil and criminal defense cases.",
         image: "/placeholder.jpg",
         linkedin: "#",
-        twitter: "",
-        email: "contact@jsmassociates.in"
+        email: "litigation@chennailawyers.net"
+    },
+    {
+        _id: "3",
+        name: "Corporate Counsel",
+        designation: "Corporate & M&A",
+        category: "Associates & Counsel",
+        bio: "Specializes in cross-border M&A, data protection compliance, and corporate structuring for multinational entities operating in India.",
+        image: "/placeholder.jpg",
+        linkedin: "#",
+        email: "corporate@chennailawyers.net"
     }
 ];
 
-// --- STRICT CATEGORY DISPLAY ORDER ---
-// This ensures leadership always stays at the top of the page regardless of alphabetical order
 const categoryOrder = [
     "Board of Directors",
     "Partners",
@@ -40,18 +58,14 @@ const Team = () => {
     const navigate = useNavigate();
     const { isDarkTheme } = useTheme();
 
-    // --- STATE ---
     const [teamMembers, setTeamMembers] = useState([]);
     const [loading, setLoading] = useState(true);
     const [selectedMember, setSelectedMember] = useState(null);
 
-    // --- ADMIN PORTAL API HOOK ---
     useEffect(() => {
         window.scrollTo(0, 0);
-
         const fetchTeam = async () => {
             try {
-                // Fetching from the established backend
                 const response = await fetch('http://localhost:5001/api/team');
                 if (response.ok) {
                     const data = await response.json();
@@ -66,22 +80,18 @@ const Team = () => {
                 setLoading(false);
             }
         };
-
         fetchTeam();
     }, []);
 
-    // Prevent background scroll when Sidebar is open
     useEffect(() => {
         if (selectedMember) document.body.style.overflow = 'hidden';
         else document.body.style.overflow = 'unset';
         return () => { document.body.style.overflow = 'unset'; };
     }, [selectedMember]);
 
-    // --- HANDLERS ---
     const openSidebar = (member) => setSelectedMember(member);
     const closeSidebar = () => setSelectedMember(null);
 
-    // --- HELPER: Group Members by Category ---
     const groupedMembers = teamMembers.reduce((acc, member) => {
         const cat = member.category || "Other";
         if (!acc[cat]) acc[cat] = [];
@@ -89,11 +99,9 @@ const Team = () => {
         return acc;
     }, {});
 
-    // Sort the grouped categories based on our strict hierarchy list
     const sortedCategories = Object.keys(groupedMembers).sort((a, b) => {
         let indexA = categoryOrder.indexOf(a);
         let indexB = categoryOrder.indexOf(b);
-        // If a category isn't in the list, push it to the bottom
         if (indexA === -1) indexA = 99;
         if (indexB === -1) indexB = 99;
         return indexA - indexB;
@@ -101,8 +109,8 @@ const Team = () => {
 
     if (loading) {
         return (
-            <div className={`team-page-container ${isDarkTheme ? 'dark-theme' : 'light-theme'}`} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                <h2 style={{ color: 'var(--accent-primary)', fontFamily: "'Playfair Display', serif" }}>Loading Council...</h2>
+            <div className={`team-page-container ${isDarkTheme ? 'dark-theme' : 'light-theme'} team-loading`}>
+                <div className="loader-spinner"></div>
             </div>
         );
     }
@@ -111,107 +119,98 @@ const Team = () => {
         <div className={`team-page-container ${isDarkTheme ? 'dark-theme' : 'light-theme'}`}>
 
             {/* HERO HEADER */}
-            <div className="team-hero-header">
-                <span className="team-subheading">The Minds Behind The Mission</span>
-                <h1 className="team-main-heading">Our Full Council</h1>
-                <div className="team-heading-divider"></div>
-            </div>
-
-            {/* DYNAMIC GRID SECTIONS (Sorted by Hierarchy) */}
-            {sortedCategories.map((category) => (
-                <div key={category} className="team-category-section">
-                    <h2 className="category-title">{category}</h2>
-
-                    <div className="team-grid">
-                        {groupedMembers[category].map((member) => (
-                            <div
-                                key={member._id || member.id}
-                                className="team-portrait-card"
-                                onClick={() => openSidebar(member)}
-                            >
-                                <div className="portrait-image-wrapper">
-                                    {/* Smart image resolver handles backend images or fallback */}
-                                    <img src={resolveUrl(member.image)} alt={member.name} onError={(e) => { e.target.onerror = null; e.target.src = "/placeholder.jpg"; }} />
-                                    <div className="portrait-overlay-gradient"></div>
-                                </div>
-
-                                <div className="portrait-content">
-                                    <h3 className="member-name">{member.name}</h3>
-                                    <p className="member-role">{member.designation}</p>
-                                    <div className="hover-line-indicator"></div>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
+            <section className="team-hero-section">
+                <div className="team-container">
+                    <button className="team-back-btn" onClick={() => navigate("/")}>
+                        <ArrowLeft size={18} />
+                        Back to Home
+                    </button>
+                    <h4 className="team-eyebrow">OUR PEOPLE</h4>
+                    <h1 className="team-title">The Minds Behind<br/>The Mission.</h1>
+                    <div className="team-accent-line"></div>
+                    <p className="team-subtitle">
+                        A multidisciplinary collective of formidable litigators, corporate strategists, and industry experts dedicated to advancing your interests.
+                    </p>
                 </div>
-            ))}
+            </section>
 
-            {/* BACK BUTTON */}
-            <div className="team-actions-footer">
-                <button className="team-back-btn" onClick={() => navigate("/")}>
-                    Return to Chambers
-                </button>
-            </div>
+            {/* TEAM GRID */}
+            <section className="team-content-section">
+                <div className="team-container">
+                    {sortedCategories.map((category) => (
+                        <div key={category} className="team-category-block">
+                            <h2 className="team-category-title">{category}</h2>
+                            <div className="team-grid">
+                                {groupedMembers[category].map((member) => (
+                                    <div
+                                        key={member._id || member.id}
+                                        className="team-card"
+                                        onClick={() => openSidebar(member)}
+                                    >
+                                        <div className="team-card-image-wrapper">
+                                            <img src={resolveUrl(member.image)} alt={member.name} onError={(e) => { e.target.onerror = null; e.target.src = "/placeholder.jpg"; }} loading="lazy" />
+                                            <div className="team-card-overlay">
+                                                <span className="team-view-profile">View Profile</span>
+                                            </div>
+                                        </div>
+                                        <div className="team-card-info">
+                                            <h3 className="team-card-name">{member.name}</h3>
+                                            <p className="team-card-role">{member.designation}</p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </section>
 
-            {/* ========================================================
-          SOLID SIDEBAR DOSSIER
-          ======================================================== */}
-
-            {/* 1. Dark Overlay (Clicks close the sidebar) */}
-            <div
-                className={`sidebar-overlay ${selectedMember ? 'active' : ''}`}
-                onClick={closeSidebar}
-            ></div>
-
-            {/* 2. The Sliding Sidebar Panel */}
-            <div className={`team-sidebar-panel ${selectedMember ? 'open' : ''}`}>
-
+            {/* SIDEBAR DOSSIER */}
+            <div className={`team-sidebar-overlay ${selectedMember ? 'active' : ''}`} onClick={closeSidebar}></div>
+            <div className={`team-sidebar ${selectedMember ? 'open' : ''}`}>
                 <button className="sidebar-close-btn" onClick={closeSidebar}>
-                    <X size={28} />
+                    <X size={24} strokeWidth={2} />
                 </button>
 
                 {selectedMember && (
-                    <div className="sidebar-content-scroll">
-
-                        <div className="sidebar-image-header">
+                    <div className="sidebar-scroll-area">
+                        <div className="sidebar-image-section">
                             <img src={resolveUrl(selectedMember.image)} alt={selectedMember.name} onError={(e) => { e.target.onerror = null; e.target.src = "/placeholder.jpg"; }} />
                         </div>
+                        <div className="sidebar-content-section">
+                            <span className="sidebar-category-badge">{selectedMember.category}</span>
+                            <h2 className="sidebar-member-name">{selectedMember.name}</h2>
+                            <p className="sidebar-member-role">{selectedMember.designation}</p>
+                            
+                            <div className="sidebar-separator"></div>
+                            
+                            <div className="sidebar-member-bio">
+                                {selectedMember.bio ? selectedMember.bio.split('\n').map((paragraph, idx) => (
+                                    <p key={idx}>{paragraph}</p>
+                                )) : <p>No professional biography provided.</p>}
+                            </div>
 
-                        <div className="sidebar-info-body">
-                            <span className="sidebar-badge">{selectedMember.category}</span>
-                            <h2 className="sidebar-name">{selectedMember.name}</h2>
-                            <h3 className="sidebar-role">{selectedMember.designation}</h3>
-
-                            <div className="sidebar-divider"></div>
-
-                            {/* Pre-wrap ensures paragraphs from the admin editor stay separated */}
-                            <p className="sidebar-bio" style={{ whiteSpace: 'pre-wrap' }}>
-                                {selectedMember.bio || "No professional biography provided."}
-                            </p>
-
-                            <div className="sidebar-social-links">
+                            <div className="sidebar-social-footer">
                                 {selectedMember.linkedin && (
-                                    <a href={selectedMember.linkedin} target="_blank" rel="noreferrer" className="social-icon-btn">
+                                    <a href={selectedMember.linkedin} target="_blank" rel="noreferrer" className="sidebar-social-link">
                                         <Linkedin size={20} />
                                     </a>
                                 )}
                                 {selectedMember.twitter && (
-                                    <a href={selectedMember.twitter} target="_blank" rel="noreferrer" className="social-icon-btn">
+                                    <a href={selectedMember.twitter} target="_blank" rel="noreferrer" className="sidebar-social-link">
                                         <Twitter size={20} />
                                     </a>
                                 )}
                                 {selectedMember.email && (
-                                    <a href={`mailto:${selectedMember.email}`} className="social-icon-btn">
+                                    <a href={`mailto:${selectedMember.email}`} className="sidebar-social-link">
                                         <Mail size={20} />
                                     </a>
                                 )}
                             </div>
                         </div>
-
                     </div>
                 )}
             </div>
-
         </div>
     );
 };
