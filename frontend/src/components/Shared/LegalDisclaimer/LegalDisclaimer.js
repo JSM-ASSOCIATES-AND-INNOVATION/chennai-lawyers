@@ -44,7 +44,7 @@ const LegalDisclaimer = () => {
                 </div>
 
                 <div className="disclaimer-footer">
-                    <button className="apple-btn primary-btn agree-btn" onClick={handleAgree}>
+                    <button className="agree-btn" onClick={handleAgree}>
                         I AGREE <span className="arrow-line"></span>
                     </button>
                 </div>

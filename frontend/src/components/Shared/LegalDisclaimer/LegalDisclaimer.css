@@ -35,7 +35,7 @@
 .disclaimer-title {
     font-family: 'Playfair Display', serif;
     font-size: 2.5rem;
-    color: var(--text-heading);
+    color: var(--text-heading) !important;
     margin-bottom: 2rem;
     font-weight: 700;
 }
@@ -43,7 +43,7 @@
 .disclaimer-content p {
     font-size: 1.05rem;
     line-height: 1.8;
-    color: var(--text-muted);
+    color: var(--text-muted) !important;
     margin-bottom: 1.5rem;
 }
 
@@ -53,28 +53,35 @@
     justify-content: flex-start;
 }
 
+/* Force colors to prevent global apple-btn overrides from breaking it */
 .agree-btn {
-    padding: 12px 30px;
-    font-size: 0.9rem;
-    letter-spacing: 2px;
-    border-radius: 0;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    background: #8b0000; /* Deep red based on the image reference */
-    border: none;
-    color: white;
+    padding: 12px 30px !important;
+    font-size: 0.9rem !important;
+    letter-spacing: 2px !important;
+    border-radius: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 15px !important;
+    background-color: var(--accent-primary) !important; 
+    border: none !important;
+    color: #FFFFFF !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    text-transform: uppercase !important;
 }
 
 .agree-btn:hover {
-    background: #600000;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2) !important;
+    opacity: 0.9 !important;
 }
 
 .arrow-line {
     display: inline-block;
     width: 30px;
     height: 1px;
-    background: white;
+    background: #FFFFFF !important;
 }
 
 @media (max-width: 768px) {
