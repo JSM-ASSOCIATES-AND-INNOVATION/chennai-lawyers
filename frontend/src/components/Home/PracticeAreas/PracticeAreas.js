@@ -11,13 +11,12 @@ const PracticeAreas = () => {
     const { isDarkTheme } = useTheme();
 
     const practices = [
-        { title: 'Civil Law', icon: <Landmark size={22} strokeWidth={1.5} />, url: '/all-practices' },
         { title: 'Corporate Law', icon: <Briefcase size={22} strokeWidth={1.5} />, url: '/all-practices' },
         { title: 'Family Law', icon: <Users size={22} strokeWidth={1.5} />, url: '/all-practices' },
         { title: 'Criminal Law', icon: <Gavel size={22} strokeWidth={1.5} />, url: '/all-practices' },
+        { title: 'Civil Law', icon: <Landmark size={22} strokeWidth={1.5} />, url: '/all-practices' },
         { title: 'Consumer Law', icon: <ShieldAlert size={22} strokeWidth={1.5} />, url: '/all-practices' },
         { title: 'Data Protection & Privacy', icon: <Shield size={22} strokeWidth={1.5} />, url: '/all-practices' },
-        { title: 'Intellectual Property', icon: <Lightbulb size={22} strokeWidth={1.5} />, url: '/all-practices' },
         { title: 'Narcotics & Drugs Act', icon: <Pill size={22} strokeWidth={1.5} />, url: '/all-practices' }
     ];
 
