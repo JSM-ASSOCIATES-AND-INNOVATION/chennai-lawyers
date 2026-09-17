@@ -83,25 +83,25 @@
     align-items: center;
 }
 
-.primary-btn {
+.hero-cta-group .primary-btn {
     background-color: var(--gold) !important;
     color: #111 !important;
     border: 1px solid var(--gold) !important;
 }
 
-.primary-btn:hover {
+.hero-cta-group .primary-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 10px 20px rgba(0,0,0,0.3);
     background-color: var(--gold-dark) !important;
 }
 
-.secondary-btn {
+.hero-cta-group .secondary-btn {
     background-color: transparent !important;
     color: #FFFFFF !important;
     border: 1px solid rgba(255, 255, 255, 0.5) !important;
 }
 
-.secondary-btn:hover {
+.hero-cta-group .secondary-btn:hover {
     background-color: #FFFFFF !important;
     color: #111 !important;
     transform: translateY(-2px);
