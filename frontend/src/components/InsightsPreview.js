@@ -51,6 +51,13 @@ const InsightsPreview = () => {
                         </div>
                     ))}
                 </div>
+
+                {/* Mobile-only View All Button */}
+                <div className="insights-mobile-action" style={{ display: 'none', marginTop: '1.5rem' }}>
+                    <Link to="/blogs" className="apple-btn primary-btn" style={{ width: '100%', justifyContent: 'center' }}>
+                        VIEW ALL ARTICLES <ArrowRight size={16} style={{marginLeft: '8px'}} />
+                    </Link>
+                </div>
                 
             </div>
         </section>
