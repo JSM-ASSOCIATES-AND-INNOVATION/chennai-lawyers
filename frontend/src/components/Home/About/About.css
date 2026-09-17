@@ -2,7 +2,7 @@
 
 .about-section {
     height: 100vh; /* Force exactly one viewport height */
-    min-height: 800px;
+    min-height: 600px; /* Reduced to avoid overflow on small laptops */
     display: flex;
     align-items: center;
     position: relative;
@@ -20,7 +20,7 @@
 .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    gap: 3rem; /* Reduced gap */
     align-items: center;
 }
 
@@ -30,8 +30,8 @@
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 24px;
-    padding: 3.5rem;
+    border-radius: 20px;
+    padding: 2.5rem; /* Reduced padding */
     box-shadow: 0 30px 60px rgba(0,0,0,0.1);
 }
 
@@ -48,35 +48,35 @@
     font-size: 0.85rem;
     letter-spacing: 3px;
     text-transform: uppercase;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     font-weight: 600;
 }
 .dark-theme .about-eyebrow { color: #FFBF00; }
 .light-theme .about-eyebrow { color: #CD0000; }
 
 .about-title {
-    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    font-size: clamp(2.2rem, 3.5vw, 3.2rem);
     font-family: 'Playfair Display', serif;
     font-weight: 400;
     line-height: 1.1;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
     color: var(--text-heading);
 }
 
 .about-accent-line {
     width: 60px;
     height: 3px;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
     border-radius: 2px;
 }
 .dark-theme .about-accent-line { background: #FFBF00; }
 .light-theme .about-accent-line { background: #CD0000; }
 
 .about-description {
-    font-size: 1.1rem;
-    line-height: 1.8;
+    font-size: 1.05rem;
+    line-height: 1.7;
     color: var(--text-muted);
-    margin-bottom: 1.25rem;
+    margin-bottom: 1rem;
 }
 
 .justified-text {
@@ -85,14 +85,14 @@
 }
 
 .about-action-wrapper {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
 }
 
 /* RIGHT COLUMN - VISUALS & STATS */
 .about-visuals-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem; /* Reduced gap */
     height: 100%;
     justify-content: center;
 }
@@ -101,36 +101,36 @@
 .about-image-container {
     position: relative;
     width: 100%;
-    border-radius: 24px;
+    border-radius: 20px;
     overflow: hidden;
-    height: 400px;
+    height: 320px; /* Reduced height */
 }
 
 .about-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: grayscale(20%);
+    filter: grayscale(10%);
 }
 
 .about-image-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 50%);
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 60%);
 }
 
 .light-theme .about-image-overlay {
-    background: linear-gradient(to top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 50%);
+    background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 60%);
 }
 
 /* QUOTE BOX */
 .about-quote-box {
     position: absolute;
-    bottom: 1.5rem;
-    left: 1.5rem;
-    right: 1.5rem;
-    padding: 1.5rem;
-    border-radius: 16px;
+    bottom: 1.25rem;
+    left: 1.25rem;
+    right: 1.25rem;
+    padding: 1.25rem;
+    border-radius: 12px;
     border-top: none;
     border-left: 3px solid;
 }
@@ -138,12 +138,12 @@
 .light-theme .about-quote-box { border-left-color: #CD0000; }
 
 .about-quote {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     font-family: 'Playfair Display', serif;
     font-style: italic;
     color: #F5F5F7;
     line-height: 1.4;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
 }
 .light-theme .about-quote { color: #111; }
 
@@ -175,7 +175,7 @@
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid rgba(255, 255, 255, 0.04);
     border-radius: 16px;
-    padding: 1.5rem 1rem;
+    padding: 1.25rem 1rem;
     text-align: center;
     transition: transform 0.4s ease;
 }
@@ -189,7 +189,7 @@
 }
 
 .stat-number {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-family: 'Playfair Display', serif;
     font-weight: 600;
     margin-bottom: 0.25rem;
@@ -209,28 +209,22 @@
 @media (max-width: 992px) {
     .about-section {
         height: auto;
-        padding: 5rem 0;
+        padding: 4rem 0;
     }
     .about-grid {
         grid-template-columns: 1fr;
-        gap: 3rem;
-    }
-    .about-image-container {
-        height: 350px;
+        gap: 2.5rem;
     }
 }
 
 @media (max-width: 768px) {
     .glass-panel, .about-quote-box {
-        padding: 1.5rem;
+        padding: 1.25rem;
     }
     .about-stats-container {
         grid-template-columns: 1fr;
     }
-    .stat-glass-card {
-        padding: 1.25rem;
-    }
     .about-image-container {
-        height: 300px;
+        height: 250px;
     }
 }
