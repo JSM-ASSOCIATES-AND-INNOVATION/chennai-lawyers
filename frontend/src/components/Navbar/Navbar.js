@@ -104,10 +104,19 @@ const Navbar = ({ isPreloaderDone }) => {
                                 <button className={`nav-link dropdown-trigger ${isAcademicsOpen ? "active" : ""}`}>
                                     Academics <ChevronDown size={14} className={`chevron ${isAcademicsOpen ? "rotate" : ""}`} />
                                 </button>
-                                <div className={`dropdown-menu ${isAcademicsOpen ? "show" : ""}`}>
-                                    <Link to="/blogs" className="dropdown-item">Blogs & Insights</Link>
-                                    <Link to="/publications" className="dropdown-item">Publications</Link>
-                                    <Link to="/events" className="dropdown-item">Events & Seminars</Link>
+                                <div className={`tlh-mega-menu ${isAcademicsOpen ? "show" : ""}`}>
+                                    <div className="mega-menu-grid">
+                                        <div className="mega-menu-column border-right">
+                                            <Link to="/blogs" className="mega-menu-link">Blogs & Insights</Link>
+                                        </div>
+                                        <div className="mega-menu-column border-right">
+                                            <Link to="/publications" className="mega-menu-link">Publications</Link>
+                                        </div>
+                                        <div className="mega-menu-column">
+                                            <Link to="/events" className="mega-menu-link">Events & Seminars</Link>
+                                        </div>
+                                    </div>
+                                    <div className="mega-menu-bottom-accent"></div>
                                 </div>
                             </div>
 
