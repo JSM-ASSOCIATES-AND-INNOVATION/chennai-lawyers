@@ -1,83 +1,83 @@
 import React from 'react';
 import { MapPin, Phone, Mail, Linkedin, Twitter, Instagram, ChevronUp } from 'lucide-react';
+import { useTheme } from "../Shared/ThemeContext/ThemeContext";
 import './Footer.css';
 
 const Footer = () => {
+    const { isDarkTheme } = useTheme();
+
     const scrollToTop = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
     return (
-        <footer className="footer-section">
+        <footer className={`footer-section ${isDarkTheme ? 'dark-theme' : 'light-theme'}`}>
             <div className="footer-container">
-                {/* Column 1: Brand */}
-                <div className="footer-col brand-col">
-                    <h2 className="footer-logo-text">
-                        Chennai<span className="footer-logo-highlight">Lawyers</span>.net
-                    </h2>
-                    <p className="footer-logo-sub">ADVOCATES & LEGAL CONSULTANTS</p>
-                    <div className="footer-divider"></div>
-                    <p className="footer-motto">Justice. Access. Community.</p>
+                {/* TOP GRID */}
+                <div className="footer-grid">
                     
-                    <div className="footer-newsletter">
-                        <p className="newsletter-text">Subscribe to our legal insights</p>
-                        <form className="newsletter-form" onSubmit={(e) => e.preventDefault()}>
-                            <input type="email" placeholder="Email Address" className="newsletter-input" required />
-                            <button type="submit" className="newsletter-btn">→</button>
-                        </form>
+                    {/* Brand Column */}
+                    <div className="footer-col brand-col">
+                        <h2 className="footer-logo-text">
+                            Chennai<span className="footer-logo-highlight">Lawyers</span>.net
+                        </h2>
+                        <p className="footer-logo-sub">ADVOCATES & LEGAL CONSULTANTS</p>
+                        <div className="footer-divider"></div>
+                        <p className="footer-motto">Justice. Access. Community.</p>
+                        
+                        <div className="footer-socials">
+                            <a href="#linkedin" className="social-icon"><Linkedin size={18} /></a>
+                            <a href="#twitter" className="social-icon"><Twitter size={18} /></a>
+                            <a href="#instagram" className="social-icon"><Instagram size={18} /></a>
+                        </div>
                     </div>
-                </div>
 
-                {/* Column 2: Quick Links */}
-                <div className="footer-col">
-                    <h4 className="footer-heading">QUICK LINKS</h4>
-                    <ul className="footer-links">
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#practice">Practice Areas</a></li>
-                        <li><a href="#team">Our Team</a></li>
-                        <li><a href="#insights">Insights</a></li>
-                        <li><a href="#careers">Careers</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
+                    {/* Quick Links Column */}
+                    <div className="footer-col">
+                        <h4 className="footer-heading">Quick Links</h4>
+                        <ul className="footer-links">
+                            <li><a href="#about">About Firm</a></li>
+                            <li><a href="#practice">Practice Areas</a></li>
+                            <li><a href="/team">Our Council</a></li>
+                            <li><a href="/blogs">News & Insights</a></li>
+                            <li><a href="#contactus">Contact Us</a></li>
+                        </ul>
+                    </div>
 
-                {/* Column 3: Practice Areas */}
-                <div className="footer-col">
-                    <h4 className="footer-heading">PRACTICE AREAS</h4>
-                    <ul className="footer-links">
-                        <li><a href="#practice">Civil Litigation</a></li>
-                        <li><a href="#practice">Corporate Law</a></li>
-                        <li><a href="#practice">Property Law</a></li>
-                        <li><a href="#practice">Dispute Resolution</a></li>
-                        <li><a href="#practice">Regulatory & Compliance</a></li>
-                        <li><a href="#practice">Intellectual Property</a></li>
-                        <li><a href="#practice">Employment Law</a></li>
-                        <li><a href="#practice">Taxation</a></li>
-                    </ul>
-                </div>
+                    {/* Contact Info Column */}
+                    <div className="footer-col contact-col">
+                        <h4 className="footer-heading">Reach Us</h4>
+                        <ul className="footer-contact-list">
+                            <li>
+                                <MapPin size={18} className="footer-icon" />
+                                <span>No. 12, Legal Chambers, High Court Campus, Chennai, Tamil Nadu, 600104</span>
+                            </li>
+                            <li>
+                                <Phone size={18} className="footer-icon" />
+                                <span>+91 98849 25464</span>
+                            </li>
+                            <li>
+                                <Mail size={18} className="footer-icon" />
+                                <span>chennailawyers.net@gmail.com</span>
+                            </li>
+                        </ul>
+                    </div>
 
-                {/* Column 4: Contact */}
-                <div className="footer-col contact-col">
-                    <h4 className="footer-heading">CONTACT</h4>
-                    <ul className="footer-contact-list">
-                        <li>
-                            <MapPin size={16} />
-                            <span>Chennai, Tamil Nadu, India</span>
-                        </li>
-                        <li>
-                            <Phone size={16} />
-                            <span>+91 44 0000 0000</span>
-                        </li>
-                        <li>
-                            <Mail size={16} />
-                            <span>info@chennailawyers.net</span>
-                        </li>
-                    </ul>
-                    
-                    <div className="footer-socials">
-                        <a href="#linkedin" className="social-icon"><Linkedin size={18} /></a>
-                        <a href="#twitter" className="social-icon"><Twitter size={18} /></a>
-                        <a href="#instagram" className="social-icon"><Instagram size={18} /></a>
+                    {/* Map Column */}
+                    <div className="footer-col map-col">
+                        <h4 className="footer-heading">Location</h4>
+                        <div className="footer-map-container">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m3!1d3886.196901844222!2d80.2848!3d13.0878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526f63459e99e7%3A0xc3b44b82d921dbfb!2sMadras%20High%20Court!5e0!3m2!1sen!2sin!4v1690000000000!5m2!1sen!2sin" 
+                                width="100%" 
+                                height="100%" 
+                                style={{ border: 0 }} 
+                                allowFullScreen="" 
+                                loading="lazy" 
+                                referrerPolicy="no-referrer-when-downgrade"
+                                title="Madras High Court Map"
+                            ></iframe>
+                        </div>
                     </div>
                 </div>
             </div>

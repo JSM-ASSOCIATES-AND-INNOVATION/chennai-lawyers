@@ -35,6 +35,7 @@ import AdminTeamManager from "./components/Admin/AdminTeamManager";
 import AdminApplications from "./components/Admin/AdminApplications";
 import AdminAcademicManager from "./components/Admin/AdminAcademicManager";
 import AdminContactManager from "./components/Admin/AdminContactManager";
+import NotFound from "./components/Pages/NotFound/NotFound";
 
 const ScrollToTop = () => {
     const { pathname, hash } = useLocation();
@@ -162,6 +163,8 @@ function App() {
                         <Route path="/admin/applications" element={<AdminApplications />} />
                         <Route path="/admin/academic" element={<AdminAcademicManager />} />
                         <Route path="/admin/contact" element={<AdminContactManager />} />
+                        {/* 404 CATCH ALL */}
+                        <Route path="*" element={<NotFound />} />
                     </Routes>
                 </AppLayout>
             </Router>
