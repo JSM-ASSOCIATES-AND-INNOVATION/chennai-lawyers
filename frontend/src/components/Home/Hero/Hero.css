@@ -11,18 +11,7 @@
     align-items: flex-start;
     padding: 0 10%;
     overflow: hidden;
-}
-
-/* 
-   IMPORTANT FIX: Hero must always use a DARK scrim with WHITE text 
-   to prevent "light bleed" and maintain readability over photos.
-   We ignore the global theme for the hero overlay.
-*/
-.hero-section {
-    --scrim: 11, 13, 16;
-    --scrim-strong: 0.85;
-    --scrim-mid: 0.6;
-    --scrim-soft: 0.2;
+    background-color: #0B0D10; /* fallback */
 }
 
 .hero-background {
@@ -42,10 +31,10 @@
     z-index: 2;
     background: linear-gradient(
         to right,
-        rgba(var(--scrim), var(--scrim-strong)) 0%,
-        rgba(var(--scrim), var(--scrim-strong)) 30%,
-        rgba(var(--scrim), var(--scrim-mid)) 60%,
-        rgba(var(--scrim), var(--scrim-soft)) 100%
+        rgba(11, 13, 16, 0.95) 0%,
+        rgba(11, 13, 16, 0.85) 30%,
+        rgba(11, 13, 16, 0.6) 60%,
+        rgba(11, 13, 16, 0.2) 100%
     );
 }
 
@@ -53,7 +42,6 @@
     position: relative;
     z-index: 3;
     max-width: 800px;
-    color: #FFFFFF; /* Always white */
 }
 
 .hero-eyebrow {
@@ -61,7 +49,7 @@
     font-weight: 700;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--gold);
+    color: var(--gold) !important;
     margin-bottom: 1.5rem;
 }
 
@@ -71,18 +59,18 @@
     font-weight: 700;
     line-height: 1.1;
     margin-bottom: 1.5rem;
-    color: #FFFFFF; /* Always white */
+    color: #FFFFFF !important;
     text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
 .hero-highlight {
     font-style: italic;
-    color: var(--gold);
+    color: var(--gold) !important;
 }
 
 .hero-subtitle {
     font-size: clamp(1.1rem, 1.5vw, 1.3rem);
-    color: #E5E5EA; /* Always light */
+    color: #E5E5EA !important;
     line-height: 1.7;
     max-width: 650px;
     margin-bottom: 3rem;
@@ -96,25 +84,25 @@
 }
 
 .primary-btn {
-    background: var(--gold);
+    background-color: var(--gold) !important;
     color: #111 !important;
-    border: 1px solid var(--gold);
+    border: 1px solid var(--gold) !important;
 }
 
 .primary-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-    background: var(--gold-dark);
+    background-color: var(--gold-dark) !important;
 }
 
 .secondary-btn {
-    background: transparent;
+    background-color: transparent !important;
     color: #FFFFFF !important;
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.5) !important;
 }
 
 .secondary-btn:hover {
-    background: #FFFFFF;
+    background-color: #FFFFFF !important;
     color: #111 !important;
     transform: translateY(-2px);
 }
@@ -139,9 +127,9 @@
     .hero-overlay {
         background: linear-gradient(
             to top,
-            rgba(var(--scrim), var(--scrim-strong)) 0%,
-            rgba(var(--scrim), var(--scrim-strong)) 50%,
-            rgba(var(--scrim), var(--scrim-soft)) 100%
+            rgba(11, 13, 16, 0.95) 0%,
+            rgba(11, 13, 16, 0.85) 50%,
+            rgba(11, 13, 16, 0.2) 100%
         );
     }
     .hero-cta-group {
@@ -150,7 +138,7 @@
         max-width: 350px;
         margin: 0 auto;
     }
-    .apple-btn {
+    .hero-cta-group .apple-btn {
         width: 100%;
         justify-content: center;
     }
