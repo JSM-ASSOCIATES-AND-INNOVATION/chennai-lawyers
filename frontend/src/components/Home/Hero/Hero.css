@@ -1,185 +1,161 @@
-/* =========================================
-   1. HERO CONTAINER (Apple HIG / Mockup Theme)
-   ========================================= */
 .hero-section {
+    --gold: #C49B55;
+    --gold-dark: #A37E43;
+    position: relative;
+    width: 100%;
     height: 100vh;
     scroll-snap-align: start;
-    overflow-y: auto;
-    overflow-x: hidden;
-    position: relative;
-    width: 100vw;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start; /* Left aligned like mockup */
-    padding: 0 5%;
-    overflow-y: auto;
-    overflow-x: hidden;
+    align-items: flex-start;
+    padding: 0 10%;
+    overflow: hidden;
 }
 
-/* =========================================
-   2. BACKGROUND IMAGE & OVERLAY
-   ========================================= */
+.hero-section.dark-theme {
+    --scrim: 11, 13, 16;
+    --scrim-strong: 0.92;
+    --scrim-mid: 0.7;
+    --scrim-soft: 0.3;
+}
+
+.hero-section.light-theme {
+    --scrim: 245, 245, 247;
+    --scrim-strong: 0.95;
+    --scrim-mid: 0.7;
+    --scrim-soft: 0.2;
+}
+
 .hero-background {
     position: absolute;
-    top: 0;
-    left: 0;
+    inset: 0;
     width: 100%;
     height: 100%;
-    background-size: cover;
-    background-position: center;
+    object-fit: cover;
+    object-position: center;
     z-index: 1;
+    filter: grayscale(20%);
 }
 
 .hero-overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.9) 10%, rgba(0, 0, 0, 0.4) 60%, rgba(0, 0, 0, 0.1) 100%);
+    inset: 0;
     z-index: 2;
+    background: linear-gradient(
+        to right,
+        rgba(var(--scrim), var(--scrim-strong)) 0%,
+        rgba(var(--scrim), var(--scrim-strong)) 32%,
+        rgba(var(--scrim), var(--scrim-mid)) 60%,
+        rgba(var(--scrim), var(--scrim-soft)) 100%
+    );
 }
 
-/* Ensure text is above background */
 .hero-content {
     position: relative;
     z-index: 3;
     max-width: 800px;
-    color: #F5F5F7; /* Apple HIG Light text on dark bg */
+    color: var(--text-heading);
 }
 
-/* =========================================
-   3. TYPOGRAPHY
-   ========================================= */
 .hero-eyebrow {
-    font-size: 0.85rem;
-    font-weight: 600;
-    letter-spacing: 0.15em;
-    color: #C1995E; /* Gold/Tan color from mockup */
-    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
 }
+.light-theme .hero-eyebrow { color: #CD0000; }
+.dark-theme .hero-eyebrow { color: #FFBF00; }
 
 .hero-title {
     font-family: 'Playfair Display', Georgia, serif;
-    font-size: clamp(3.5rem, 7vw, 6rem);
+    font-size: clamp(3rem, 6vw, 5.5rem);
     font-weight: 700;
     line-height: 1.1;
-    letter-spacing: -0.01em;
-    color: #FFFFFF !important;
     margin-bottom: 1.5rem;
-    text-shadow: 0 4px 20px rgba(0,0,0,0.5); /* Helps against bright backgrounds */
+    color: var(--text-heading);
 }
 
 .hero-highlight {
     font-style: italic;
-    color: #C49B55 !important; /* Gold */
+    color: var(--gold);
 }
+.light-theme .hero-highlight { color: #CD0000; }
+.dark-theme .hero-highlight { color: #FFBF00; }
 
 .hero-subtitle {
     font-size: clamp(1.1rem, 1.5vw, 1.3rem);
-    color: #E5E5EA !important;
-    font-weight: 400;
-    line-height: 1.6;
+    color: var(--text-muted);
+    line-height: 1.7;
     max-width: 650px;
-    margin-bottom: 2.5rem;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    margin-bottom: 3rem;
 }
 
-/* =========================================
-   4. BUTTONS (Apple HIG Inspired)
-   ========================================= */
 .hero-cta-group {
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
     align-items: center;
-}
-
-.apple-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 14px 28px;
-    border-radius: 8px; /* Slightly rounded, not full pill in mockup */
-    font-size: 0.9rem;
-    font-weight: 600;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    cursor: pointer;
 }
 
 .primary-btn {
-    background-color: #C1995E;
-    color: #111;
-    border: 1px solid #C1995E;
+    background: var(--gold);
+    color: #111 !important;
+    border: none;
 }
+.light-theme .primary-btn { background: #CD0000; color: #fff !important; }
+.dark-theme .primary-btn { background: #FFBF00; color: #111 !important; }
 
 .primary-btn:hover {
-    background-color: #A37E43;
-    border-color: #A37E43;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
 .secondary-btn {
-    background-color: transparent;
-    color: #F5F5F7;
-    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: transparent;
+    color: var(--text-heading) !important;
+    border: 1px solid var(--text-heading);
 }
 
 .secondary-btn:hover {
-    border-color: #F5F5F7;
-    background-color: rgba(255, 255, 255, 0.1);
+    background: var(--text-heading);
+    color: var(--bg-main) !important;
+    transform: translateY(-2px);
 }
 
-/* =========================================
-   5. ANIMATIONS
-   ========================================= */
 .fade-in-up {
     opacity: 0;
-    animation: fadeUp 1s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+    animation: heroFadeUp 1s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+    animation-delay: 0.2s;
 }
 
-@keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+@keyframes heroFadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-/* =========================================
-   6. RESPONSIVE DESIGN
-   ========================================= */
 @media (max-width: 768px) {
     .hero-section {
-    height: 100vh;
-    scroll-snap-align: start;
-    overflow-y: auto;
-    overflow-x: hidden;
-        padding: 0 20px;
+        padding: 0 5%;
+        text-align: center;
+        align-items: center;
     }
-    
-    .hero-title {
-        font-size: 2.8rem;
+    .hero-overlay {
+        background: linear-gradient(
+            to top,
+            rgba(var(--scrim), var(--scrim-strong)) 0%,
+            rgba(var(--scrim), var(--scrim-strong)) 60%,
+            rgba(var(--scrim), var(--scrim-soft)) 100%
+        );
     }
-    
     .hero-cta-group {
         flex-direction: column;
-        align-items: stretch;
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
     }
-    
     .apple-btn {
         width: 100%;
-        text-align: center;
-    }
-    
-    .hero-overlay {
-        background: linear-gradient(to top, rgba(0,0,0,0.9) 20%, rgba(0,0,0,0.5) 100%);
     }
 }
