@@ -8,7 +8,7 @@ const Hero = () => {
     return (
         <section className={`hero-section ${isDarkTheme ? 'dark-theme' : 'light-theme'}`} id="home">
             <img 
-                src="/FirmImage.jpg" 
+                src="/Satish-with-foreigh-deligates.jpg" 
                 alt="Chennai Lawyers" 
                 className="hero-background" 
             />
