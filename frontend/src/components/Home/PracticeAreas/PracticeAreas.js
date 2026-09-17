@@ -11,14 +11,14 @@ const PracticeAreas = () => {
     const { isDarkTheme } = useTheme();
 
     const practices = [
-        { title: 'Civil Law', icon: <Landmark size={24} strokeWidth={1.5} />, url: '/all-practices' },
-        { title: 'Corporate Law', icon: <Briefcase size={24} strokeWidth={1.5} />, url: '/all-practices' },
-        { title: 'Family Law', icon: <Users size={24} strokeWidth={1.5} />, url: '/all-practices' },
-        { title: 'Criminal Law', icon: <Gavel size={24} strokeWidth={1.5} />, url: '/all-practices' },
-        { title: 'Consumer Law', icon: <ShieldAlert size={24} strokeWidth={1.5} />, url: '/all-practices' },
-        { title: 'Data Protection & Privacy', icon: <Shield size={24} strokeWidth={1.5} />, url: '/all-practices' },
-        { title: 'Intellectual Property', icon: <Lightbulb size={24} strokeWidth={1.5} />, url: '/all-practices' },
-        { title: 'Narcotics & Drugs Act', icon: <Pill size={24} strokeWidth={1.5} />, url: '/all-practices' }
+        { title: 'Civil Law', icon: <Landmark size={22} strokeWidth={1.5} />, url: '/all-practices' },
+        { title: 'Corporate Law', icon: <Briefcase size={22} strokeWidth={1.5} />, url: '/all-practices' },
+        { title: 'Family Law', icon: <Users size={22} strokeWidth={1.5} />, url: '/all-practices' },
+        { title: 'Criminal Law', icon: <Gavel size={22} strokeWidth={1.5} />, url: '/all-practices' },
+        { title: 'Consumer Law', icon: <ShieldAlert size={22} strokeWidth={1.5} />, url: '/all-practices' },
+        { title: 'Data Protection & Privacy', icon: <Shield size={22} strokeWidth={1.5} />, url: '/all-practices' },
+        { title: 'Intellectual Property', icon: <Lightbulb size={22} strokeWidth={1.5} />, url: '/all-practices' },
+        { title: 'Narcotics & Drugs Act', icon: <Pill size={22} strokeWidth={1.5} />, url: '/all-practices' }
     ];
 
     return (
@@ -35,10 +35,16 @@ const PracticeAreas = () => {
                             <p className="pg-description">
                                 Our nuanced understanding of the legal landscape equips us to effectively counsel international and domestic businesses, operations and investments across varied practice areas.
                             </p>
+
+                            <div className="pg-action-wrapper">
+                                <Link to="/all-practices" className="apple-btn primary-btn glass-btn">
+                                    VIEW ALL PRACTICE AREAS <span style={{marginLeft: '8px'}}>→</span>
+                                </Link>
+                            </div>
                         </div>
                     </div>
 
-                    {/* Right Column (List of Links) */}
+                    {/* Right Column (List of Links with TLH Animation) */}
                     <div className="pg-right">
                         <div className="pg-list-wrapper">
                             {practices.map((practice, index) => (
@@ -52,15 +58,11 @@ const PracticeAreas = () => {
                                     <div className="pg-arrow-wrapper">
                                         <ArrowRight size={20} strokeWidth={1.5} />
                                     </div>
-                                    <div className="pg-hover-reveal"></div>
+                                    {/* TLH-style animated bottom line */}
+                                    <div className="pg-link-border-bg"></div>
+                                    <div className="pg-link-border-active"></div>
                                 </Link>
                             ))}
-                        </div>
-                        
-                        <div className="pg-action-wrapper">
-                            <Link to="/all-practices" className="apple-btn primary-btn glass-btn">
-                                VIEW ALL PRACTICE AREAS <span style={{marginLeft: '8px'}}>→</span>
-                            </Link>
                         </div>
                     </div>
 
