@@ -5,19 +5,12 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from "react-route
 import "./styles/global.css";
 
 import Navbar from "./components/Navbar/Navbar";
-import Hero from "./components/Home/Hero/Hero";
-import PracticeAreas from "./components/Home/PracticeAreas/PracticeAreas";
-import ContactForm from "./components/Home/ContactForm/ContactForm";
+import Home from "./components/Home/Home";
 import Footer from "./components/Footer/Footer";
-import Testimonials from "./components/Home/Testimonials/Testimonials";
-import Ourpeople from "./components/Home/Ourpeople/Ourpeople";
-import InsightsPreview from "./components/Home/InsightsPreview/InsightsPreview";
-import About from "./components/Home/About/About";
 import AboutPage from "./components/Pages/AboutPage/AboutPage";
 import PracticeAreasPage from "./components/Pages/PracticeAreasPage/PracticeAreasPage";
 import ContactPage from "./components/Pages/ContactPage/ContactPage";
 
-import DotNavigation from "./components/Shared/DotNavigation/DotNavigation";
 import Careers from "./components/Pages/Career/Career";
 import { ThemeProvider } from "./components/Shared/ThemeContext/ThemeContext";
 import Blogs from "./components/Pages/Blogs/Blogs";
@@ -134,19 +127,7 @@ function App() {
                 <AppLayout isPreloaderDone={!showPreloader}>
                     <Routes>
                         {/* Main Website Routes */}
-                        <Route path="/" element={
-                            <main id="home-scroll-container" className="snap-container">
-                                <DotNavigation />
-                                <Hero />
-                                <PracticeAreas />
-                                <About />
-                                <InsightsPreview />
-                                <Ourpeople />
-                                <Testimonials />
-                                <ContactForm />
-                            </main>
-                        }
-                        />
+                        <Route path="/" element={<Home />} />
                         <Route path="/legacy" element={<Legacy />} />
                         <Route path="/about" element={<AboutPage />} />
                         <Route path="/all-practices" element={<PracticeAreasPage />} />
