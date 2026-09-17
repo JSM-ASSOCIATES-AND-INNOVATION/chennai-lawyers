@@ -23,8 +23,8 @@
     font-weight: 600;
 }
 
-.dark-theme .testimonials-eyebrow { color: #FFBF00; }
-.light-theme .testimonials-eyebrow { color: #CD0000; }
+.dark-theme .testimonials-eyebrow { color: #C49B55; }
+.light-theme .testimonials-eyebrow { color: #C49B55; }
 
 .testimonials-title {
     font-size: clamp(2.5rem, 4vw, 3.5rem);
@@ -128,11 +128,11 @@
     transform: translateY(-5px);
 }
 
-.dark-theme .award-glass-card:hover { border-color: rgba(255, 191, 0, 0.4); }
-.light-theme .award-glass-card:hover { border-color: rgba(205, 0, 0, 0.4); }
+.dark-theme .award-glass-card:hover { border-color: rgba(196, 155, 85, 0.4); }
+.light-theme .award-glass-card:hover { border-color: rgba(196, 155, 85, 0.4); }
 
-.dark-theme .review-glass-card:hover { border-color: rgba(255, 191, 0, 0.4); }
-.light-theme .review-glass-card:hover { border-color: rgba(205, 0, 0, 0.4); }
+.dark-theme .review-glass-card:hover { border-color: rgba(196, 155, 85, 0.4); }
+.light-theme .review-glass-card:hover { border-color: rgba(196, 155, 85, 0.4); }
 
 /* Award Card specifics */
 .award-icon-header {
@@ -144,8 +144,8 @@
 .accent-icon {
     color: var(--text-heading);
 }
-.dark-theme .accent-icon { color: #FFBF00; }
-.light-theme .accent-icon { color: #CD0000; }
+.dark-theme .accent-icon { color: #C49B55; }
+.light-theme .accent-icon { color: #C49B55; }
 
 .award-issuer {
     font-size: 0.85rem;
@@ -244,11 +244,4 @@
         width: 320px;
         padding: 1.5rem;
     }
-}
-
-.testimonials-section {
-    padding: 0;
-}
-.testimonials-container {
-    padding-top: 80px;
 }

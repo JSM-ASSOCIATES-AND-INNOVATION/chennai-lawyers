@@ -4,8 +4,8 @@
 
 .publications-section {
   /* 🚨 DARK MODE DEFAULTS (Jet Black & Orangish Amber) */
-  --accent-primary: #FFBF00;
-  --accent-muted: rgba(255, 191, 0, 0.15);
+  --accent-primary: #C49B55;
+  --accent-muted: rgba(196, 155, 85, 0.15);
 
   --bg-main: #0a0a0a;
   --bg-badge: #0a0a0a;
@@ -19,8 +19,8 @@
 
 .publications-section.light-theme {
   /* 🚨 LIGHT MODE OVERRIDES (Crisp White & Cherry Red) */
-  --accent-primary: #CD0000;
-  --accent-muted: rgba(205, 0, 0, 0.08);
+  --accent-primary: #C49B55;
+  --accent-muted: rgba(196, 155, 85, 0.08);
 
   --bg-main: #ffffff;
   --bg-badge: #ffffff;

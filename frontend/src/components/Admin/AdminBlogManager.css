@@ -51,17 +51,17 @@
 }
 
 .admin-back-btn:hover {
-    border-color: #FFBF00;
-    color: #FFBF00;
-    background: rgba(255, 191, 0, 0.05);
+    border-color: #C49B55;
+    color: #C49B55;
+    background: rgba(196, 155, 85, 0.05);
 }
 
 .header-icon {
-    color: #FFBF00;
+    color: #C49B55;
 }
 
 .header-title {
-    color: #FFBF00;
+    color: #C49B55;
     font-family: 'Playfair Display', serif;
     margin: 0;
     font-size: 2rem;
@@ -70,7 +70,7 @@
 
 /* Buttons */
 .admin-submit-btn {
-    background: #FFBF00;
+    background: #C49B55;
     color: #000000;
     padding: 12px 24px;
     border: none;
@@ -87,7 +87,7 @@
 .admin-submit-btn:hover:not(:disabled) {
     background: #e6a800;
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(255, 191, 0, 0.2);
+    box-shadow: 0 8px 20px rgba(196, 155, 85, 0.2);
 }
 
 .admin-submit-btn:disabled {
@@ -161,8 +161,8 @@
 
 .reorder-btn {
     background: rgba(0, 0, 0, 0.8);
-    color: #FFBF00;
-    border: 1px solid #FFBF00;
+    color: #C49B55;
+    border: 1px solid #C49B55;
     border-radius: 4px;
     cursor: pointer;
     padding: 6px;
@@ -170,7 +170,7 @@
 }
 
 .reorder-btn:hover:not(:disabled) {
-    background: #FFBF00;
+    background: #C49B55;
     color: #000;
 }
 
@@ -204,7 +204,7 @@
 }
 
 .blog-card-author {
-    color: #FFBF00;
+    color: #C49B55;
     font-size: 0.9rem;
     margin: 0;
     display: flex;
@@ -233,13 +233,13 @@
 }
 
 .edit-btn {
-    background: rgba(255, 191, 0, 0.1);
-    color: #FFBF00;
-    border: 1px solid #FFBF00;
+    background: rgba(196, 155, 85, 0.1);
+    color: #C49B55;
+    border: 1px solid #C49B55;
 }
 
 .edit-btn:hover {
-    background: #FFBF00;
+    background: #C49B55;
     color: #000000;
 }
 
@@ -339,7 +339,7 @@
 
 .form-group input:focus,
 .form-group textarea:focus {
-    border-color: #FFBF00;
+    border-color: #C49B55;
 }
 
 .huge-input {
@@ -430,8 +430,8 @@
 
 .secondary-outline-btn {
     background: transparent;
-    color: #FFBF00;
-    border: 1px solid #FFBF00;
+    color: #C49B55;
+    border: 1px solid #C49B55;
     padding: 6px 12px;
     border-radius: 4px;
     cursor: pointer;
@@ -442,7 +442,7 @@
 }
 
 .secondary-outline-btn:hover {
-    background: rgba(255, 191, 0, 0.1);
+    background: rgba(196, 155, 85, 0.1);
 }
 
 .text-danger-btn {
@@ -456,7 +456,7 @@
 
 /* --- QUILL OVERRIDES --- */
 .quill-wrapper-box label {
-    color: #FFBF00;
+    color: #C49B55;
     display: block;
     margin-bottom: 10px;
     text-transform: uppercase;
@@ -471,14 +471,14 @@
     z-index: 100;
     background: #fdfdfd;
     border-radius: 8px 8px 0 0;
-    border: 1px solid #FFBF00;
+    border: 1px solid #C49B55;
     border-bottom: 1px solid #ccc;
 }
 
 .ql-container.ql-snow {
     border-radius: 0 0 8px 8px;
     background: #ffffff;
-    border: 1px solid #FFBF00;
+    border: 1px solid #C49B55;
     border-top: none;
 }
 
@@ -494,7 +494,7 @@
 .ql-editor h2,
 .ql-editor h3 {
     font-family: 'Playfair Display', serif !important;
-    color: #FFBF00 !important;
+    color: #C49B55 !important;
 }
 
 /* Font Dropdown Labels */
@@ -618,7 +618,7 @@
 .mock-hero-meta {
     display: flex;
     gap: 15px;
-    color: #FFBF00;
+    color: #C49B55;
     font-size: 0.85rem;
     margin-top: 15px;
     text-transform: uppercase;
@@ -649,7 +649,7 @@
 .quill-preview-content h1,
 .quill-preview-content h2,
 .quill-preview-content h3 {
-    color: #FFBF00;
+    color: #C49B55;
     font-family: 'Playfair Display', serif;
 }
 
@@ -679,7 +679,7 @@
     height: 80px;
     margin: 0 auto 15px;
     border-radius: 50%;
-    border: 2px solid #FFBF00;
+    border: 2px solid #C49B55;
     padding: 3px;
 }
 
@@ -697,7 +697,7 @@
 }
 
 .mock-sidebar-card h4 {
-    color: #FFBF00;
+    color: #C49B55;
     font-size: 0.75rem;
     text-transform: uppercase;
     margin: 5px 0;
@@ -707,7 +707,7 @@
 .mock-sidebar-divider {
     width: 30px;
     height: 2px;
-    background: #FFBF00;
+    background: #C49B55;
     margin: 15px auto;
     opacity: 0.5;
 }
@@ -738,7 +738,7 @@
     background: #111111;
     border-radius: 12px;
     overflow: hidden;
-    border: 1px solid rgba(255, 191, 0, 0.2);
+    border: 1px solid rgba(196, 155, 85, 0.2);
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
 }
 
@@ -785,7 +785,7 @@
 
 .cropper-save-btn {
     padding: 10px 20px;
-    background: #FFBF00;
+    background: #C49B55;
     color: #000000;
     border: none;
     border-radius: 4px;

@@ -39,13 +39,13 @@
 }
 
 .admin-contact-back-btn:hover {
-    border-color: #FFBF00;
-    color: #FFBF00;
-    background: rgba(255, 191, 0, 0.05);
+    border-color: #C49B55;
+    color: #C49B55;
+    background: rgba(196, 155, 85, 0.05);
 }
 
 .admin-contact-title {
-    color: #FFBF00;
+    color: #C49B55;
     font-family: 'Playfair Display', serif;
     margin: 0;
     font-size: 2rem;
@@ -153,12 +153,12 @@
 }
 
 .admin-contact-meta-item a:hover {
-    color: #FFBF00;
+    color: #C49B55;
     text-decoration: underline;
 }
 
 .admin-contact-name {
-    color: #FFBF00;
+    color: #C49B55;
     font-weight: bold;
     font-size: 1.2rem;
     letter-spacing: 0.5px;

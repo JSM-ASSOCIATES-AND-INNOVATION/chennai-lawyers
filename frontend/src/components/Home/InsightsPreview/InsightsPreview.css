@@ -42,8 +42,8 @@
     box-shadow: 0 30px 60px rgba(0,0,0,0.05);
 }
 
-.dark-theme .insights-sticky-content { border-top: 2px solid rgba(255, 191, 0, 0.3); }
-.light-theme .insights-sticky-content { border-top: 2px solid rgba(205, 0, 0, 0.3); }
+.dark-theme .insights-sticky-content { border-top: 2px solid rgba(196, 155, 85, 0.3); }
+.light-theme .insights-sticky-content { border-top: 2px solid rgba(196, 155, 85, 0.3); }
 
 .insights-eyebrow {
     font-size: 0.85rem;
@@ -52,8 +52,8 @@
     margin-bottom: 1.5rem;
     font-weight: 600;
 }
-.dark-theme .insights-eyebrow { color: #FFBF00; }
-.light-theme .insights-eyebrow { color: #CD0000; }
+.dark-theme .insights-eyebrow { color: #C49B55; }
+.light-theme .insights-eyebrow { color: #C49B55; }
 
 .insights-title {
     font-size: clamp(2.5rem, 4vw, 3.5rem);
@@ -70,8 +70,8 @@
     margin-bottom: 2rem;
     border-radius: 2px;
 }
-.dark-theme .insights-accent-line { background: #FFBF00; }
-.light-theme .insights-accent-line { background: #CD0000; }
+.dark-theme .insights-accent-line { background: #C49B55; }
+.light-theme .insights-accent-line { background: #C49B55; }
 
 .insights-description {
     font-size: 1.1rem;
@@ -121,8 +121,8 @@
     transform-origin: left;
     transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
 }
-.dark-theme .insight-border-active { background: #FFBF00; }
-.light-theme .insight-border-active { background: #CD0000; }
+.dark-theme .insight-border-active { background: #C49B55; }
+.light-theme .insight-border-active { background: #C49B55; }
 
 .insight-text-card:hover .insight-border-active {
     transform: scaleX(1);
@@ -151,8 +151,8 @@
     border-radius: 4px;
     background: rgba(128,128,128,0.1);
 }
-.dark-theme .insight-badge { color: #FFBF00; }
-.light-theme .insight-badge { color: #CD0000; }
+.dark-theme .insight-badge { color: #C49B55; }
+.light-theme .insight-badge { color: #C49B55; }
 
 .insight-date {
     font-size: 0.85rem;
@@ -166,8 +166,8 @@
     margin-bottom: 2rem;
     transition: color 0.3s ease;
 }
-.dark-theme .insight-text-card:hover .insight-card-title { color: #FFBF00; }
-.light-theme .insight-text-card:hover .insight-card-title { color: #CD0000; }
+.dark-theme .insight-text-card:hover .insight-card-title { color: #C49B55; }
+.light-theme .insight-text-card:hover .insight-card-title { color: #C49B55; }
 
 /* View More Button at Bottom */
 .insight-card-footer {
@@ -180,8 +180,8 @@
     letter-spacing: 1px;
     transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1);
 }
-.dark-theme .insight-card-footer { color: #FFBF00; }
-.light-theme .insight-card-footer { color: #CD0000; }
+.dark-theme .insight-card-footer { color: #C49B55; }
+.light-theme .insight-card-footer { color: #C49B55; }
 
 .view-more-arrow {
     opacity: 0.5;
@@ -253,11 +253,4 @@
     .insight-card-title {
         font-size: 1.15rem;
     }
-}
-
-.insights-section {
-    padding: 0;
-}
-.insights-container {
-    padding-top: 80px;
 }

@@ -34,8 +34,8 @@
     margin: 2rem 0;
     border-radius: 2px;
 }
-.light-theme .notfound-divider { background: #CD0000; }
-.dark-theme .notfound-divider { background: #FFBF00; }
+.light-theme .notfound-divider { background: #C49B55; }
+.dark-theme .notfound-divider { background: #C49B55; }
 
 .notfound-subtitle {
     font-family: 'Montserrat', sans-serif;

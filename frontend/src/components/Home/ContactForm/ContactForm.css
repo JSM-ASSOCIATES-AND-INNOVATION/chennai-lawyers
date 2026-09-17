@@ -36,8 +36,8 @@
     font-weight: 600;
     margin-bottom: 1.5rem;
 }
-.dark-theme .contact-eyebrow { color: #FFBF00; }
-.light-theme .contact-eyebrow { color: #CD0000; }
+.dark-theme .contact-eyebrow { color: #C49B55; }
+.light-theme .contact-eyebrow { color: #C49B55; }
 
 .contact-title {
     font-size: clamp(3rem, 4vw, 4rem);
@@ -54,8 +54,8 @@
     margin-bottom: 2rem;
     border-radius: 2px;
 }
-.dark-theme .contact-accent-line { background: #FFBF00; }
-.light-theme .contact-accent-line { background: #CD0000; }
+.dark-theme .contact-accent-line { background: #C49B55; }
+.light-theme .contact-accent-line { background: #C49B55; }
 
 .contact-description {
     font-size: 1.15rem;
@@ -88,8 +88,8 @@
     flex-shrink: 0;
     transition: all 0.3s ease;
 }
-.dark-theme .detail-icon { color: #FFBF00; }
-.light-theme .detail-icon { color: #CD0000; }
+.dark-theme .detail-icon { color: #C49B55; }
+.light-theme .detail-icon { color: #C49B55; }
 
 .contact-detail-item:hover .detail-icon {
     transform: translateY(-3px);
@@ -134,10 +134,10 @@
 }
 
 .dark-theme .contact-glass-panel {
-    border-top: 3px solid rgba(255, 191, 0, 0.4);
+    border-top: 3px solid rgba(196, 155, 85, 0.4);
 }
 .light-theme .contact-glass-panel {
-    border-top: 3px solid rgba(205, 0, 0, 0.4);
+    border-top: 3px solid rgba(196, 155, 85, 0.4);
 }
 
 .premium-form {
@@ -276,11 +276,4 @@
     .contact-info-column {
         padding: 0 10px;
     }
-}
-
-.contact-section {
-    padding: 0;
-}
-.contact-container {
-    padding-top: 80px;
 }

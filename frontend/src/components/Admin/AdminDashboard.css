@@ -22,7 +22,7 @@
 /* --- HEADER --- */
 .dashboard-header h1 {
     font-family: 'Playfair Display', serif;
-    color: #FFBF00;
+    color: #C49B55;
     /* Orangish Amber */
     font-size: 3rem;
     margin-bottom: 0.5rem;
@@ -47,7 +47,7 @@
 
 .dashboard-card {
     background: #0a0a0a;
-    border: 1px solid rgba(255, 191, 0, 0.2);
+    border: 1px solid rgba(196, 155, 85, 0.2);
     padding: 3rem 2rem;
     border-radius: 12px;
     cursor: pointer;
@@ -59,13 +59,13 @@
 
 .dashboard-card:hover {
     transform: translateY(-10px);
-    border-color: #FFBF00;
-    background: rgba(255, 191, 0, 0.05);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(255, 191, 0, 0.1);
+    border-color: #C49B55;
+    background: rgba(196, 155, 85, 0.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(196, 155, 85, 0.1);
 }
 
 .card-icon {
-    color: #FFBF00;
+    color: #C49B55;
     margin-bottom: 1.5rem;
     transition: transform 0.3s ease;
 }
@@ -92,8 +92,8 @@
 /* --- BUTTONS --- */
 .dashboard-btn {
     background: transparent;
-    border: 1px solid #FFBF00;
-    color: #FFBF00;
+    border: 1px solid #C49B55;
+    color: #C49B55;
     padding: 10px 24px;
     border-radius: 6px;
     cursor: pointer;
@@ -106,7 +106,7 @@
 }
 
 .dashboard-card:hover .dashboard-btn {
-    background: #FFBF00;
+    background: #C49B55;
     color: #000000;
 }
 

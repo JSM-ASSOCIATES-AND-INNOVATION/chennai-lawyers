@@ -20,7 +20,7 @@
     width: 280px;
     min-width: 280px;
     background: #080808;
-    border-right: 1px solid rgba(255, 191, 0, 0.15);
+    border-right: 1px solid rgba(196, 155, 85, 0.15);
     /* Orangish Amber tint */
     position: fixed;
     top: 0;
@@ -51,14 +51,14 @@
 }
 
 .sidebar-branding h2 {
-    color: #FFBF00 !important;
+    color: #C49B55 !important;
     /* Orangish Amber */
     margin: 0 0 8px 0;
     font-size: 1.65rem;
     font-family: 'Playfair Display', 'Times New Roman', serif;
     letter-spacing: 0.5px;
     font-weight: 700;
-    text-shadow: 0 2px 15px rgba(255, 191, 0, 0.2);
+    text-shadow: 0 2px 15px rgba(196, 155, 85, 0.2);
 }
 
 .sidebar-branding span {
@@ -96,7 +96,7 @@
     top: 0;
     bottom: 0;
     width: 3px;
-    background: #FFBF00;
+    background: #C49B55;
     transform: scaleY(0);
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     transform-origin: center;
@@ -105,7 +105,7 @@
 /* HOVER STATE */
 .admin-nav-item:hover {
     color: #f8fafc;
-    background: linear-gradient(90deg, rgba(255, 191, 0, 0.05) 0%, transparent 100%);
+    background: linear-gradient(90deg, rgba(196, 155, 85, 0.05) 0%, transparent 100%);
 }
 
 .admin-nav-item:hover::before {
@@ -115,13 +115,13 @@
 
 /* ACTIVE STATE */
 .admin-nav-item.active {
-    color: #FFBF00;
-    background: linear-gradient(90deg, rgba(255, 191, 0, 0.12) 0%, transparent 100%);
+    color: #C49B55;
+    background: linear-gradient(90deg, rgba(196, 155, 85, 0.12) 0%, transparent 100%);
 }
 
 .admin-nav-item.active::before {
     transform: scaleY(1);
-    box-shadow: 2px 0 10px rgba(255, 191, 0, 0.6);
+    box-shadow: 2px 0 10px rgba(196, 155, 85, 0.6);
 }
 
 .admin-nav-item svg {
@@ -136,7 +136,7 @@
 
 .admin-nav-item.active svg {
     opacity: 1;
-    filter: drop-shadow(0 0 8px rgba(255, 191, 0, 0.5));
+    filter: drop-shadow(0 0 8px rgba(196, 155, 85, 0.5));
     transform: translateX(3px);
 }
 
@@ -187,7 +187,7 @@
     justify-content: space-between;
     align-items: flex-end;
     margin-bottom: 50px;
-    border-bottom: 1px solid rgba(255, 191, 0, 0.2);
+    border-bottom: 1px solid rgba(196, 155, 85, 0.2);
     padding-bottom: 20px;
 }
 
@@ -236,7 +236,7 @@
 }
 
 .text-gold {
-    color: #FFBF00 !important;
+    color: #C49B55 !important;
 }
 
 /* =========================================
@@ -271,8 +271,8 @@
 
 .submission-card:hover {
     transform: translateY(-4px);
-    border-color: #FFBF00;
-    box-shadow: 0 10px 30px rgba(255, 191, 0, 0.1);
+    border-color: #C49B55;
+    box-shadow: 0 10px 30px rgba(196, 155, 85, 0.1);
 }
 
 .sub-card-header {
@@ -285,8 +285,8 @@
 }
 
 .id-badge {
-    background: rgba(255, 191, 0, 0.1);
-    color: #FFBF00;
+    background: rgba(196, 155, 85, 0.1);
+    color: #C49B55;
     padding: 4px 10px;
     border-radius: 4px;
     font-size: 0.8rem;
@@ -325,7 +325,7 @@
     display: flex;
     align-items: center;
     gap: 8px;
-    color: #FFBF00;
+    color: #C49B55;
     font-size: 0.95rem;
     margin: 0;
     font-weight: 500;
@@ -361,7 +361,7 @@
 }
 
 .inline-status-drop:focus {
-    border-color: #FFBF00;
+    border-color: #C49B55;
 }
 
 button {
@@ -376,8 +376,8 @@ button {
     justify-content: center;
     gap: 8px;
     background: transparent !important;
-    color: #FFBF00 !important;
-    border: 1px solid #FFBF00 !important;
+    color: #C49B55 !important;
+    border: 1px solid #C49B55 !important;
     padding: 10px 20px;
     border-radius: 4px !important;
     font-weight: 600;
@@ -389,10 +389,10 @@ button {
 .review-btn:hover,
 .primary-btn:hover,
 .admin-primary-btn:hover {
-    background: #FFBF00 !important;
+    background: #C49B55 !important;
     color: #000 !important;
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(255, 191, 0, 0.25);
+    box-shadow: 0 5px 15px rgba(196, 155, 85, 0.25);
 }
 
 /* =========================================
@@ -413,7 +413,7 @@ button {
 }
 
 .admin-input:focus {
-    border-color: #FFBF00 !important;
+    border-color: #C49B55 !important;
 }
 
 /* =========================================
@@ -438,7 +438,7 @@ button {
     border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 40px;
     border-radius: 4px;
-    border-top: 4px solid #FFBF00 !important;
+    border-top: 4px solid #C49B55 !important;
     max-width: 550px;
     width: 90%;
     text-align: center;
@@ -509,7 +509,7 @@ input:-webkit-autofill:active {
 
 .lock-box {
     background: #0a0a0a;
-    border: 1px solid rgba(255, 191, 0, 0.3);
+    border: 1px solid rgba(196, 155, 85, 0.3);
     padding: 40px;
     border-radius: 8px;
     max-width: 400px;
@@ -527,7 +527,7 @@ input:-webkit-autofill:active {
     left: 0;
     right: 0;
     height: 3px;
-    background: linear-gradient(90deg, transparent, #FFBF00, transparent);
+    background: linear-gradient(90deg, transparent, #C49B55, transparent);
 }
 
 .lock-icon-ring {
@@ -535,12 +535,12 @@ input:-webkit-autofill:active {
     height: 80px;
     margin: 0 auto 20px;
     border-radius: 50%;
-    background: rgba(255, 191, 0, 0.05);
-    border: 1px solid rgba(255, 191, 0, 0.2);
+    background: rgba(196, 155, 85, 0.05);
+    border: 1px solid rgba(196, 155, 85, 0.2);
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 0 20px rgba(255, 191, 0, 0.1) inset;
+    box-shadow: 0 0 20px rgba(196, 155, 85, 0.1) inset;
 }
 
 .lock-box h2 {
@@ -575,7 +575,7 @@ input:-webkit-autofill:active {
     background: #050505;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 4px;
-    color: #FFBF00;
+    color: #C49B55;
     font-size: 1.1rem;
     letter-spacing: 2px;
     outline: none;
@@ -584,8 +584,8 @@ input:-webkit-autofill:active {
 }
 
 .lock-input-group input:focus {
-    border-color: #FFBF00;
-    box-shadow: 0 0 0 2px rgba(255, 191, 0, 0.15);
+    border-color: #C49B55;
+    box-shadow: 0 0 0 2px rgba(196, 155, 85, 0.15);
 }
 
 .lock-error {
@@ -619,7 +619,7 @@ input:-webkit-autofill:active {
 .unlock-btn {
     width: 100%;
     padding: 15px;
-    background: #FFBF00;
+    background: #C49B55;
     color: #000;
     border: none;
     border-radius: 4px;
@@ -634,5 +634,5 @@ input:-webkit-autofill:active {
 .unlock-btn:hover {
     background: #e6a800;
     transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(255, 191, 0, 0.25);
+    box-shadow: 0 10px 20px rgba(196, 155, 85, 0.25);
 }

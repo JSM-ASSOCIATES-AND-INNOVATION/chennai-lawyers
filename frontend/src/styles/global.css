@@ -3,7 +3,7 @@
    ========================================= */
 :root {
     /* 🚨 APPLE HIG SYSTEM TOKENS (Dark Mode) */
-    --accent-primary: #0A84FF; /* iOS Blue */
+    --accent-primary: #C49B55; /* iOS Blue */
     --accent-muted: rgba(10, 132, 255, 0.15);
     --accent-glow: rgba(10, 132, 255, 0.3);
 
@@ -30,7 +30,7 @@
 /* ☀️ LIGHT THEME OVERRIDES (Apple HIG) */
 body.light-theme,
 .light-theme {
-    --accent-primary: #0066CC;
+    --accent-primary: #C49B55;
     --accent-muted: rgba(0, 102, 204, 0.08);
     --accent-glow: rgba(0, 102, 204, 0.15);
 
@@ -217,7 +217,7 @@ a:hover {
 .dark-theme .secondary-btn::before,
 .dark-theme .submit-btn::before,
 .dark-theme .nav-right .nav-link:last-child::before { 
-    background-color: #FFBF00 !important; 
+    background-color: #C49B55 !important; 
 }
 
 /* Light Theme Colors */
@@ -226,7 +226,7 @@ a:hover {
 .light-theme .secondary-btn::before,
 .light-theme .submit-btn::before,
 .light-theme .nav-right .nav-link:last-child::before { 
-    background-color: #CD0000 !important; 
+    background-color: #C49B55 !important; 
 }
 
 /* Hover Effects */
@@ -277,34 +277,4 @@ a:hover {
 /* Specific styling for Navbar Contact button to ensure it matches exactly */
 .nav-right .nav-link:last-child {
     padding: 10px 24px !important;
-}
-
-/* SNAP SCROLLING */
-.snap-container {
-    height: 100vh;
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
-    overflow-x: hidden;
-}
-
-.snap-container > section {
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-}
-
-/* Ensure child containers don't overflow */
-.snap-container > section > div {
-    max-height: 100vh;
-    overflow-y: auto;
-    scrollbar-width: none; /* Firefox */
-}
-.snap-container > section > div::-webkit-scrollbar {
-    display: none; /* Safari and Chrome */
 }

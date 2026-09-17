@@ -85,8 +85,8 @@
     font-weight: 600;
 }
 
-.dark-theme .about-eyebrow { color: #FFBF00; }
-.light-theme .about-eyebrow { color: #CD0000; }
+.dark-theme .about-eyebrow { color: #C49B55; }
+.light-theme .about-eyebrow { color: #C49B55; }
 
 .about-sticky-title h2 {
     font-size: clamp(2.5rem, 4vw, 3.5rem);
@@ -102,8 +102,8 @@
     height: 3px;
     border-radius: 2px;
 }
-.dark-theme .about-accent-line { background: #FFBF00; }
-.light-theme .about-accent-line { background: #CD0000; }
+.dark-theme .about-accent-line { background: #C49B55; }
+.light-theme .about-accent-line { background: #C49B55; }
 
 /* Right Content */
 .about-paragraph {
@@ -145,8 +145,8 @@
     margin-bottom: 0.5rem;
 }
 
-.dark-theme .stat-item h3 { color: #FFBF00; }
-.light-theme .stat-item h3 { color: #CD0000; }
+.dark-theme .stat-item h3 { color: #C49B55; }
+.light-theme .stat-item h3 { color: #C49B55; }
 
 .stat-item p {
     font-size: 0.9rem;

@@ -43,8 +43,8 @@
 .footer-logo-highlight {
     color: #C49B55;
 }
-.light-theme .footer-logo-highlight { color: #CD0000; }
-.dark-theme .footer-logo-highlight { color: #FFBF00; }
+.light-theme .footer-logo-highlight { color: #C49B55; }
+.dark-theme .footer-logo-highlight { color: #C49B55; }
 
 .footer-logo-sub {
     font-family: 'Montserrat', sans-serif;
@@ -61,8 +61,8 @@
     background: #C49B55;
     margin-bottom: 1.5rem;
 }
-.light-theme .footer-divider { background: #CD0000; }
-.dark-theme .footer-divider { background: #FFBF00; }
+.light-theme .footer-divider { background: #C49B55; }
+.dark-theme .footer-divider { background: #C49B55; }
 
 .footer-motto {
     font-size: 1rem;
@@ -98,8 +98,8 @@
     color: #000;
     transform: translateY(-3px);
 }
-.light-theme .social-icon:hover { background: #CD0000; color: #fff; }
-.dark-theme .social-icon:hover { background: #FFBF00; color: #000; }
+.light-theme .social-icon:hover { background: #C49B55; color: #fff; }
+.dark-theme .social-icon:hover { background: #C49B55; color: #000; }
 
 /* SHARED HEADINGS */
 .footer-heading {
@@ -134,8 +134,8 @@
 .footer-links a:hover {
     color: #C49B55;
 }
-.light-theme .footer-links a:hover { color: #CD0000; }
-.dark-theme .footer-links a:hover { color: #FFBF00; }
+.light-theme .footer-links a:hover { color: #C49B55; }
+.dark-theme .footer-links a:hover { color: #C49B55; }
 
 /* CONTACT COLUMN */
 .footer-contact-list {
@@ -162,8 +162,8 @@
     flex-shrink: 0;
     margin-top: 3px;
 }
-.light-theme .footer-icon { color: #CD0000; }
-.dark-theme .footer-icon { color: #FFBF00; }
+.light-theme .footer-icon { color: #C49B55; }
+.dark-theme .footer-icon { color: #C49B55; }
 
 /* MAP COLUMN */
 .footer-map-container {
@@ -258,8 +258,8 @@
     background: #C49B55;
     color: #000;
 }
-.light-theme .scroll-top-btn:hover { background: #CD0000; color: #fff; }
-.dark-theme .scroll-top-btn:hover { background: #FFBF00; color: #000; }
+.light-theme .scroll-top-btn:hover { background: #C49B55; color: #fff; }
+.dark-theme .scroll-top-btn:hover { background: #C49B55; color: #000; }
 
 /* MOBILE RESPONSIVE */
 @media (max-width: 1024px) {

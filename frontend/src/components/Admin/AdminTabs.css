@@ -19,7 +19,7 @@
     background: #111111;
     border-radius: 8px;
     border: 1px solid #222222;
-    border-left: 5px solid #FFBF00;
+    border-left: 5px solid #C49B55;
 }
 
 .placement-info h2 {
@@ -35,11 +35,11 @@
 }
 
 .placement-info strong {
-    color: #FFBF00;
+    color: #C49B55;
 }
 
 .rollover-trigger-btn {
-    background: #FFBF00;
+    background: #C49B55;
     color: #000000;
     border: none;
     padding: 12px 24px;
@@ -57,7 +57,7 @@
 .rollover-trigger-btn:hover {
     background: #e6a800;
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(255, 191, 0, 0.2);
+    box-shadow: 0 5px 15px rgba(196, 155, 85, 0.2);
 }
 
 /* --- DASHBOARD HEADER & STATS --- */
@@ -75,7 +75,7 @@
 .dash-header-titles h1 {
     font-family: 'Playfair Display', serif;
     font-size: 2.2rem;
-    color: #FFBF00;
+    color: #C49B55;
     margin: 0 0 10px 0;
 }
 
@@ -113,7 +113,7 @@
 }
 
 .text-amber {
-    color: #FFBF00 !important;
+    color: #C49B55 !important;
 }
 
 /* --- SEARCH & FILTER BAR --- */
@@ -152,7 +152,7 @@
 }
 
 .search-input:focus {
-    border-color: #FFBF00;
+    border-color: #C49B55;
 }
 
 .filter-box {
@@ -219,8 +219,8 @@
 
 .submission-card:hover {
     transform: translateY(-4px);
-    border-color: #FFBF00;
-    box-shadow: 0 10px 30px rgba(255, 191, 0, 0.05);
+    border-color: #C49B55;
+    box-shadow: 0 10px 30px rgba(196, 155, 85, 0.05);
 }
 
 .sub-card-header {
@@ -233,8 +233,8 @@
 }
 
 .id-badge {
-    background: rgba(255, 191, 0, 0.1);
-    color: #FFBF00;
+    background: rgba(196, 155, 85, 0.1);
+    color: #C49B55;
     padding: 4px 12px;
     border-radius: 4px;
     font-size: 0.8rem;
@@ -273,7 +273,7 @@
     display: flex;
     align-items: center;
     gap: 8px;
-    color: #FFBF00;
+    color: #C49B55;
     font-size: 0.95rem;
     margin: 0;
     font-weight: 600;
@@ -290,9 +290,9 @@
 }
 
 .current-badge {
-    background: rgba(255, 191, 0, 0.1);
-    color: #FFBF00;
-    border: 1px solid rgba(255, 191, 0, 0.3);
+    background: rgba(196, 155, 85, 0.1);
+    color: #C49B55;
+    border: 1px solid rgba(196, 155, 85, 0.3);
 }
 
 .archive-badge {
@@ -328,7 +328,7 @@
 }
 
 .inline-status-drop:focus {
-    border-color: #FFBF00;
+    border-color: #C49B55;
 }
 
 .review-btn {
@@ -337,8 +337,8 @@
     justify-content: center;
     gap: 8px;
     background: transparent;
-    color: #FFBF00;
-    border: 1px solid #FFBF00;
+    color: #C49B55;
+    border: 1px solid #C49B55;
     padding: 11px 20px;
     border-radius: 6px;
     font-weight: 700;
@@ -349,10 +349,10 @@
 }
 
 .review-btn:hover {
-    background: #FFBF00;
+    background: #C49B55;
     color: #000000;
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(255, 191, 0, 0.2);
+    box-shadow: 0 5px 15px rgba(196, 155, 85, 0.2);
 }
 
 /* --- MODAL STYLES --- */
@@ -375,7 +375,7 @@
     border: 1px solid #333333;
     padding: 40px;
     border-radius: 12px;
-    border-top: 5px solid #FFBF00;
+    border-top: 5px solid #C49B55;
     max-width: 600px;
     width: 90%;
     color: #ffffff;
@@ -384,7 +384,7 @@
 
 .modal-title {
     margin: 0 0 25px 0;
-    color: #FFBF00;
+    color: #C49B55;
     font-family: 'Playfair Display', serif;
     font-size: 2rem;
     text-align: center;
@@ -409,14 +409,14 @@
 }
 
 .modal-option.active {
-    border-color: #FFBF00;
-    background: rgba(255, 191, 0, 0.05);
+    border-color: #C49B55;
+    background: rgba(196, 155, 85, 0.05);
 }
 
 .modal-option input[type="radio"] {
     margin-top: 4px;
     transform: scale(1.2);
-    accent-color: #FFBF00;
+    accent-color: #C49B55;
 }
 
 .option-text {
@@ -468,7 +468,7 @@
 }
 
 .admin-input:focus {
-    border-color: #FFBF00;
+    border-color: #C49B55;
 }
 
 .modal-actions {
@@ -494,7 +494,7 @@
 }
 
 .primary-btn {
-    background: #FFBF00;
+    background: #C49B55;
     color: #000000;
     border: none;
     padding: 12px 24px;

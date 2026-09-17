@@ -34,7 +34,7 @@ const Admin = () => {
     const bg = isDarkTheme ? '#0a0a0a' : '#fdfdfd';
     const cardBg = isDarkTheme ? '#111111' : '#ffffff';
     const text = isDarkTheme ? '#ffffff' : '#111111';
-    const accent = isDarkTheme ? '#FFBF00' : '#CD0000';
+    const accent = isDarkTheme ? '#C49B55' : '#C49B55';
     const border = isDarkTheme ? '#222222' : '#eaeaea';
 
     return (

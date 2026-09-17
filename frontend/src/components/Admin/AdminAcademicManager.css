@@ -40,18 +40,18 @@
 }
 
 .admin-back-btn:hover {
-    border-color: #FFBF00;
+    border-color: #C49B55;
     /* Orangish Amber */
-    color: #FFBF00;
-    background: rgba(255, 191, 0, 0.05);
+    color: #C49B55;
+    background: rgba(196, 155, 85, 0.05);
 }
 
 .header-icon {
-    color: #FFBF00;
+    color: #C49B55;
 }
 
 .header-title {
-    color: #FFBF00;
+    color: #C49B55;
     font-family: 'Playfair Display', serif;
     margin: 0;
     font-size: 2rem;
@@ -108,8 +108,8 @@
 }
 
 .form-group input[type="text"]:focus {
-    border-color: #FFBF00;
-    box-shadow: 0 0 0 2px rgba(255, 191, 0, 0.1);
+    border-color: #C49B55;
+    box-shadow: 0 0 0 2px rgba(196, 155, 85, 0.1);
 }
 
 /* File Upload Area */
@@ -160,14 +160,14 @@
 }
 
 .file-upload-wrapper input[type="file"]::file-selector-button:hover {
-    background: #FFBF00;
+    background: #C49B55;
     color: #000000;
-    border-color: #FFBF00;
+    border-color: #C49B55;
 }
 
 /* Submit Button */
 .admin-submit-btn {
-    background: #FFBF00;
+    background: #C49B55;
     color: #000000;
     padding: 15px;
     border: none;
@@ -187,7 +187,7 @@
 .admin-submit-btn:hover:not(:disabled) {
     background: #e6a800;
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(255, 191, 0, 0.2);
+    box-shadow: 0 8px 20px rgba(196, 155, 85, 0.2);
 }
 
 .admin-submit-btn:disabled {
@@ -234,8 +234,8 @@
 
 .collab-card:hover {
     transform: translateY(-5px);
-    border-color: #FFBF00;
-    box-shadow: 0 10px 30px rgba(255, 191, 0, 0.05);
+    border-color: #C49B55;
+    box-shadow: 0 10px 30px rgba(196, 155, 85, 0.05);
 }
 
 .delete-collab-btn {
