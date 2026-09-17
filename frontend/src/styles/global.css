@@ -278,3 +278,33 @@ a:hover {
 .nav-right .nav-link:last-child {
     padding: 10px 24px !important;
 }
+
+/* SNAP SCROLLING */
+.snap-container {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+.snap-container > section {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+/* Ensure child containers don't overflow */
+.snap-container > section > div {
+    max-height: 100vh;
+    overflow-y: auto;
+    scrollbar-width: none; /* Firefox */
+}
+.snap-container > section > div::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+}

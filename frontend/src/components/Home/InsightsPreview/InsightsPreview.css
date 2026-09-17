@@ -254,3 +254,10 @@
         font-size: 1.15rem;
     }
 }
+
+.insights-section {
+    padding: 0;
+}
+.insights-container {
+    padding-top: 80px;
+}

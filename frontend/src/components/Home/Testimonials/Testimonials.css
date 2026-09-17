@@ -245,3 +245,10 @@
         padding: 1.5rem;
     }
 }
+
+.testimonials-section {
+    padding: 0;
+}
+.testimonials-container {
+    padding-top: 80px;
+}

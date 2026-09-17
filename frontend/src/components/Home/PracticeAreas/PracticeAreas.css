@@ -266,3 +266,11 @@
         text-align: center;
     }
 }
+
+.practice-section.liquid-glass-style {
+    padding: 0;
+    align-items: center;
+}
+.practice-container {
+    padding-top: 80px; /* navbar offset */
+}
