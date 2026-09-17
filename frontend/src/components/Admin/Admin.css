@@ -78,7 +78,7 @@
     position: absolute;
     inset: 0;
     /* Subtle Orangish Amber Glow */
-    background: radial-gradient(circle at center, rgba(196, 155, 85, 0.1) 0%, transparent 70%);
+    background: radial-gradient(circle at center, rgba(205, 0, 0, 0.1) 0%, transparent 70%);
     z-index: 1;
 }
 
@@ -88,7 +88,7 @@
     background: rgba(10, 10, 10, 0.95);
     padding: 3.5rem 3rem;
     border-radius: 12px;
-    border: 1px solid rgba(196, 155, 85, 0.2);
+    border: 1px solid rgba(205, 0, 0, 0.2);
     text-align: center;
     width: 100%;
     max-width: 420px;
@@ -100,17 +100,17 @@
     height: 70px;
     margin: 0 auto 1.5rem;
     border-radius: 50%;
-    background: rgba(196, 155, 85, 0.05);
-    border: 1px solid rgba(196, 155, 85, 0.2);
+    background: rgba(205, 0, 0, 0.05);
+    border: 1px solid rgba(205, 0, 0, 0.2);
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: inset 0 0 15px rgba(196, 155, 85, 0.1);
+    box-shadow: inset 0 0 15px rgba(205, 0, 0, 0.1);
 }
 
 .admin-login-card h2 {
     font-family: 'Playfair Display', serif;
-    color: #C49B55;
+    color: #CD0000;
     /* Orangish Amber */
     margin-bottom: 0.5rem;
     font-size: 2rem;
@@ -130,7 +130,7 @@
     padding: 15px;
     background: #000;
     border: 1px solid #333;
-    color: #C49B55;
+    color: #CD0000;
     border-radius: 6px;
     text-align: center;
     font-size: 1.2rem;
@@ -141,8 +141,8 @@
 
 .input-group input:focus {
     outline: none;
-    border-color: #C49B55;
-    box-shadow: 0 0 0 2px rgba(196, 155, 85, 0.1);
+    border-color: #CD0000;
+    box-shadow: 0 0 0 2px rgba(205, 0, 0, 0.1);
 }
 
 .error-msg {
@@ -183,7 +183,7 @@
 .login-btn {
     width: 100%;
     padding: 15px;
-    background: #C49B55;
+    background: #CD0000;
     border: none;
     color: #000;
     font-weight: 700;
@@ -197,7 +197,7 @@
 .login-btn:hover {
     background: #e6a800;
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(196, 155, 85, 0.25);
+    box-shadow: 0 8px 20px rgba(205, 0, 0, 0.25);
 }
 
 /* =========================================
@@ -212,7 +212,7 @@
 
 .input-block label {
     display: block;
-    color: #C49B55;
+    color: #CD0000;
     font-size: 0.8rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -232,12 +232,12 @@
 }
 
 .dark-input:focus {
-    border-color: #C49B55;
+    border-color: #CD0000;
 }
 
 .title-input {
     font-size: 1.2rem;
-    border-bottom: 2px solid #C49B55;
+    border-bottom: 2px solid #CD0000;
 }
 
 /* Native Select Styling */
@@ -308,13 +308,13 @@ select.dark-input option {
 }
 
 .back-link-btn:hover {
-    border-color: #C49B55;
-    color: #C49B55;
+    border-color: #CD0000;
+    color: #CD0000;
 }
 
 .panel-header h1 {
     margin: 0;
-    color: #C49B55;
+    color: #CD0000;
     font-size: 1.5rem;
     font-family: 'Playfair Display', serif;
 }
@@ -338,13 +338,13 @@ select.dark-input option {
 }
 
 .action-btn.save {
-    background: #C49B55;
+    background: #CD0000;
     color: #000;
 }
 
 .action-btn.save:hover:not(:disabled) {
     background: #e6a800;
-    box-shadow: 0 4px 15px rgba(196, 155, 85, 0.2);
+    box-shadow: 0 4px 15px rgba(205, 0, 0, 0.2);
 }
 
 .action-btn:disabled {
@@ -374,7 +374,7 @@ select.dark-input option {
 }
 
 .editor-scroll-area::-webkit-scrollbar-thumb:hover {
-    background: #C49B55;
+    background: #CD0000;
 }
 
 .author-grid {
@@ -396,7 +396,7 @@ select.dark-input option {
 }
 
 .upload-container:hover {
-    border-color: #C49B55;
+    border-color: #CD0000;
 }
 
 .upload-btn {
@@ -415,9 +415,9 @@ select.dark-input option {
 }
 
 .upload-btn:hover {
-    background: rgba(196, 155, 85, 0.1);
-    border-color: #C49B55;
-    color: #C49B55;
+    background: rgba(205, 0, 0, 0.1);
+    border-color: #CD0000;
+    color: #CD0000;
 }
 
 /* =========================================
@@ -444,7 +444,7 @@ select.dark-input option {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    border: 1px solid rgba(196, 155, 85, 0.2);
+    border: 1px solid rgba(205, 0, 0, 0.2);
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.9);
 }
 
@@ -478,7 +478,7 @@ select.dark-input option {
 }
 
 .save-crop {
-    background: #C49B55;
+    background: #CD0000;
     color: #000;
 }
 

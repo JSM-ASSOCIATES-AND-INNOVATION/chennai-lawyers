@@ -3,9 +3,9 @@
    ========================================= */
 .blogs-container {
     /* 🚨 DARK MODE DEFAULTS (Jet Black & Orangish Amber) */
-    --accent-primary: #C49B55;
-    --accent-muted: rgba(196, 155, 85, 0.15);
-    --accent-glow: rgba(196, 155, 85, 0.3);
+    --accent-primary: #CD0000;
+    --accent-muted: rgba(205, 0, 0, 0.15);
+    --accent-glow: rgba(205, 0, 0, 0.3);
 
     --bg-main: #0a0a0a;
     --bg-card: #111111;
@@ -19,9 +19,9 @@
 
 .blogs-container.light-theme {
     /* 🚨 LIGHT MODE OVERRIDES (Crisp White & Cherry Red) */
-    --accent-primary: #C49B55;
-    --accent-muted: rgba(196, 155, 85, 0.08);
-    --accent-glow: rgba(196, 155, 85, 0.15);
+    --accent-primary: #CD0000;
+    --accent-muted: rgba(205, 0, 0, 0.08);
+    --accent-glow: rgba(205, 0, 0, 0.15);
 
     --bg-main: #fdfdfd;
     --bg-card: #ffffff;
@@ -151,7 +151,7 @@
     flex-direction: column;
     background: linear-gradient(145deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
     border: 1px solid rgba(255, 255, 255, 0.05);
-    border-top: 3px solid #C49B55;
+    border-top: 3px solid #CD0000;
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     position: relative;
     overflow: hidden;
@@ -161,7 +161,7 @@
 .light-theme .blog-card {
     background: linear-gradient(145deg, #FFFFFF 0%, #F5F5F7 100%);
     border: 1px solid rgba(0, 0, 0, 0.05);
-    border-top: 3px solid #C49B55;
+    border-top: 3px solid #CD0000;
 }
 
 

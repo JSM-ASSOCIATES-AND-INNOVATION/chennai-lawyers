@@ -48,7 +48,7 @@
 /* --- 3. SIGNATURE SVG DRAWING ANIMATIONS --- */
 .logo-paths path {
     fill: transparent;
-    stroke: #C49B55;
+    stroke: #CD0000;
     /* Orangish Amber */
     stroke-width: 4px;
     /* Thin outline for the drawing effect */
@@ -93,7 +93,7 @@
 /* --- 4. THE MELT/FILL EFFECT --- */
 /* Once drawing is done, we fade the stroke out and fade the solid fill in */
 .filling .logo-paths path {
-    fill: #C49B55;
+    fill: #CD0000;
     stroke: transparent;
     transition: fill 0.8s ease, stroke 0.8s ease;
 }

@@ -49,10 +49,10 @@
 }
 
 .admin-back-btn:hover {
-    border-color: #C49B55;
+    border-color: #CD0000;
     /* Orangish Amber */
-    color: #C49B55;
-    background: rgba(196, 155, 85, 0.05);
+    color: #CD0000;
+    background: rgba(205, 0, 0, 0.05);
 }
 
 .details-back {
@@ -60,11 +60,11 @@
 }
 
 .header-icon {
-    color: #C49B55;
+    color: #CD0000;
 }
 
 .header-title {
-    color: #C49B55;
+    color: #CD0000;
     font-family: 'Playfair Display', serif;
     margin: 0;
     font-size: 2rem;
@@ -87,9 +87,9 @@
 }
 
 .new-badge {
-    background: rgba(196, 155, 85, 0.1);
-    color: #C49B55;
-    border: 1px solid rgba(196, 155, 85, 0.3);
+    background: rgba(205, 0, 0, 0.1);
+    color: #CD0000;
+    border: 1px solid rgba(205, 0, 0, 0.3);
 }
 
 .total-badge {
@@ -141,12 +141,12 @@
 }
 
 .app-card-new {
-    border-color: rgba(196, 155, 85, 0.5);
+    border-color: rgba(205, 0, 0, 0.5);
 }
 
 .app-card-new:hover {
-    border-color: #C49B55;
-    box-shadow: 0 10px 30px rgba(196, 155, 85, 0.1);
+    border-color: #CD0000;
+    box-shadow: 0 10px 30px rgba(205, 0, 0, 0.1);
 }
 
 .app-card-date {
@@ -177,7 +177,7 @@
     align-items: center;
     justify-content: center;
     margin: 0 auto 15px;
-    color: #C49B55;
+    color: #CD0000;
 }
 
 .app-name {
@@ -189,7 +189,7 @@
 
 .app-role {
     margin: 0 0 15px 0;
-    color: #C49B55;
+    color: #CD0000;
     font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -232,7 +232,7 @@
 }
 
 .app-status-select:focus {
-    border-color: #C49B55;
+    border-color: #CD0000;
 }
 
 /* Card Buttons */
@@ -244,7 +244,7 @@
 .app-view-btn {
     flex: 1;
     padding: 10px;
-    background: #C49B55;
+    background: #CD0000;
     color: #000000;
     border: none;
     border-radius: 6px;
@@ -294,9 +294,9 @@
 }
 
 .details-ref-badge {
-    color: #C49B55;
-    border: 1px solid rgba(196, 155, 85, 0.4);
-    background: rgba(196, 155, 85, 0.05);
+    color: #CD0000;
+    border: 1px solid rgba(205, 0, 0, 0.4);
+    background: rgba(205, 0, 0, 0.05);
     padding: 4px 12px;
     border-radius: 20px;
     font-size: 0.8rem;
@@ -313,7 +313,7 @@
 }
 
 .details-role {
-    color: #C49B55;
+    color: #CD0000;
     margin: 0;
     font-size: 1.1rem;
     text-transform: uppercase;
@@ -341,7 +341,7 @@
 }
 
 .meta-icon {
-    color: #C49B55;
+    color: #CD0000;
 }
 
 .details-cover-letter {
@@ -380,7 +380,7 @@
     flex: 1;
     min-width: 250px;
     padding: 16px;
-    background: #C49B55;
+    background: #CD0000;
     color: #000000;
     border: none;
     border-radius: 8px;
@@ -399,18 +399,18 @@
 .doc-download-btn:hover {
     background: #e6a800;
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(196, 155, 85, 0.2);
+    box-shadow: 0 8px 20px rgba(205, 0, 0, 0.2);
 }
 
 .secondary-doc {
     background: transparent;
-    border: 1px solid #C49B55;
-    color: #C49B55;
+    border: 1px solid #CD0000;
+    color: #CD0000;
 }
 
 .secondary-doc:hover {
-    background: rgba(196, 155, 85, 0.1);
-    color: #C49B55;
+    background: rgba(205, 0, 0, 0.1);
+    color: #CD0000;
 }
 
 .details-delete-btn {

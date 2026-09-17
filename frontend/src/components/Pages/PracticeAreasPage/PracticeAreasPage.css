@@ -70,12 +70,12 @@
 
 .practice-detail-card:hover {
     transform: translateY(-5px);
-    border-color: rgba(196, 155, 85, 0.4);
+    border-color: rgba(205, 0, 0, 0.4);
     box-shadow: 0 15px 40px rgba(0,0,0,0.05);
 }
 
 .practice-icon-wrapper {
-    color: #C49B55;
+    color: #CD0000;
     margin-bottom: 1.5rem;
 }
 
@@ -101,7 +101,7 @@
 }
 
 .learn-more-link {
-    color: #C49B55;
+    color: #CD0000;
     text-decoration: none;
     font-size: 0.85rem;
     font-weight: 700;

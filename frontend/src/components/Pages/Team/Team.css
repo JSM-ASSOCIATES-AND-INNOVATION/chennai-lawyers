@@ -28,7 +28,7 @@
     height: 40px;
     border: 3px solid rgba(128,128,128,0.2);
     border-radius: 50%;
-    border-top-color: #C49B55;
+    border-top-color: #CD0000;
     animation: spin 1s ease-in-out infinite;
 }
 @keyframes spin { to { transform: rotate(360deg); } }
@@ -54,8 +54,8 @@
     padding: 0;
     transition: color 0.3s ease;
 }
-.dark-theme .team-back-btn:hover { color: #C49B55; }
-.light-theme .team-back-btn:hover { color: #C49B55; }
+.dark-theme .team-back-btn:hover { color: #CD0000; }
+.light-theme .team-back-btn:hover { color: #CD0000; }
 
 .team-eyebrow {
     font-size: 0.85rem;
@@ -64,8 +64,8 @@
     margin-bottom: 1.5rem;
     font-weight: 600;
 }
-.dark-theme .team-eyebrow { color: #C49B55; }
-.light-theme .team-eyebrow { color: #C49B55; }
+.dark-theme .team-eyebrow { color: #CD0000; }
+.light-theme .team-eyebrow { color: #CD0000; }
 
 .team-title {
     font-size: clamp(3rem, 5vw, 4.5rem);
@@ -82,8 +82,8 @@
     margin-bottom: 2rem;
     border-radius: 2px;
 }
-.dark-theme .team-accent-line { background: #C49B55; }
-.light-theme .team-accent-line { background: #C49B55; }
+.dark-theme .team-accent-line { background: #CD0000; }
+.light-theme .team-accent-line { background: #CD0000; }
 
 .team-subtitle {
     font-size: 1.25rem;
@@ -189,8 +189,8 @@
     margin: 0 0 0.5rem 0;
     transition: color 0.3s ease;
 }
-.dark-theme .team-card:hover .team-card-name { color: #C49B55; }
-.light-theme .team-card:hover .team-card-name { color: #C49B55; }
+.dark-theme .team-card:hover .team-card-name { color: #CD0000; }
+.light-theme .team-card:hover .team-card-name { color: #CD0000; }
 
 .team-card-role {
     font-size: 0.85rem;
@@ -335,8 +335,8 @@
     font-weight: 600;
     margin: 0 0 2rem 0;
 }
-.dark-theme .sidebar-member-role { color: #C49B55; }
-.light-theme .sidebar-member-role { color: #C49B55; }
+.dark-theme .sidebar-member-role { color: #CD0000; }
+.light-theme .sidebar-member-role { color: #CD0000; }
 
 .sidebar-separator {
     width: 100%;
@@ -383,13 +383,13 @@
     transform: translateY(-4px);
 }
 .dark-theme .sidebar-social-link:hover {
-    background-color: #C49B55;
-    border-color: #C49B55;
+    background-color: #CD0000;
+    border-color: #CD0000;
     color: #000;
 }
 .light-theme .sidebar-social-link:hover {
-    background-color: #C49B55;
-    border-color: #C49B55;
+    background-color: #CD0000;
+    border-color: #CD0000;
     color: #fff;
 }
 

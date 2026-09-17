@@ -50,17 +50,17 @@
 }
 
 .admin-back-btn:hover {
-    border-color: #C49B55;
-    color: #C49B55;
-    background: rgba(196, 155, 85, 0.05);
+    border-color: #CD0000;
+    color: #CD0000;
+    background: rgba(205, 0, 0, 0.05);
 }
 
 .header-icon {
-    color: #C49B55;
+    color: #CD0000;
 }
 
 .header-title {
-    color: #C49B55;
+    color: #CD0000;
     font-family: 'Playfair Display', serif;
     margin: 0;
     font-size: 2rem;
@@ -68,7 +68,7 @@
 }
 
 .admin-submit-btn {
-    background: #C49B55;
+    background: #CD0000;
     color: #000000;
     padding: 12px 24px;
     border: none;
@@ -85,7 +85,7 @@
 .admin-submit-btn:hover {
     background: #e6a800;
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(196, 155, 85, 0.2);
+    box-shadow: 0 8px 20px rgba(205, 0, 0, 0.2);
 }
 
 /* --- EMPTY STATE --- */
@@ -115,7 +115,7 @@
 }
 
 .toast-message.success {
-    background: #C49B55;
+    background: #CD0000;
     color: #000000;
 }
 
@@ -193,8 +193,8 @@
 
 .order-controls button {
     background: rgba(0, 0, 0, 0.8);
-    color: #C49B55;
-    border: 1px solid #C49B55;
+    color: #CD0000;
+    border: 1px solid #CD0000;
     padding: 6px;
     border-radius: 4px;
     cursor: pointer;
@@ -202,7 +202,7 @@
 }
 
 .order-controls button:hover:not(:disabled) {
-    background: #C49B55;
+    background: #CD0000;
     color: #000;
 }
 
@@ -230,7 +230,7 @@
     position: absolute;
     bottom: 12px;
     left: 12px;
-    background: #C49B55;
+    background: #CD0000;
     color: #000000;
     padding: 4px 10px;
     font-size: 0.75rem;
@@ -279,12 +279,12 @@
 }
 
 .edit-btn {
-    color: #C49B55;
+    color: #CD0000;
     border-right: 1px solid #222222;
 }
 
 .edit-btn:hover {
-    background: rgba(196, 155, 85, 0.1);
+    background: rgba(205, 0, 0, 0.1);
 }
 
 .delete-btn {
@@ -313,7 +313,7 @@
 
 .form-header h2 {
     font-family: 'Playfair Display', serif;
-    color: #C49B55;
+    color: #CD0000;
     margin: 0;
     font-size: 1.8rem;
 }
@@ -379,7 +379,7 @@
 }
 
 .dark-input:focus {
-    border-color: #C49B55;
+    border-color: #CD0000;
 }
 
 select.dark-input {
@@ -413,7 +413,7 @@ select.dark-input option {
 }
 
 .image-dropzone:hover {
-    border-color: #C49B55;
+    border-color: #CD0000;
 }
 
 .image-dropzone img {
@@ -435,17 +435,17 @@ select.dark-input option {
     display: flex;
     align-items: center;
     gap: 15px;
-    background: rgba(196, 155, 85, 0.05);
+    background: rgba(205, 0, 0, 0.05);
     padding: 20px;
     border-radius: 8px;
-    border: 1px solid rgba(196, 155, 85, 0.3);
+    border: 1px solid rgba(205, 0, 0, 0.3);
 }
 
 .homepage-toggle-box input[type="checkbox"] {
     width: 24px;
     height: 24px;
     cursor: pointer;
-    accent-color: #C49B55;
+    accent-color: #CD0000;
 }
 
 .toggle-label-content {
@@ -455,7 +455,7 @@ select.dark-input option {
 }
 
 .toggle-label-content strong {
-    color: #C49B55;
+    color: #CD0000;
     font-size: 0.95rem;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -500,7 +500,7 @@ select.dark-input option {
 }
 
 .btn-solid-gold {
-    background: #C49B55;
+    background: #CD0000;
     color: #000000;
     border: none;
     padding: 12px 24px;
@@ -514,7 +514,7 @@ select.dark-input option {
 
 .btn-solid-gold:hover:not(:disabled) {
     background: #e6a800;
-    box-shadow: 0 4px 15px rgba(196, 155, 85, 0.2);
+    box-shadow: 0 4px 15px rgba(205, 0, 0, 0.2);
     transform: translateY(-2px);
 }
 

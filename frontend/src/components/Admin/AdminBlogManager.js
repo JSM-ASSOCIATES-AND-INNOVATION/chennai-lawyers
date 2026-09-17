@@ -10,7 +10,7 @@ import { ArrowLeft, Save, Edit3, Trash2, FileText, Plus, ArrowUp, ArrowDown, Use
 // 🚨 IMPORT NEW CSS
 import './AdminBlogManager.css';
 
-// Updated SVG placeholders with Orangish Amber (#C49B55)
+// Updated SVG placeholders with Orangish Amber (#CD0000)
 const defaultAvatar = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23111'/%3E%3Cpath d='M100 105c16.5 0 30-13.5 30-30s-13.5-30-30-30-30 13.5-30 30 13.5 30 30 30zm0 15c-22.1 0-65 11.1-65 33.3V170h130v-16.7c0-22.2-42.9-33.3-65-33.3z' fill='%23FFBF00'/%3E%3C/svg%3E";
 const defaultHero = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 600'%3E%3Crect width='1200' height='600' fill='%230a0a0a'/%3E%3C/svg%3E";
 

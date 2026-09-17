@@ -41,10 +41,10 @@
 .light-theme .footer-logo-text { color: #111; }
 
 .footer-logo-highlight {
-    color: #C49B55;
+    color: #CD0000;
 }
-.light-theme .footer-logo-highlight { color: #C49B55; }
-.dark-theme .footer-logo-highlight { color: #C49B55; }
+.light-theme .footer-logo-highlight { color: #CD0000; }
+.dark-theme .footer-logo-highlight { color: #CD0000; }
 
 .footer-logo-sub {
     font-family: 'Montserrat', sans-serif;
@@ -58,11 +58,11 @@
 .footer-divider {
     width: 40px;
     height: 2px;
-    background: #C49B55;
+    background: #CD0000;
     margin-bottom: 1.5rem;
 }
-.light-theme .footer-divider { background: #C49B55; }
-.dark-theme .footer-divider { background: #C49B55; }
+.light-theme .footer-divider { background: #CD0000; }
+.dark-theme .footer-divider { background: #CD0000; }
 
 .footer-motto {
     font-size: 1rem;
@@ -94,12 +94,12 @@
 }
 
 .social-icon:hover {
-    background: #C49B55;
+    background: #CD0000;
     color: #000;
     transform: translateY(-3px);
 }
-.light-theme .social-icon:hover { background: #C49B55; color: #fff; }
-.dark-theme .social-icon:hover { background: #C49B55; color: #000; }
+.light-theme .social-icon:hover { background: #CD0000; color: #fff; }
+.dark-theme .social-icon:hover { background: #CD0000; color: #000; }
 
 /* SHARED HEADINGS */
 .footer-heading {
@@ -132,10 +132,10 @@
 .light-theme .footer-links a { color: rgba(0, 0, 0, 0.7); }
 
 .footer-links a:hover {
-    color: #C49B55;
+    color: #CD0000;
 }
-.light-theme .footer-links a:hover { color: #C49B55; }
-.dark-theme .footer-links a:hover { color: #C49B55; }
+.light-theme .footer-links a:hover { color: #CD0000; }
+.dark-theme .footer-links a:hover { color: #CD0000; }
 
 /* CONTACT COLUMN */
 .footer-contact-list {
@@ -158,12 +158,12 @@
 .light-theme .footer-contact-list li { color: rgba(0, 0, 0, 0.7); }
 
 .footer-icon {
-    color: #C49B55;
+    color: #CD0000;
     flex-shrink: 0;
     margin-top: 3px;
 }
-.light-theme .footer-icon { color: #C49B55; }
-.dark-theme .footer-icon { color: #C49B55; }
+.light-theme .footer-icon { color: #CD0000; }
+.dark-theme .footer-icon { color: #CD0000; }
 
 /* MAP COLUMN */
 .footer-map-container {
@@ -255,11 +255,11 @@
 }
 
 .scroll-top-btn:hover {
-    background: #C49B55;
+    background: #CD0000;
     color: #000;
 }
-.light-theme .scroll-top-btn:hover { background: #C49B55; color: #fff; }
-.dark-theme .scroll-top-btn:hover { background: #C49B55; color: #000; }
+.light-theme .scroll-top-btn:hover { background: #CD0000; color: #fff; }
+.dark-theme .scroll-top-btn:hover { background: #CD0000; color: #000; }
 
 /* MOBILE RESPONSIVE */
 @media (max-width: 1024px) {

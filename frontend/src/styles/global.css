@@ -3,7 +3,7 @@
    ========================================= */
 :root {
     /* 🚨 APPLE HIG SYSTEM TOKENS (Dark Mode) */
-    --accent-primary: #C49B55; /* iOS Blue */
+    --accent-primary: #CD0000; /* iOS Blue */
     --accent-muted: rgba(10, 132, 255, 0.15);
     --accent-glow: rgba(10, 132, 255, 0.3);
 
@@ -30,7 +30,7 @@
 /* ☀️ LIGHT THEME OVERRIDES (Apple HIG) */
 body.light-theme,
 .light-theme {
-    --accent-primary: #C49B55;
+    --accent-primary: #CD0000;
     --accent-muted: rgba(0, 102, 204, 0.08);
     --accent-glow: rgba(0, 102, 204, 0.15);
 
@@ -217,7 +217,7 @@ a:hover {
 .dark-theme .secondary-btn::before,
 .dark-theme .submit-btn::before,
 .dark-theme .nav-right .nav-link:last-child::before { 
-    background-color: #C49B55 !important; 
+    background-color: #CD0000 !important; 
 }
 
 /* Light Theme Colors */
@@ -226,7 +226,7 @@ a:hover {
 .light-theme .secondary-btn::before,
 .light-theme .submit-btn::before,
 .light-theme .nav-right .nav-link:last-child::before { 
-    background-color: #C49B55 !important; 
+    background-color: #CD0000 !important; 
 }
 
 /* Hover Effects */

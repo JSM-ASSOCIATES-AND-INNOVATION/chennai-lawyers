@@ -30,12 +30,12 @@
 .notfound-divider {
     width: 60px;
     height: 3px;
-    background: #C49B55;
+    background: #CD0000;
     margin: 2rem 0;
     border-radius: 2px;
 }
-.light-theme .notfound-divider { background: #C49B55; }
-.dark-theme .notfound-divider { background: #C49B55; }
+.light-theme .notfound-divider { background: #CD0000; }
+.dark-theme .notfound-divider { background: #CD0000; }
 
 .notfound-subtitle {
     font-family: 'Montserrat', sans-serif;

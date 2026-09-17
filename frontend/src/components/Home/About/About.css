@@ -41,8 +41,8 @@
     box-shadow: 0 30px 60px rgba(0,0,0,0.05);
 }
 
-.dark-theme .about-content-wrapper { border-top: 2px solid rgba(196, 155, 85, 0.3); }
-.light-theme .about-content-wrapper { border-top: 2px solid rgba(196, 155, 85, 0.3); }
+.dark-theme .about-content-wrapper { border-top: 2px solid rgba(205, 0, 0, 0.3); }
+.light-theme .about-content-wrapper { border-top: 2px solid rgba(205, 0, 0, 0.3); }
 
 .about-eyebrow {
     font-size: 0.85rem;
@@ -51,8 +51,8 @@
     margin-bottom: 1rem;
     font-weight: 600;
 }
-.dark-theme .about-eyebrow { color: #C49B55; }
-.light-theme .about-eyebrow { color: #C49B55; }
+.dark-theme .about-eyebrow { color: #CD0000; }
+.light-theme .about-eyebrow { color: #CD0000; }
 
 .about-title {
     font-size: clamp(2.2rem, 3.5vw, 3.2rem);
@@ -69,8 +69,8 @@
     margin-bottom: 1.25rem;
     border-radius: 2px;
 }
-.dark-theme .about-accent-line { background: #C49B55; }
-.light-theme .about-accent-line { background: #C49B55; }
+.dark-theme .about-accent-line { background: #CD0000; }
+.light-theme .about-accent-line { background: #CD0000; }
 
 .about-description {
     font-size: 1.05rem;
@@ -134,8 +134,8 @@
     border-top: none;
     border-left: 3px solid;
 }
-.dark-theme .about-quote-box { border-left-color: #C49B55; }
-.light-theme .about-quote-box { border-left-color: #C49B55; }
+.dark-theme .about-quote-box { border-left-color: #CD0000; }
+.light-theme .about-quote-box { border-left-color: #CD0000; }
 
 .about-quote {
     font-size: 1.05rem;
@@ -152,8 +152,8 @@
     height: 2px;
     margin-bottom: 0.5rem;
 }
-.dark-theme .quote-divider { background: #C49B55; }
-.light-theme .quote-divider { background: #C49B55; }
+.dark-theme .quote-divider { background: #CD0000; }
+.light-theme .quote-divider { background: #CD0000; }
 
 .quote-author {
     font-size: 0.75rem;
@@ -161,8 +161,8 @@
     letter-spacing: 2px;
     font-weight: 600;
 }
-.dark-theme .quote-author { color: #C49B55; }
-.light-theme .quote-author { color: #C49B55; }
+.dark-theme .quote-author { color: #CD0000; }
+.light-theme .quote-author { color: #CD0000; }
 
 /* STATS */
 .about-stats-container {
@@ -194,8 +194,8 @@
     font-weight: 600;
     margin-bottom: 0.25rem;
 }
-.dark-theme .stat-number { color: #C49B55; }
-.light-theme .stat-number { color: #C49B55; }
+.dark-theme .stat-number { color: #CD0000; }
+.light-theme .stat-number { color: #CD0000; }
 
 .stat-label {
     font-size: 0.7rem;

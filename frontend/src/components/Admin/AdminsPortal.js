@@ -101,7 +101,7 @@ export default function AdminPortal() {
             {/* SIDEBAR */}
             <aside className="admin-sidebar">
                 <div className="sidebar-branding">
-                    <ShieldCheck size={32} className="admin-brand-icon" color="#C49B55" style={{ marginBottom: '12px' }} />
+                    <ShieldCheck size={32} className="admin-brand-icon" color="#CD0000" style={{ marginBottom: '12px' }} />
                     <h2>JSM Law Journal</h2>
                     <span>Editorial Portal</span>
                 </div>
@@ -138,7 +138,7 @@ export default function AdminPortal() {
                     </div>
                     <div className="stats-box">
                         <div className="admin-profile" style={{ textAlign: 'right' }}>
-                            <span style={{ color: '#C49B55', fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '1.5px', fontWeight: '700' }}>Editor-in-Chief</span>
+                            <span style={{ color: '#CD0000', fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '1.5px', fontWeight: '700' }}>Editor-in-Chief</span>
                             <div style={{ color: '#ffffff', fontSize: '1.1rem', marginTop: '5px', fontFamily: "'Playfair Display', serif" }}>JSM Admin</div>
                         </div>
                     </div>

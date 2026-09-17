@@ -45,7 +45,7 @@ export default function AdminContactManager() {
                     <button className="admin-contact-back-btn" onClick={() => navigate("/admin/dashboard")}>
                         <ArrowLeft size={16} /> Hub
                     </button>
-                    <Mail size={32} color="#C49B55" />
+                    <Mail size={32} color="#CD0000" />
                     <h1 className="admin-contact-title">Contact Inbox</h1>
                 </div>
 
