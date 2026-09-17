@@ -44,7 +44,7 @@ const About = () => {
                         <div className="about-image-container">
                             <img
                                 className="about-image"
-                                src={`${process.env.PUBLIC_URL}/FirmImage.jpg`}
+                                src={`${process.env.PUBLIC_URL}/Satish-with-foreigh-deligates.jpg`}
                                 alt="Members of the ChennaiLawyers team in discussion"
                                 loading="lazy"
                             />
