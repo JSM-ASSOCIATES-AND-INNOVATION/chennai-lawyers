@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import './Ourpeople.css';
+import './OurPeople.css';
 import { useTheme } from "../../Shared/ThemeContext/ThemeContext";
 
 // 🚨 SMART RESOLVER: Ensures backend uploads render correctly

@@ -27,7 +27,7 @@ import CookieConsent from "./components/Shared/CookieConsent/CookieConsent";
 import Preloader from "./components/Shared/Preloader/Preloader";
 
 // --- ADMIN IMPORTS ---
-import Admin from "./components/admin";
+import Admin from "./components/Admin";
 import AdminDashboard from "./components/Admin/AdminDashboard";
 import AdminBlogManager from "./components/Admin/AdminBlogManager";
 import AdminEventManager from "./components/Admin/AdminEventManager";
